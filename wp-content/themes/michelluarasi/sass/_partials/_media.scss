@@ -1,3 +1,10 @@
+/***************
+*
+*  Media / Breakoints
+*
+****************/
+
+
 @mixin breakpoint($point) {
   @if $point == greatgrandfather-bear {
     @media (max-width: 1920px) { @content; }
