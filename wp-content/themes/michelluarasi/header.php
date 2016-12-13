@@ -54,7 +54,6 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 		<link href="https://plus.google.com/+MichelLuarasi/" rel="author"/>
 
 		<!--  	APPLE		-->
-
 	    <meta name="apple-mobile-web-app-capable" content="yes" />
 	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	    <meta name="apple-mobile-web-app-title" content="Michel Luarasi" />
@@ -72,6 +71,12 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 	    <link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/img/splashes/splash-iphone-old.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px)" />
 	    <link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/img/splashes/splash-iphone-old-retina.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px) and (-webkit-min-device-pixel-ratio: 2)" />
 
+		<!--  	TYPEKIT		-->
+
+        <script type="text/javascript" src="//use.typekit.net/ebk3utm.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>		
+
+		<!--  	OTHER		-->
 
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.css"> 
         <?php wp_head(); ?>
@@ -79,17 +84,6 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
         	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/work_detail/<?php echo $detail_stylesheet; ?>.css">
         <?php endif;?>
         <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.1.min.js"></script>
-        <script type="text/javascript" src="//use.typekit.net/ebk3utm.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>		
-		<!-- Mailchimp Starts -->
-		<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-		<style type="text/css">
-		    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-		    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-		       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-		</style> 		
-		<!-- Mailchimp End -->
-
 
     </head>
     <!-- put project class names for specific template-->
@@ -110,11 +104,12 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 						<a href="<?php echo $prev_page; ?>" class="detail-content-nav__link detail-content-nav__link--prev ml-icon-nav-back"></a>
 						<a href="<?php echo $next_page; ?>" class="detail-content-nav__link detail-content-nav__link--next ml-icon-nav-next"></a>
 					</div>
-					
+
 					<a href="#" class="menu-link ml-icon-nav-menu" ></a>    
 				</div>    		
         	</div>
 		</header>
+
 		<div class="main-nav-container">
 			<div class="nav-wrapper">
 				<div class="main-nav-container__header">
@@ -136,7 +131,6 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 						<li class="social-links__item"><a target="_blank" class="social-links__item__link ml-icon-social-tumblr" href="http://michelluarasi.tumblr.com"></a></li>
 					</ul>
 				</div>
-			</div>
-
-			
+			</div>			
 		</div>
+
