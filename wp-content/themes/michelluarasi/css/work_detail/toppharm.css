@@ -1,0 +1,104 @@
+
+
+
+/* ----- BACKGROUND COLOR ----- */
+.toppharm .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #f1f1f1;
+}
+
+
+/* ----- LEAD IN TEXT ----- */
+.toppharm .detail-content__tagline {
+color: #c51516;
+}
+
+
+/* ----- CONTENT TEXT ----- */
+.toppharm .detail-content__body__section__content p {
+color: #999999;
+} 
+
+
+
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+/* - Title - */
+.toppharm .detail-information__row h2 {
+color: #303133;
+}
+
+/* - Text - */
+.toppharm .detail-information__row p {
+color: #999999	;
+}
+
+/* - Link & Social- */
+.toppharm .detail-information__row a {
+    color: #999999; }
+
+.toppharm .detail-information__row a:visited {
+    color: #999999;
+}
+
+.toppharm .detail-information__row a:hover {
+    color: #bbc1c3;
+}
+
+.toppharm .detail-information__row a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /FOOTER ------------------------------ */
+
+
+/* ------------------------------ NAVIGATE ------------------------------ */
+
+
+/* - Border - */
+.toppharm .detail-nav__link-list {
+border-color: #999999;
+}
+
+.toppharm .detail-nav__link-list__item__link {
+border-right-color:	#999999;
+}
+
+
+
+/* - Title - */
+.toppharm .detail-nav h2 {
+color: #eaebeb;
+}
+
+/* - Text - */
+.toppharm .detail-nav p {
+color: #999999	;
+}
+
+/* - Link & Social- */
+.toppharm .detail-nav a {
+    color: #999999; }
+
+.toppharm .detail-nav a:visited {
+    color: #999999;
+}
+
+.toppharm .detail-nav a:hover {
+    color: #bbc1c3;
+}
+
+.toppharm .detail-nav a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /NAVIGATE ------------------------------ */
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,209 @@
+.journal-wrapper{
+	width:100%;
+	margin:164px auto 0;
+	max-width:1200px;
+	padding:0 20px;
+	@include breakpoint(baby-bear){
+		padding:0 20px;
+		margin-top:120px;
+	}
+}
+
+.journal-list{
+	text-align:center;
+	padding:0;
+}
+
+.journal-list__item{
+	margin-bottom:90px;
+	overflow:hidden;
+	@include breakpoint(baby-bear){
+		margin-bottom:40px;
+	}
+
+	opacity: 1;
+   	transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.journal-list__item:hover {
+      opacity: 0.8;
+     }
+
+.journal-list__item__link{
+	display:block;
+	text-decoration: none;
+	margin-bottom:10px;
+
+	@include breakpoint(baby-bear){
+		margin-bottom:5px;
+	}
+}
+
+.journal-list__item__img{
+	@include transition(all 400ms ease-out);
+	width:100%;
+}
+
+.journal-list__item__body{
+	>a{
+		text-decoration: none;
+	}
+}
+
+
+.journal-list__item__body__header{
+	@extend %header;
+	font-weight:800;
+	letter-spacing: 1px;
+	max-width:640px;
+	margin:0 auto;
+	padding:12px 0 0 0;
+
+	@include breakpoint(baby-bear){
+	padding:6px 0 0 0;
+	}
+}
+
+.journal-list__item__body__subtitle{
+	margin:0;	
+	@include breakpoint(baby-bear){
+		font-size:13px;
+	}
+}
+
+
+/*.journal-list__item__body__year::before,.journal-list__item__body__year::after{
+	display:inline-block;
+    width: 8%;
+    height: 4px;
+    content: '\a0';
+    background-color: #e1e2e5;
+    vertical-align:middle;
+}
+
+.journal-list__item__body__year::before {
+	margin-right:10px;
+}
+
+.journal-list__item__body__year::after{
+	margin-left:7px;
+}*/
+
+
+.journal-list__item__body__desc{
+	font-family:$base-copy-font;
+	font-size:21px;
+	color:#323233;
+	padding:0 20%;
+
+	@include breakpoint(mama-bear){
+		font-size:18px;
+		padding:0 3%;
+	}
+
+	@include breakpoint(baby-bear){
+		font-size:16px;
+		padding:0;
+	}
+}
+
+.journal-list__item__body__tags_list__item{
+	font-family:$base-copy-italic-font;
+	color:#c8c9cc;
+	display:inline-block;
+	font-size:18px;
+	@include breakpoint(mama-bear){
+		font-size: 16px;
+	}
+
+	@include breakpoint(baby-bear){
+		font-size:12px;
+	}
+}
+
+.journal-list__item__body__tags_list__item::after,.journal-pagination__list__item::after{
+	content: "&bull;";
+	padding:0 2px 0 4px;
+}
+
+.journal-list__item__body__tags_list__item:last-child:after, .journal-pagination__list__item:last-child:after{
+	content: " ";
+	padding:0;
+}
+
+.journal-pagination{
+	display:table;
+	width:100%;
+	padding:0 20%;
+	margin:80px auto;
+
+	@include breakpoint(mama-bear){
+		padding:0 3%;
+	}
+
+	@include breakpoint(baby-bear){
+		padding:0;
+	}
+}
+
+.journal-pagination__list{
+	display:table-cell;
+	text-align:center;
+	font-family:$base-copy-font;
+}
+
+.journal-pagination__list__item{
+	display:inline-block;
+	color:#c8c9cc;
+}
+
+
+.journal-pagination__list__item__link, .journal-pagination__list__item__link:active, .journal-pagination__list__item__link:visited{
+	font-size:21px;
+	color:#c8c9cc;
+	text-decoration:none;	
+
+	@include breakpoint(mama-bear){
+		font-size:18px;
+	}
+
+	@include breakpoint(baby-bear){
+		font-size:16px;
+	}
+}
+
+.journal-pagination__list__item__link:hover{
+	color:#323233;
+}
+
+.journal-pagination__list__item__link--current{
+	font-size:30px;
+	color:#323233;
+
+
+	@include breakpoint(baby-bear){
+		font-size:24px;
+	}
+
+	@include breakpoint(baby-bear){
+		font-size:21px;
+	}
+}
+
+.journal-pagination__item {
+	display:table-cell;	
+	width:20%;
+}
+
+.journal-pagination__item--next{
+	text-align:right;
+}
+
+.journal-pagination__item__link{
+	color:#323233;
+	font-size:21px;
+	
+}
+

@@ -1,0 +1,103 @@
+
+
+
+/* ----- BACKGROUND COLOR ----- */
+.yogurtpure .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #9c1515;
+}
+
+
+/* ----- LEAD IN TEXT ----- */
+.yogurtpure .detail-content__tagline {
+color: #f5e8e8;
+}
+
+
+/* ----- CONTENT TEXT ----- */
+.yogurtpure .detail-content__body__section__content p {
+color: #da4e4e;
+} 
+
+
+
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+/* - Title - */
+.yogurtpure .detail-information__row h2 {
+color: #f5e8e8;
+}
+
+/* - Text - */
+.yogurtpure .detail-information__row p {
+color: #da4e4e	;
+}
+
+/* - Link & Social- */
+.yogurtpure .detail-information__row a {
+    color: #da4e4e; }
+
+.yogurtpure .detail-information__row a:visited {
+    color: #da4e4e;
+}
+
+.yogurtpure .detail-information__row a:hover {
+    color: #e87e7e;
+}
+
+.yogurtpure .detail-information__row a:active {
+    color: #f5bcbc;
+}
+
+/* ----------------------------------- /FOOTER ------------------------------ */
+
+
+
+
+/* ------------------------------ NAVIGATE ------------------------------ */
+
+
+/* - Border - */
+.yogurtpure .detail-nav__link-list {
+border-color: #da4e4e;
+}
+
+.yogurtpure .detail-nav__link-list__item__link {
+border-right-color:	#da4e4e;
+}
+
+
+
+/* - Title - */
+.yogurtpure .detail-nav h2 {
+color: #f5e8e8;
+}
+
+/* - Text - */
+.yogurtpure .detail-nav p {
+color: #da4e4e	;
+}
+
+/* - Link & Social- */
+.yogurtpure .detail-nav a {
+    color: #da4e4e; }
+
+.yogurtpure .detail-nav a:visited {
+    color: #da4e4e;
+}
+
+.yogurtpure .detail-nav a:hover {
+    color: #bbc1c3;
+}
+
+.yogurtpure .detail-nav a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /NAVIGATE ------------------------------ */
+
+
+
+
+
+

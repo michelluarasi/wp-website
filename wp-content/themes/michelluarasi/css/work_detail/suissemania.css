@@ -1,0 +1,95 @@
+
+
+
+/* --------------------------- HEADER ------------------------------ */
+
+/* - Project Title - */
+.suissemania h1.detail-header__content__project-name {
+color: white;
+}
+
+/* - Project Subtitle - */
+.suissemania p.detail-header__content__subtitle {
+color: white;
+}
+
+/* - Video Transparency - */
+.video-container {
+    opacity: 0.8;
+}
+
+/* ------------------------------ /HEADER ------------------------------ */
+
+
+/* ------------------------- CONTENT COLORS ------------------------------ */
+
+
+/* - Background - */
+.suissemania .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #212224;
+}
+
+/* - Lead - */
+.suissemania p.lead {
+	color: #F5F7FA;
+}
+
+/* - Titles - */
+.suissemania h2, h3, h4 {
+	color: #F5F7FA;
+}
+
+/* - Paragraph, Hidden Link, Share - */
+.suissemania p, a.hidden:link, a.hidden:visited, .suissemania .share-menu .share-menu__list-item__link{
+	color: #5C6066;
+}
+
+
+/* - Hidden Link Hover - */
+a.hidden:hover{
+	color: #F5F7FA;
+}
+
+
+/* ------------------------- /CONTENT COLORS ------------------------------ */
+
+
+
+/* ----------------------------- DETAIL NAV ------------------------------ */
+
+
+/* - Border - */
+.suissemania .detail-nav__link-list, .suissemania .detail-nav__link-list__item__link {
+	border-color: #5C6066;
+}
+
+/* - States - */
+.suissemania .detail-nav a, .detail-nav a:visited {
+    color: #F5F7FA;
+    background-color: #212224;
+ }
+
+.suissemania .detail-nav a:hover {
+    color: #F5F7FA;
+    background-color: #5C6066;
+}
+
+.suissemania .detail-nav a:active {
+    color: #303133;
+    background-color: #F5F7FA;
+}
+
+/* ----------------------------- /DETAIL NAV ------------------------------ */
+
+
+
+/* ------------------------------ OTHER FIXES ------------------------------ */
+
+.one-column {
+	margin: 0 auto;
+}
+
+/* ------------------------------ /OTHER FIXES ------------------------------ */
+
+
+

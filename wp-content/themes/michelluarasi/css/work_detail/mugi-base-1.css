@@ -1,0 +1,391 @@
+
+
+/* ------------------------------ NAVIGATE ------------------------------ */
+
+
+/* - Hidden Links- */
+.journal-new a.hidden:link {
+    color: #666666; }
+
+.journal-new a.hidden:visited {
+    color: #666666;
+}
+
+.journal-new a.hidden:hover {
+    color: #5259d4;
+}
+
+.journal-new a.hidden:active {
+    color: #9094e4;
+}
+
+
+
+
+/* ----------------------------------- /NAVIGATE ------------------------------ */
+
+
+
+/* ------------------------------ COPY ------------------------------ */
+
+
+/*  Link ------------------------------ */
+
+
+/* -  - */
+
+i>a {
+    text-decoration: none;
+    color: #5259d4;
+}
+
+i>a:hover {
+    text-decoration: underline;
+}
+
+i>a:active {
+    color: #9094e4;
+}
+
+
+/*  Decoration ------------------------------ */
+
+strong {
+    font-weight: 600;
+    color: #303133;
+}
+
+
+i {
+    font-style: italic;
+}
+
+
+/*  Paragraphs ------------------------------ */
+
+em, p {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #5c6066;
+    padding: 0px 0 24px 0;
+    margin: 0;
+}
+
+
+p.lead {
+    font-size: 24px;
+    line-height: 36px;
+    color: #5259d4;
+    padding: 0px 0 36px 0;
+    margin: 0;
+}
+
+p.footnote {
+    font-size: 13px;
+    line-height: 16px;
+    color: #8a9099;
+    padding: 0;
+    margin: 0;
+}
+
+/*  Titles ------------------------------ */
+
+
+h1, h2, h3, h4, h5 { 
+    color: #303133;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0;
+
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 48px;
+    padding: 48px 0 24px 0;
+} 
+
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 24px 0 18px 0;
+} 
+
+h3 {
+
+    font-size: 18px;
+    line-height: 18px;
+    padding: 24px 0 12px 0;
+} 
+
+h4 {
+    font-size: 11px;
+    line-height: 11px;
+    padding: 24px 0 6px 0;
+} 
+
+
+/*  Quotes ------------------------------ */
+
+
+blockquote {
+    border-left: 4px solid #5259d4;
+    color: #303133;
+    font-style: italic;
+    margin: 30px 0 30px 15px;
+    padding-left: 20px;
+    font-size: 21px
+}
+
+blockquote cite {
+    display: block;
+    font-size: 11px;
+    line-height: 11px;
+    font-style: normal;
+    color: #303133;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 8px 0 0 0;
+}
+
+    blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+
+/*  Code ------------------------------ */
+
+code {
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	font-size: 12px;
+	border-radius: 3px;
+	padding: 4px 8px 2px 8px;
+	color: #303133;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    background-color: white;
+}
+
+/*  Lists ------------------------------ */
+
+
+ul, ol{
+    -webkit-padding-start: 40px;
+    color: #303133;
+    font-weight: 600;
+    font-size: 19px;
+
+}
+
+li{
+}
+
+ul{
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+
+/*  List Debugging ------------------------------ */
+
+.share-menu {
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 16px;
+
+}
+
+.footer__list, .social-links {
+    -webkit-padding-start: 0;
+}
+
+/* ------------------------------ /COPY ------------------------------ */
+
+
+/* ------------------------------ BUTTONS ------------------------------ */
+
+
+.btn {
+    display: inline-block;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+    margin: 12px 0 12px 0;
+}
+
+.btn-l {
+    height:     64px;
+    padding:    16px 64px;
+    font-size:  13px;
+}
+
+.btn-m {
+    height:     48px;
+    padding:    12px 48px;
+    font-size:  11px;
+}
+
+.btn-s {
+    height:     32px;
+    padding:    8px 32px;
+    font-size:  9px;
+}
+
+
+
+/*  Colors / Hovers / Active ------------------------------ */
+
+/* Violet */
+
+
+.btn-violet{
+    color: white;
+    background-color: #5259d4;
+}
+
+.btn-violet:hover{
+    background-color: #3e44bb;
+}
+
+.btn-violet:active{
+    color: white;
+    background-color: #5259d4;
+}
+
+/* Dark */
+
+.btn-dark{
+    color: white;
+    background-color: #303133;
+}
+
+.btn-dark:hover{
+    background-color: #18181a;
+}
+
+.btn-dark:active{
+    color: white;
+    background-color: #303133;
+}
+
+/* Grey */
+
+.btn-grey{
+	color: #303133;
+    background-color: #bcc2cc;
+}
+
+.btn-grey:hover{
+    background-color: #b1b8c5;
+}
+
+.btn-grey:active{
+	color: #303133;
+    background-color: #bcc2cc;
+}
+
+/* White */
+
+.btn-white{
+    color: rgba(48, 49, 51, 1);
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.2);
+    background-color: white;
+}
+
+.btn-white:hover{
+    color: rgba(48, 49, 51, 0.8);
+    border-color: rgba(128, 128, 128, 0.4);
+    background-color: white;
+}
+
+.btn-white:active{
+    color: rgba(48, 49, 51, 1);
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.2);
+    background-color: white;
+}
+
+/* Transparent */
+
+.btn-transparent{
+    color: rgba(48, 49, 51, 1);
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-transparent:hover {
+    color: rgba(48, 49, 51, 0.8);
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-transparent:active {
+    color: rgba(48, 49, 51, 1);
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+/* ------------------------------ /BUTTONS ------------------------------ */
+
+
+/* ------------------------------ LAYOUT ------------------------------ */
+
+
+.one-column {
+    margin: 20px auto;
+    max-width: 640px;
+    padding: 0;
+}
+
+
+/* ------------------------------ /LAYOUT ------------------------------ */
+
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+
+@media (max-width: 640px){
+    .footer .footer__body{
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+/* ------------------------------ /FOOTER ------------------------------ */
+
+
+
+/* ------------------------------ SEPARATOR ------------------------------ */
+
+
+hr { 
+    width: 100%;
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-top: 1px solid #e6e8eb;
+}
+
+
+/* ----------------------------------- /SEPARATOR ------------------------------ */
+
+
+
+

@@ -1,0 +1,102 @@
+
+
+
+/* ----- BACKGROUND COLOR ----- */
+.bontadivina .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #262626;
+}
+
+
+/* ----- LEAD IN TEXT ----- */
+.bontadivina .detail-content__tagline {
+color: #eaeaea;
+}
+
+
+/* ----- CONTENT TEXT ----- */
+.bontadivina .detail-content__body__section__content p {
+color: #939393;
+} 
+
+
+
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+/* - Title - */
+.bontadivina .detail-information__row h2 {
+color: #eaeaea;
+}
+
+/* - Text - */
+.bontadivina .detail-information__row p {
+color: #939393	;
+}
+
+/* - Link & Social- */
+.bontadivina .detail-information__row a {
+    color: #939393; }
+
+.bontadivina .detail-information__row a:visited {
+    color: #939393;
+}
+
+.bontadivina .detail-information__row a:hover {
+    color: #c5c5c5;
+}
+
+.bontadivina .detail-information__row a:active {
+    color: #ffffff;
+}
+
+/* ----------------------------------- /FOOTER ------------------------------ */
+
+
+
+/* ------------------------------ NAVIGATE ------------------------------ */
+
+
+/* - Border - */
+.bontadivina .detail-nav__link-list {
+border-color: #7a7879;
+}
+
+.bontadivina .detail-nav__link-list__item__link {
+border-right-color:	#7a7879;
+}
+
+
+
+/* - Title - */
+.bontadivina .detail-nav h2 {
+color: #eaeaea;
+}
+
+/* - Text - */
+.bontadivina .detail-nav p {
+color: #939393	;
+}
+
+/* - Link & Social- */
+.bontadivina .detail-nav a {
+    color: #7a7879; }
+
+.bontadivina .detail-nav a:visited {
+    color: #7a7879;
+}
+
+.bontadivina .detail-nav a:hover {
+    color: #bbc1c3;
+}
+
+.bontadivina .detail-nav a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /NAVIGATE ------------------------------ */
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+
+
+
+
+/* --------------------------- HEADER ------------------------------ */
+
+/* - Project Title - */
+.hoststar h1.detail-header__content__project-name {
+color: white;
+}
+
+/* - Project Subtitle - */
+.hoststar p.detail-header__content__subtitle {
+color: white;
+}
+
+/* ------------------------------ /HEADER ------------------------------ */
+
+
+/* ------------------------- CONTENT COLORS ------------------------------ */
+
+
+/* - Background - */
+.hoststar .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #383a3f;
+}
+
+/* - Lead - */
+.hoststar p.lead {
+color: #e6e9f2;
+}
+
+/* - Paragraph, Hidden Link, Share - */
+.hoststar p, a.hidden:link, a.hidden:visited, .hoststar .share-menu .share-menu__list-item__link{
+color: #8d9099;
+} 
+
+/* - Titles - */
+.hoststar h2, h3, h4 {
+color: #e6e9f2;
+}
+
+/* ------------------------- /CONTENT COLORS ------------------------------ */
+
+
+
+
+/* ----------------------------- DETAIL NAV ------------------------------ */
+
+
+/* - Border - */
+.hoststar .detail-nav__link-list, .hoststar .detail-nav__link-list__item__link {
+border-color: #999999;
+}
+
+/* - States - */
+.hoststar .detail-nav a, .detail-nav a:visited {
+    color: #F5F7FA;
+    background-color: #383a3f;
+ }
+
+.hoststar .detail-nav a:hover {
+    color: #F5F7FA;
+    background-color: #999999;
+}
+
+.hoststar .detail-nav a:active {
+    color: #303133;
+    background-color: #F5F7FA;
+}
+
+/* ----------------------------- /DETAIL NAV ------------------------------ */
+
+
+
+/* ------------------------------ OTHER FIXES ------------------------------ */
+
+.one-column {
+margin: 0 auto;
+}
+
+/* ------------------------------ /OTHER FIXES ------------------------------ */
+

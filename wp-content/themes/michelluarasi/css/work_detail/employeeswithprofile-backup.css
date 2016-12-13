@@ -1,0 +1,104 @@
+
+
+
+/* ----- BACKGROUND COLOR ----- */
+.employeeswithprofile .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #2b3335;
+}
+
+
+/* ----- LEAD IN TEXT ----- */
+.employeeswithprofile .detail-content__tagline {
+color: #eaebeb;
+}
+
+
+/* ----- CONTENT TEXT ----- */
+.employeeswithprofile .detail-content__body__section__content p {
+color: #95999a;
+} 
+
+
+
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+/* - Title - */
+.employeeswithprofile .detail-information__row h2 {
+color: #eaebeb;
+}
+
+/* - Text - */
+.employeeswithprofile .detail-information__row p {
+color: #95999a	;
+}
+
+/* - Link & Social- */
+.employeeswithprofile .detail-information__row a {
+    color: #95999a; }
+
+.employeeswithprofile .detail-information__row a:visited {
+    color: #95999a;
+}
+
+.employeeswithprofile .detail-information__row a:hover {
+    color: #bbc1c3;
+}
+
+.employeeswithprofile .detail-information__row a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /FOOTER ------------------------------ */
+
+
+/* ------------------------------ NAVIGATE ------------------------------ */
+
+
+/* - Border - */
+.employeeswithprofile .detail-nav__link-list {
+border-color: #95999a;
+}
+
+.employeeswithprofile .detail-nav__link-list__item__link {
+border-right-color:	#95999a;
+}
+
+
+
+/* - Title - */
+.employeeswithprofile .detail-nav h2 {
+color: #eaebeb;
+}
+
+/* - Text - */
+.employeeswithprofile .detail-nav p {
+color: #95999a	;
+}
+
+/* - Link & Social- */
+.employeeswithprofile .detail-nav a {
+    color: #95999a; }
+
+.employeeswithprofile .detail-nav a:visited {
+    color: #95999a;
+}
+
+.employeeswithprofile .detail-nav a:hover {
+    color: #bbc1c3;
+}
+
+.employeeswithprofile .detail-nav a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /NAVIGATE ------------------------------ */
+
+
+
+
+
+
+
+
+

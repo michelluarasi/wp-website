@@ -1,0 +1,89 @@
+
+
+
+/* --------------------------- HEADER ------------------------------ */
+
+/* - Project Title - */
+.employeeswithprofile h1.detail-header__content__project-name {
+color: white;
+}
+
+/* - Project Subtitle - */
+.employeeswithprofile p.detail-header__content__subtitle {
+color: white;
+}
+
+/* ------------------------------ /HEADER ------------------------------ */
+
+
+/* ------------------------- CONTENT COLORS ------------------------------ */
+
+
+/* - Background - */
+.employeeswithprofile .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #2b3335;
+}
+
+/* - Lead - */
+.employeeswithprofile p.lead {
+color: #eaebeb;
+}
+
+/* - Paragraph, Hidden Link, Share - */
+.employeeswithprofile p, a.hidden:link, a.hidden:visited, .employeeswithprofile .share-menu .share-menu__list-item__link{
+color: #95999a;
+} 
+
+
+/* - Titles - */
+.employeeswithprofile h2, h3, h4{
+color: #eaebeb;
+}
+
+/* ------------------------- /CONTENT COLORS ------------------------------ */
+
+
+
+/* ----------------------------- DETAIL NAV ------------------------------ */
+
+
+/* - Border - */
+.employeeswithprofile .detail-nav__link-list, .employeeswithprofile .detail-nav__link-list__item__link {
+border-color: #95999a;
+}
+
+/* - Text - */
+.employeeswithprofile .detail-nav p {
+color: #95999a	;
+}
+
+/* - States - */
+.employeeswithprofile .detail-nav a, .detail-nav a:visited {
+    color: #95999a;
+    background-color: #222426;
+ }
+
+.employeeswithprofile .detail-nav a:hover {
+    color: #bbc1c3;
+    background-color: #737680;
+}
+
+.employeeswithprofile .detail-nav a:active {
+    color: #e0eaec;
+    background-color: #e6edf2;
+}
+
+/* ----------------------------- /DETAIL NAV ------------------------------ */
+
+
+
+
+/* ------------------------------ OTHER FIXES ------------------------------ */
+
+.one-column {
+margin: 0 auto;
+}
+
+/* ------------------------------ /OTHER FIXES ------------------------------ */
+
+

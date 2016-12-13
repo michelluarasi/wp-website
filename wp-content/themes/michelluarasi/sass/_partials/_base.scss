@@ -1,0 +1,687 @@
+$base-header-font: "proxima-nova";
+$base-copy-font: "proxima-nova";
+$base-copy-italic-font:"proxima-nova";
+$base-opacity-value: 0.5;
+
+@import "compass/css3";
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+a, a:active, a:visited, a:focus{
+    outline: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.hide{
+	display:none;
+}
+
+%header{
+	text-transform:uppercase;
+	font-family: $base-header-font;
+}
+
+%copy{
+	font-family: $base-copy-font;	
+	color:white;
+	opacity:$base-opacity-value;
+}
+
+%inputreset {
+	outline:0;
+  	border:none;
+	-webkit-appearance: none;
+	background-color: white;
+	border-radius: 0;
+	&:focus {
+		outline: 0;
+	}
+}
+
+.h2{
+	font-size: 11px;
+	line-height: 16px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin:0;
+	padding:36px 0 0 0;
+	@include breakpoint(baby-bear){
+		padding-top: 20px;
+	}
+}
+
+.body_text{
+	font-size:19px;
+	line-height: 30px;
+	margin:0;
+	padding:0;
+	color:#666;
+	a{
+		text-decoration: none;
+		color:#5259d4;
+		&:hover{
+			text-decoration: underline;
+		}
+
+		&:active{
+			color:#9094e4;
+		}
+	}
+
+	@include breakpoint(baby-bear){
+		width:100%;
+		margin-top:0px;
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 21px;
+		padding:0 20px;
+	}
+}
+
+.btn{
+	@extend %inputreset;
+	display:inline-block;
+	border-radius: 4px;
+	letter-spacing: 2px;
+	padding:12px 40px;
+	text-transform: uppercase;
+	background-color: #333333;
+	color:#fff;
+	font-size: 11px;
+	font-weight:800;
+	text-decoration: none;
+
+	&:hover{
+		background-color: #000;
+	}
+
+	&:active{
+		background-color: #333;
+	}
+}
+
+.emphasis{
+	opacity:1;
+}
+
+.semi-transparent{
+	opacity:$base-opacity-value;
+}
+
+.is-visible-mobile{
+	visibility: hidden !important;
+}
+
+@include breakpoint(baby-bear){
+	.is-visible-mobile{
+		visibility: visible !important;
+	}
+	.is-hidden-mobile{
+		visibility: hidden !important;
+	}
+}
+
+
+/* ------------------------------ MUGI BASE ------------------------------ */
+
+
+body{
+    -moz-osx-font-smoothing: grayscale;   /*o Only Firefox */
+}
+
+
+
+/* ------------------------------ NAVIGATE ------------------------------ */
+
+
+/* - Hidden Links- */
+a.hidden:link {
+    color: #666666; }
+
+a.hidden:visited {
+    color: #666666;
+}
+
+a.hidden:hover {
+    color: #5259d4;
+}
+
+a.hidden:active {
+    color: #9094e4;
+}
+
+
+
+
+/* ----------------------------------- /NAVIGATE ------------------------------ */
+
+
+
+/* ------------------------------ COPY ------------------------------ */
+
+/* General ------------------------------*/
+.copy-white{
+    color: white;
+}
+
+
+/*  Link ------------------------------  */
+
+i>a {
+    text-decoration: none;
+    color: #5259d4;
+}
+
+i>a:hover {
+    text-decoration: underline;
+}
+
+i>a:active {
+    color: #9094e4;
+}
+
+/*  Titles ------------------------------ */
+
+h1, h2, h3, h4, h5 { 
+    color: #303133;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 48px;
+    line-height: 48px;
+    padding: 48px 0 24px 0;
+    @include breakpoint(baby-bear){
+      font-size: 30px;
+      line-height: 30px;
+      padding: 36px 0 21px 0;
+    }
+}
+
+
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 48px 0 18px 0;
+    @include breakpoint(baby-bear){
+       font-size: 24px;
+       line-height: 30px;
+       padding: 24px 0 16px 0;
+    }
+}
+
+h3 {
+
+    font-size: 18px;
+    line-height: 18px;
+    padding: 24px 0 12px 0;
+    @include breakpoint(baby-bear){
+      font-size: 16px;
+      line-height: 16px;
+      padding: 24px 0 12px 0;
+    }
+}
+
+
+
+h4 {
+    font-size: 11px;
+    line-height: 11px;
+    padding: 24px 0 6px 0;
+}
+
+/*  Paragraphs ------------------------------ */
+
+em, p {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #5c6066;
+    padding: 0px 0 24px 0;
+    margin: 0;
+    @include breakpoint(baby-bear){
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 0px 0 18px 0;
+    }
+}
+
+p.lead {
+    font-size: 24px;
+    line-height: 36px;
+    color: #5259d4;
+    padding: 0px 0 36px 0;
+    margin: 0;
+    @include breakpoint(baby-bear){
+      font-size: 21px;
+      line-height: 30px;
+      padding: 0px 0 24px 0;
+    }
+}
+
+
+p.footnote {
+    font-size: 13px;
+    line-height: 16px;
+    color: #8a9099;
+    padding: 0px 0 12px 0;
+    margin: 0;
+    @include breakpoint(baby-bear){
+     font-size: 11px;
+     line-height: 13px;
+     padding: 0px 0 12px 0;
+    }
+}
+
+/*  Quotes ------------------------------ */
+
+
+blockquote {
+    border-left: none;
+    color: #303133;
+    font-style: italic;
+    margin: 30px 0;
+    padding-left: 0;
+    font-size: 21px;
+    @include breakpoint(baby-bear){
+      margin: 18px 12px;
+      font-size: 18px
+    }
+}
+
+
+/*  Lists ------------------------------ */
+
+
+ul, ol{
+    -webkit-padding-start: 40px;
+    -moz-padding-start: 40px;
+
+    color: #303133;
+    font-weight: 600;
+    font-size: 19px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    list-style: disc;
+    @include breakpoint(baby-bear){
+      -webkit-padding-start: 30px;
+      font-size: 16px;
+    }
+}
+
+ol {
+  list-style: decimal;
+}
+
+
+/*  List Debugging ------------------------------ */
+
+.share-menu {
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 16px;
+
+}
+
+.footer__list, .social-links {
+    -webkit-padding-start: 0;
+}
+
+img{
+    width: 100%;
+}
+
+/* ------------------------------ BUTTONS ------------------------------ */
+
+
+.btn, .btn:hover {
+    display: inline-block;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800;
+    margin: 12px 0 12px 0;
+}
+
+
+.btn-l {
+    height:     64px;
+    padding:    20px 64px;
+    font-size:  13px;
+}
+
+.btn-m {
+    height:     48px;
+    padding:    2px 48px;
+    font-size:  11px;
+    line-height:48px;
+}
+
+.btn-s {
+    height:     32px;
+    padding:    3px 32px;
+    font-size:  9px;
+}
+
+
+
+/*  Colors / Hovers / Active ------------------------------ */
+
+/* Violet */
+
+
+.btn-violet{
+    color: white;
+    background-color: #5259d4;
+}
+
+.btn-violet:hover{
+    background-color: #3e44bb;
+}
+
+.btn-violet:active{
+    color: white;
+    background-color: #5259d4;
+}
+
+/* Dark */
+
+.btn-dark{
+    color: white;
+    background-color: #303133;
+}
+
+.btn-dark:hover{
+    background-color: #18181a;
+}
+
+.btn-dark:active{
+    color: white;
+    background-color: #303133;
+}
+
+/* Grey */
+
+.btn-grey{
+    color: #303133;
+    background-color: #bcc2cc;
+}
+
+.btn-grey:hover{
+    background-color: #b1b8c5;
+}
+
+.btn-grey:active{
+    color: #303133;
+    background-color: #bcc2cc;
+}
+
+/* White */
+
+.btn-white{
+    color: rgba(48, 49, 51, 1);
+    background-color: white;
+}
+
+.btn-white:hover{
+    background-color: rgba(255, 255, 255, 0.9);;
+}
+
+.btn-white:active{
+    color: rgba(48, 49, 51, 1);
+    background-color: white;
+}
+
+/* Transparent */
+
+.btn-trans{
+    color: rgba(48, 49, 51, 1);
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-trans:hover {
+    color: rgba(48, 49, 51, 0.8);
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-trans:active {
+    color: rgba(48, 49, 51, 1);
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+/* ------------------------------ /BUTTONS ------------------------------ */
+
+/* ------------------------------ INPUT ------------------------------ */
+
+
+.form {
+    padding: 0;
+   /* font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
+    font-family: "proxima-nova";
+    font-size: 19px;
+    font-weight: 400;
+}
+.form li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form input[type=text], 
+.form input[type=date],
+.form input[type=datetime],
+.form input[type=number],
+.form input[type=search],
+.form input[type=time],
+.form input[type=url],
+.form input[type=email],
+textarea, 
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+.form input[type=text]:focus, 
+.form input[type=date]:focus,
+.form input[type=datetime]:focus,
+.form input[type=number]:focus,
+.form input[type=search]:focus,
+.form input[type=time]:focus,
+.form input[type=url]:focus,
+.form input[type=email]:focus,
+.form textarea:focus, 
+.form select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.form .field-left{
+    width: 49%;
+}
+
+.form .field-right{
+    width: 49%;
+}
+
+.form .field-long{
+    width: 100%;
+}
+.form .field-select{
+    width: 100%;
+}
+.form .field-textarea{
+    height: 100px;
+}
+.form input[type=submit], .form input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+.form input[type=submit]:hover, .form input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form .required{
+    color:red;
+}
+
+/* ------------------------------ /INPUT ------------------------------ */
+
+/* ------------------------------ LAYOUT ------------------------------ */
+
+
+.one-column {
+    margin: 20px auto;
+    max-width: 640px;
+    padding: 0;
+}
+
+.one-column {
+    margin: 20px auto;
+    max-width: 640px;
+    padding: 0;
+    @include breakpoint(baby-bear){
+            margin: 20px;
+    }
+}
+
+
+/* ------------------------------ /LAYOUT ------------------------------ */
+
+/* ------------------------------ FOOTER ------------------------------ 
+
+
+@media (max-width: 640px){
+    .footer .footer__body{
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+
+/* ------------------------------ /FOOTER ------------------------------ */
+
+
+
+/* ------------------------------ SEPARATOR ------------------------------ */
+
+
+hr { 
+    width: 100%;
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-top: 1px solid #e6e8eb;
+    @include breakpoint(baby-bear){
+       margin-top: 24px;
+       margin-bottom: 24px;
+    }
+}
+
+
+
+
+hr.empty { 
+    width: 100%;
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    @include breakpoint(baby-bear){
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+}
+
+
+/* ----------------------------------- /SEPARATOR ------------------------------ */
+
+
+/* ------------------------------ MAILCHIMP ------------------------------  */
+
+
+#mc_embed_signup #mce-success-response #mce-error-response  {
+    font-family: "proxima-nova";
+    font-style: normal;
+    font-weight: 400;
+}
+
+#mce-success-response{
+    color: #78C32D;
+}
+
+#mce-error-response  {
+    color: #DD6271;
+}
+
+#mc_embed_signup #mce-EMAIL {
+    font-size: 17px;
+    letter-spacing: 0px;
+}
+/* ------------------------------ /MAILCHIMP ------------------------------  */
+
+
+
+/* ------------------------------ /MUGI BASE ------------------------------ */
+
+
+
+
+

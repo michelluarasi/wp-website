@@ -1,0 +1,89 @@
+
+
+
+/* --------------------------- HEADER ------------------------------ */
+
+/* - Project Title - */
+.bucherer h1.detail-header__content__project-name {
+color: white;
+}
+
+/* - Project Subtitle - */
+.bucherer p.detail-header__content__subtitle {
+color: white;
+}
+
+/* ------------------------------ /HEADER ------------------------------ */
+
+
+/* ------------------------- CONTENT COLORS ------------------------------ */
+
+
+/* - Background - */
+.bucherer .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #222426;
+}
+
+/* - Lead - */
+.bucherer p.lead {
+color: #e6edf2;
+}
+
+/* - Paragraph, Hidden Link, Share - */
+.bucherer p, a.hidden:link, a.hidden:visited, .bucherer .share-menu .share-menu__list-item__link{
+color: #737680;
+} 
+
+
+/* - Titles - */
+.bucherer h2, h3, h4{
+color: #e6edf2;
+}
+
+/* ------------------------- /CONTENT COLORS ------------------------------ */
+
+
+
+/* ----------------------------- DETAIL NAV ------------------------------ */
+
+
+/* - Border - */
+.bucherer .detail-nav__link-list, .bucherer .detail-nav__link-list__item__link {
+border-color: #737680;
+}
+
+/* - Text - */
+.bucherer .detail-nav p {
+color: #737680	;
+}
+
+/* - States - */
+.bucherer .detail-nav a, .detail-nav a:visited {
+    color: #737680;
+    background-color: #222426;
+ }
+
+.bucherer .detail-nav a:hover {
+    color: #222426;
+    background-color: #737680;
+}
+
+.bucherer .detail-nav a:active {
+    color: #222426;
+    background-color: #e6edf2;
+}
+
+/* ----------------------------- /DETAIL NAV ------------------------------ */
+
+
+
+/* ------------------------------ OTHER FIXES ------------------------------ */
+
+.one-column {
+margin: 0 auto;
+}
+
+/* ------------------------------ /OTHER FIXES ------------------------------ */
+
+
+

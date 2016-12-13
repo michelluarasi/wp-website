@@ -1,0 +1,105 @@
+
+
+
+/* --------------------------- HEADER ------------------------------ */
+
+/* - Project Title - */
+.beatricemueller h1.detail-header__content__project-name {
+color: white;
+}
+
+/* - Project Subtitle - */
+.beatricemueller p.detail-header__content__subtitle {
+color: white;
+}
+
+
+
+/* ------------------------------ /HEADER ------------------------------ */
+
+
+/* ------------------------- CONTENT COLORS ------------------------------ */
+
+
+/* - Background - */
+.beatricemueller .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #2A2E34;
+}
+
+/* - Lead - */
+.beatricemueller p.lead {
+color: #e6edf2;
+}
+
+/* - Paragraph - */
+.beatricemueller p, a.hidden:visited, a.hidden:link {
+color: #F5F7FA;
+} 
+
+/* - Titles - */
+.beatricemueller h2, h3, h4 {
+color: #F5F7FA;
+}
+
+/* ------------------------- /CONTENT COLORS ------------------------------ */
+
+
+
+/* ----------------------------- DETAIL NAV ------------------------------ */
+
+
+/* - Border - */
+.beatricemueller .detail-nav__link-list {
+border-color: #737680;
+}
+
+.beatricemueller .detail-nav__link-list__item__link {
+border-right-color:	#737680;
+}
+
+/* - Text - */
+.beatricemueller .detail-nav p {
+color: #737680	;
+}
+
+.beatricemueller .share-menu .share-menu__list-item__link {
+color: #737680;
+}
+
+/* - States - */
+.beatricemueller .detail-nav a {
+    color: #737680;
+    background-color: #222426;
+ }
+
+.beatricemueller .detail-nav a:visited {
+    color: #737680;
+    background-color: #222426;
+
+}
+
+.beatricemueller .detail-nav a:hover {
+    color: #222426;
+    background-color: #737680;
+
+}
+
+.beatricemueller .detail-nav a:active {
+    color: #222426;
+    background-color: #e6edf2;
+}
+
+/* ----------------------------- /DETAIL NAV ------------------------------ */
+
+
+
+/* ------------------------------ OTHER FIXES ------------------------------ */
+
+.one-column {
+margin: 0 auto;
+}
+
+/* ------------------------------ /OTHER FIXES ------------------------------ */
+
+
+

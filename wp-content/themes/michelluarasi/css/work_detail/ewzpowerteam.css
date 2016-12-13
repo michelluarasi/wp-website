@@ -1,0 +1,104 @@
+
+
+
+/* ----- BACKGROUND COLOR ----- */
+.ewzpowerteam .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #131313;
+}
+
+
+/* ----- LEAD IN TEXT ----- */
+.ewzpowerteam .detail-content__tagline {
+color: #d3d2d2;
+}
+
+
+/* ----- CONTENT TEXT ----- */
+.ewzpowerteam .detail-content__body__section__content p {
+color: #7a7879;
+} 
+
+
+
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+/* - Title - */
+.ewzpowerteam .detail-information__row h2 {
+color: #d3d2d2;
+}
+
+/* - Text - */
+.ewzpowerteam .detail-information__row p {
+color: #7a7879	;
+}
+
+/* - Link & Social- */
+.ewzpowerteam .detail-information__row a {
+    color: #7a7879; }
+
+.ewzpowerteam .detail-information__row a:visited {
+    color: #7a7879;
+}
+
+.ewzpowerteam .detail-information__row a:hover {
+    color: #bbc1c3;
+}
+
+.ewzpowerteam .detail-information__row a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /FOOTER ------------------------------ */
+
+
+/* ------------------------------ NAVIGATE ------------------------------ */
+
+
+/* - Border - */
+.ewzpowerteam .detail-nav__link-list {
+border-color: #7a7879;
+}
+
+.ewzpowerteam .detail-nav__link-list__item__link {
+border-right-color:	#7a7879;
+}
+
+
+
+/* - Title - */
+.ewzpowerteam .detail-nav h2 {
+color: #eaebeb;
+}
+
+/* - Text - */
+.ewzpowerteam .detail-nav p {
+color: #7a7879	;
+}
+
+/* - Link & Social- */
+.ewzpowerteam .detail-nav a {
+    color: #7a7879; }
+
+.ewzpowerteam .detail-nav a:visited {
+    color: #7a7879;
+}
+
+.ewzpowerteam .detail-nav a:hover {
+    color: #bbc1c3;
+}
+
+.ewzpowerteam .detail-nav a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /NAVIGATE ------------------------------ */
+
+
+
+
+
+
+
+
+

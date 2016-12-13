@@ -1,0 +1,33 @@
+/* STATES */
+
+// video
+.video.no-touch .home-bg{
+	display:none;
+}
+
+.video.no-touch .img-fallback{
+	display:none;
+}
+
+
+// no video
+.no-video .video-container, .touch .video-container{
+	display:none;
+}
+
+.home .footer{
+	display:none;
+}
+
+
+.no-video .detail-header--video, .touch .detail-header--video{
+	padding-bottom:50%;
+	height: 0;
+	@include breakpoint(mama-bear){
+		padding-bottom:71%;
+	}
+
+	@include breakpoint(baby-bear){
+		padding-bottom:100%;
+	}
+}

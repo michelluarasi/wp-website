@@ -1,0 +1,94 @@
+
+
+
+/* ----- BACKGROUND COLOR ----- */
+.handsomemag .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+	background-color: #ede5ce;
+}
+
+
+/* ----- LEAD IN TEXT ----- */
+.handsomemag .detail-content__tagline {
+color: #d16a59;
+}
+
+
+/* ----- CONTENT TEXT ----- */
+.handsomemag .detail-content__body__section__content p {
+color: #a5a090;
+} 
+
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+/* - Title - */
+.handsomemag .detail-information__row h2 {
+color: #d16a59;
+}
+
+/* - Text - */
+.handsomemag .detail-information__row p {
+color: #a5a090	;
+}
+
+/* - Link & Social- */
+.handsomemag .detail-information__row a {
+    color: #a5a090; }
+
+.handsomemag .detail-information__row a:visited {
+    color: #a5a090;
+}
+
+.handsomemag .detail-information__row a:hover {
+    color: #706d63;
+}
+
+.handsomemag .detail-information__row a:active {
+    color: #34332e;
+}
+
+/* ----------------------------------- /FOOTER ------------------------------ */
+
+
+/* ------------------------------ NAVIGATE ------------------------------ */
+
+
+/* - Border - */
+.handsomemag .detail-nav__link-list {
+border-color: #a5a090;
+}
+
+.handsomemag .detail-nav__link-list__item__link {
+border-right-color:	#a5a090;
+}
+
+
+
+/* - Title - */
+.handsomemag .detail-nav h2 {
+color: #d16a59;
+}
+
+/* - Text - */
+.handsomemag .detail-nav p {
+color: #a5a090	;
+}
+
+/* - Link & Social- */
+.handsomemag .detail-nav a {
+    color: #a5a090; }
+
+.handsomemag .detail-nav a:visited {
+    color: #a5a090;
+}
+
+.handsomemag .detail-nav a:hover {
+    color: #bbc1c3;
+}
+
+.handsomemag .detail-nav a:active {
+    color: #e0eaec;
+}
+
+/* ----------------------------------- /NAVIGATE ------------------------------ */
+
