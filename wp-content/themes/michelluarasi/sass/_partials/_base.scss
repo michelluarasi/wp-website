@@ -28,8 +28,24 @@ a, a:active, a:visited, a:focus{
 
  
 // START show on scroll animation
-// Variant 1
+
+// Variant Slide In
+
 .scroll_reveal-slide_in {
+  transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0,40px,0);
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+// Variant Fade In
+.scroll_reveal-fade_in {
   transition: transform 300ms ease-out, visibility 300ms ease-out;
   visibility: hidden;
   transform: translateY(100px);
@@ -39,11 +55,6 @@ a, a:active, a:visited, a:focus{
     visibility: visible;
     opacity: 1;
   }
-}
-
-// Variant 2
-.scroll_reveal-slide_in_slow {
-
 }
 
 // END show on scroll animation

@@ -20,18 +20,10 @@
 	@include breakpoint(baby-bear){
 		margin-bottom:40px;
 	}
-
-	opacity: 1;
-   	transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
 }
 
-.journal-list__item:hover {
-      opacity: 0.8;
-     }
-
 .journal-list__item__link{
+	transition: opacity 400ms ease-out;
 	display:block;
 	text-decoration: none;
 	margin-bottom:10px;
@@ -39,6 +31,10 @@
 	@include breakpoint(baby-bear){
 		margin-bottom:5px;
 	}
+}
+
+.journal-list__item__link:hover {
+    opacity: 0.8;
 }
 
 .journal-list__item__img{

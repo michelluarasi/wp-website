@@ -575,7 +575,7 @@ var ScrollReveal = (function() {
 
 						setTimeout(function() {
 							entry.target.classList.add('is-visible');
-						}, i * 100);
+						}, i * 240);  // Delay for next transition in Miliseconds
 					}());
 				}
 			};
