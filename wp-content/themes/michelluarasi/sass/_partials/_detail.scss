@@ -596,8 +596,20 @@
 	background-color:#f5f7fa;
 }
 
+.detail-img {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 300ms linear, visibility 300ms;
+
+	&.is-image-loaded {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
 .detail-header--work{ 
 	.detail-img{
+
 		// opacity:0.8;
 		opacity:1;
 	}

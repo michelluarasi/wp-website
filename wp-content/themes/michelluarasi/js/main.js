@@ -29,7 +29,7 @@ var Helpers = (function(){
 					'left': newL+'px',
 					'top': newT+'px'
 				}
-			);
+			).addClass('is-initialized');
 		},
 
 		getPageTitle: function(){
@@ -283,7 +283,12 @@ var PictureFill = (function(){
 		loadImage: function(){
 			console.log("background image is "+s.backgroundImages[s.currentBreakpoint]);
 			s.detailImgContainer.each(function(i){    			
-    			$(this).get(0).style.backgroundImage = "url(" + s.backgroundImages[i][s.currentBreakpoint]+")";
+    			var $img = $(this);
+    			$img.get(0).style.backgroundImage = "url(" + s.backgroundImages[i][s.currentBreakpoint]+")";
+			
+				setTimeout(function() {
+					$img.addClass('is-image-loaded');
+				}, 0);
 			})
 		},
 
@@ -546,17 +551,73 @@ var Detail = (function(){
 	return Module;
 }());
 
+
+// START show on scroll
+var ScrollReveal = (function() {
+	var s,
+	Module = {
+		settings:{
+		},
+
+		init : function(){
+			s = this.settings;
+
+			var options = {
+				rootMargin: '0px',
+				threshold: 0.2 // how much should be visible until class is added. between 0-1
+			};
+
+			var callback = function(entries, observer) { 
+
+				for (var i = 0; i < entries.length; i++) {
+					(function() {
+						var entry = entries[i];
+
+						setTimeout(function() {
+							entry.target.classList.add('is-visible');
+						}, i * 100);
+					}());
+				}
+			};
+
+			var observer = new IntersectionObserver(callback, options);
+	
+			var $elements = $('.js-scroll_reveal');
+
+			for (var i = 0, len = $elements.length; i < len; i++) {
+				observer.observe($elements[i]);
+			}
+		}
+	};
+
+	return Module;
+}());
+// END show on scroll
+
+// START Fade In Home, Image Header, Video Header
+
 $(window).load(function(){
 	Helpers.init();
+	
 	FastClick.attach(document.body);
 	Nav.init();
+
+	ScrollReveal.init();
+
 	if($(".home").length > 0){
 		Home.init();
 	}
+	
 	if($(".video-element").length > 0 ){
 		VideoFill.init();
 	}
+	
 	if($(".home").length == 0){
 		Detail.init();
 	}
+
+	$('body').addClass('is-loaded');
 });
+
+// END Fade In Home, Image Header, Video Header
+

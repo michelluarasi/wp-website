@@ -25,6 +25,32 @@ a, a:active, a:visited, a:focus{
 .cf:after {
     clear: both;
 }
+
+ 
+// START show on scroll animation
+// Variant 1
+.scroll_reveal-slide_in {
+  transition: transform 300ms ease-out, visibility 300ms ease-out;
+  visibility: hidden;
+  transform: translateY(100px);
+
+  &.is-visible {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// Variant 2
+.scroll_reveal-slide_in_slow {
+
+}
+
+// END show on scroll animation
+
+
+
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.

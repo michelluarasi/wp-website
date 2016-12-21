@@ -64,9 +64,6 @@
 	}
 
 	opacity: 1;
-   	transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
 
 }
 
@@ -141,4 +138,8 @@
 	text-decoration: none;
 	width: 100%;
 	height: 100%;
+	
+//   	transition: opacity .25s ease-in-out;
+  //  -moz-transition: opacity .25s ease-in-out;
+    //-webkit-transition: opacity .25s ease-in-out;
 }

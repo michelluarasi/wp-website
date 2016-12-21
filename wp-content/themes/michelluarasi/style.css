@@ -887,6 +887,15 @@ header .wrapper:after,
 .cf:after, header:after, header .wrapper:after, .main-nav__list:after, .menu-toggler-container:after, .detail-content-nav:after, .home-footer:after, .work-list:after, .detail-footer__connect:after, .box-row:after, .portrait__body .portrait__body__details__list:after, .portrait__body__head:after, .clients-list:after, .footer .newsletter-subscription:after {
   clear: both; }
 
+.scroll_reveal-slide_in {
+  transition: transform 300ms ease-out, visibility 300ms ease-out;
+  visibility: hidden;
+  transform: translateY(100px); }
+  .scroll_reveal-slide_in.is-visible {
+    transform: none;
+    visibility: visible;
+    opacity: 1; }
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
@@ -2150,10 +2159,7 @@ header.header--sticky {
   width: 49.5%;
   margin: 0 0.5% 0.5% 0;
   padding-bottom: 48px;
-  opacity: 1;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out; }
+  opacity: 1; }
   @media (max-width: 790px) {
     .work-list__item {
       float: none;
@@ -2724,6 +2730,14 @@ header.header--sticky {
 
 .detail-wrapper--journal {
   background-color: #f5f7fa; }
+
+.detail-img {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms linear, visibility 300ms; }
+  .detail-img.is-image-loaded {
+    opacity: 1;
+    visibility: visible; }
 
 .detail-header--work .detail-img {
   opacity: 1; }
@@ -3660,6 +3674,13 @@ p > a {
   overflow: hidden;
   z-index: -1;
   background-color: #000; }
+  .video-container video {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms linear, visibility 300ms linear; }
+    .video-container video.is-initialized {
+      opacity: 1;
+      visibility: visible; }
 
 #vid {
   position: absolute;

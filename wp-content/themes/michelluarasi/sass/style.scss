@@ -73,6 +73,19 @@ p{
 	overflow: hidden;
 	z-index: -1;
 	background-color:#000;
+
+
+	// merdar: fade in video
+	video {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 300ms linear, visibility 300ms linear;
+
+		&.is-initialized {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 }
 
 
