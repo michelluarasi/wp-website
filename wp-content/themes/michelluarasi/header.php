@@ -71,14 +71,13 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 	    <link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/img/splashes/splash-iphone-old.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px)" />
 	    <link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/img/splashes/splash-iphone-old-retina.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px) and (-webkit-min-device-pixel-ratio: 2)" />
 
-		<!--  	TYPEKIT		-->
+		<!--  	NORMALISE.CSS	-->
 
-        <script type="text/javascript" src="//use.typekit.net/ebk3utm.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>		
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
 
 		<!--  	OTHER		-->
 
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.css"> 
+
         <?php wp_head(); ?>
         <?php if(!empty($detail_stylesheet)) :?>
         	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/work_detail/<?php echo $detail_stylesheet; ?>.css">
@@ -123,13 +122,17 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 					</ul>
 				</nav>
 				<div class="main-nav-container__footer">
-					<ul class="social-links">
-						<li class="social-links__item"><a target="_blank" class="social-links__item__link ml-icon-social-facebook" href="http://facebook.com/michelluarasi"></a></li>
-						<li class="social-links__item"><a target="_blank" class="social-links__item__link ml-icon-social-twitter" href="http://twitter.com/michelluarasi"></a></li>
-						<li class="social-links__item"><a target="_blank" class="social-links__item__link ml-icon-social-instagram" href="http://instagram.com/michelluarasi"></a></li>
-						<li class="social-links__item"><a target="_blank" class="social-links__item__link ml-icon-social-dribbble" href="http://dribbble.com/michelluarasi"></a></li>
-						<li class="social-links__item"><a target="_blank" class="social-links__item__link ml-icon-social-tumblr" href="http://michelluarasi.tumblr.com"></a></li>
-					</ul>
+
+
+					<div class="footer--container">
+						<p>
+							<a class="hidden" target="_blank" href="http://instagram.com/michelluarasi">Instagram</a>
+							<a class="hidden" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat</a>
+							<a class="hidden" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn</a>
+						</p>
+					</div>
+
+
 				</div>
 			</div>			
 		</div>

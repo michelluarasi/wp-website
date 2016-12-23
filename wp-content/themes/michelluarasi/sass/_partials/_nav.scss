@@ -89,7 +89,9 @@ header.header--visible{
 .site-logo__text{
 	padding-left:10px;
 	vertical-align:middle;
-}
+ 	font-family: $copy-font;
+ 	text-transform: uppercase;
+ }
 
 
 header.header--sticky{
@@ -324,9 +326,8 @@ header.header--sticky{
 	@include transition-duration(0.2s);
 	@include transition-timing-function(ease-out);
 	text-align: center;
-	font-family:$base-header-font;
+	font-family:$head-font;
 	font-weight:600;
-	text-transform:uppercase;
 	color:#c0c5cc;
 	text-decoration:none;
 	letter-spacing:2px;
@@ -361,13 +362,12 @@ header.header--sticky{
 .selected-menu-item{
 	float:left;
 	font-size:11px;
+	text-transform: uppercase;
+	font-weight: bold;
 	line-height:30px;
 	height:30px;
 	margin-top: 6px;
 	color:black;
-	letter-spacing: 2px;	
-	text-transform: uppercase;
-	font-weight: 800;
 	text-decoration: none;
 }
 
@@ -488,7 +488,7 @@ header.header--sticky{
 	.journal-detail .main-nav__list-item__link,
 	.inprogress-detail .main-nav__list-item__link{
 		&:hover{
-			opacity:$base-opacity-value;
+			opacity:0.5;
 		}
 	}
 }

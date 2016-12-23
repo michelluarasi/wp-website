@@ -4,18 +4,16 @@
 	}
 
 }
+
 .detail-wrapper{
 	background-color:black;
 }
-
 
 .detail-header{
 	position: relative;
 	z-index:800;
 	height: 100%;
 }
-
-
 
 .detail-header--video{
 	// padding-bottom: 56.25%;
@@ -58,15 +56,6 @@
 }
 
 .detail-header--img{
-	// padding-bottom:50%;
-	// height: 0;
-	// @include breakpoint(mama-bear){
-	// 	padding-bottom:71%;
-	// }
-
-	// @include breakpoint(baby-bear){
-	// 	padding-bottom:100%;
-	// }
 	width:100%;
 	height:100%;
 	background: #000;
@@ -101,7 +90,7 @@
 }
 
 .img-container{
-	
+
 }
 
 .detail-header--work:before{
@@ -132,7 +121,6 @@
 		font-size:32px;
 		line-height:32px;
 		vertical-align: middle;
-		
 	}
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
@@ -143,7 +131,6 @@
 }
 
 .detail-content{
-	// padding:0 35px;
 	position:relative;
 	z-index:800;
 	margin:0 auto;
@@ -183,28 +170,6 @@
 	}
 }
 
-// .detail-header__content__year::before,.detail-header__content__year::after{
-// 	display:inline-block;
-//     width: 120px;
-//     height: 4px;
-//     content: '\a0';
-//     background-color: #8d8d8d;
-//     vertical-align:middle;
-
-//     @include breakpoint(baby-bear){
-//     	width:60px;
-//     	height: 2px;
-//     }
-// }
-
-// .detail-header__content__year::before {
-// 	margin-right:10px;
-// }
-
-// .detail-header__content__year::after{
-// 	margin-left:7px;
-// }
-
 .detail-header__content__subtitle{
 	padding:0;
 }
@@ -212,54 +177,9 @@
 
 .detail-header__content__project-name{
 	@extend %header;
-	font-weight: 800;
-	letter-spacing: 2px;
 	margin:0;
 	padding:0 0 6px 0;
 	color:white;
-
-
-	// @include breakpoint(baby-bear){
-	// 	font-size:24px;
-	// 	line-height:24px;
-	// 	padding:0 20px;
-	// }	
-	// @extend %header;
-	// font-size:72px;
-	// opacity:0.9;
-	// color:white;
-	// font-family:$base-header-font;
-	// margin:0px auto;
-	// line-height:1em;
-	// width:860px;
-	// @include breakpoint(papa-bear){
-	// 	font-size:60px;
-	// }
-
-	// @include breakpoint(mama-bear){
-	// 	width:100%;
-	// 	font-size:48px;
-	// }
-
-	// @include breakpoint(baby-bear){
-	// 	font-size:24px;
-	// 	margin:5px 0;
-	// }
-}
-
-.detail-header__content__project-name--journal{
-	// font-size:60px;
-	// margin-top:30px;
-
-	// @include breakpoint(mama-bear){
-	// 	width:100%;
-	// 	font-size:48px;
-	// }
-
-	// @include breakpoint(baby-bear){
-	// 	font-size:24px;
-	// 	margin:15px 0 0;
-	// }	
 }
 
 
@@ -281,7 +201,7 @@
 	margin:0 auto;
 	font-size:30px;
 	line-height:36px;
-	font-family:$base-copy-font;
+	font-family:$copy-font;
 	color:white;
 	padding:45px 10px;
 	@include breakpoint(mama-bear){
@@ -435,7 +355,7 @@
 }
 
 .detail-content__body__row__column__text__copy{
-	font-family:$base-copy-font;
+	font-family:$copy-font;
 	font-size:19px;
 	line-height:30px;
 	color:#666;	
@@ -513,18 +433,7 @@
 	}
 }
 
-.detail-footer__connect__link__short-tiny-url{
-	font-family:$base-copy-italic-font;
-	display:block;
-	position:relative;
-	overflow:hidden;
-	width:300px;
-	height:60px;
-	background-color:#1e1e1e;
-	font-size:18px;
-	color:#808080;
-	padding:18px 60px 20px 20px;
-}
+
 
 .detail-footer__connect__link__mail-icon{
 	position:absolute;

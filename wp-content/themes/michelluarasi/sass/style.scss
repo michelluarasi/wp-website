@@ -9,6 +9,20 @@ License: GNU General Public License
 License URI: license.txt
 Tags:
 */
+
+
+html,body{
+	background-color:#f5f7fa;
+	font-family: "Proxima Nova";
+	font-style:normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+// Import Font Files Styles
+
+@import "_partials/fonts";
 @import "_partials/royal-slider";
 @import "_partials/royal-slider-skin-default";
 @import "compass/css3";
@@ -26,15 +40,8 @@ Tags:
 @import "_partials/states";
 @import "_partials/fullPage";
 
-html,body{
-	// height:100%;
-	background-color:#f5f7fa;
-	font-family:"proxima-nova";
-	font-style:normal;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
 
-}
+
 
 html,body{
 	width:100%;
@@ -173,11 +180,8 @@ p{
 }
 
 .page-not-found__title{
-	text-transform: uppercase;
-	letter-spacing: 2px;
 	font-size:11px;
 	line-height:30px;
-	font-weight:800;
 	margin:0;
 }
 
@@ -269,16 +273,6 @@ p{
   	float:left;
 
 
-  	h3{
-  		// @extend .portrait-content-header;
-  		// margin-top:20px;
-  	}
-
-  	p{
-			// @extend .detail-content__body__row__column__text__copy;
-			// margin:5px 0;
-  	}
-
 		.caption-wrapper{
 			width: 480px;
 			margin:0 auto;
@@ -289,14 +283,6 @@ p{
 		}
   	
   }
-
-  // &.rsWithThumbs{
-		// margin-bottom: 92px;
-  // }
-
-  // &.rsWithBullets{
-  // 	margin-bottom: 40px;
-  // }
 }
 
 .rsDefault {

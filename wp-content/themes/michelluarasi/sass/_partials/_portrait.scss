@@ -28,8 +28,6 @@
 	@extend %header;
 	color:#303133;
 	font-size:48px;
-	font-weight:800;
-	letter-spacing:2px;
 	@include breakpoint(mama-bear){
 		font-size: 36px;
 	}
@@ -42,7 +40,7 @@
 .portrait__intro-text > p, .portrait__body__details__text{
 	width:960px;
 	margin:0 auto 100px;
-	font-family:$base-copy-font;
+	font-family:$copy-font;
 	color:#303133;
 	font-size:30px;
 	line-height:40px;
@@ -112,7 +110,7 @@
 }
 
 .portrait-content-header, .portrait-content-text{
-	font-family:$base-copy-font;
+	font-family:$copy-font;
 	padding:0;
 }
 
@@ -120,9 +118,6 @@
 	margin:40px 0 0 0;
 	font-size:11px;
 	line-height: 16px;
-	letter-spacing: 3px;
-	font-weight:800;
-	text-transform: uppercase;
 }
 
 .portrait-content-text{
@@ -172,7 +167,7 @@
 }
 
 .portrait__body__media__text{
-	font-family:$base-copy-italic-font;
+	font-family: "Proxima Nova";
 	font-size:18px;
 	color:#c8c9cc;
 	text-align:right;
@@ -396,7 +391,7 @@
 	p{
 		width: 640px;
 		font-size:21px;
-		font-family:$base-copy-font;
+		font-family:$copy-font;
 		margin:0 auto 36px;
 		@include breakpoint(mama-bear){
 			padding:0 45px;

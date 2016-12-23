@@ -35,7 +35,7 @@ get_header();?>
 		<li class="work-list__item js-scroll_reveal scroll_reveal-slide_in">
 			<a class="work-list__item__link" href="<?php echo get_permalink()?>">
 				<img class="work-list__item__img" src="<?php echo $thumbnail_image_url; ?>" />
-				<h3 class="work-list__item__info__header"><?php echo $thumbnail_title; ?></h3>
+				<h2 class="work-list__item__info__header"><?php echo $thumbnail_title; ?></h2>
 				<p class="work-list__item__info__subtitle"><?php echo $thumbnail_subtitle; ?></p>
 			</a>
 		</li>

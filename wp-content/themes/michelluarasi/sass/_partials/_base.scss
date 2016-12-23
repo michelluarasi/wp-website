@@ -1,7 +1,17 @@
-$base-header-font: "proxima-nova";
-$base-copy-font: "proxima-nova";
-$base-copy-italic-font:"proxima-nova";
-$base-opacity-value: 0.5;
+
+
+
+// START Variables
+
+// Fonts
+
+$head-font: "Domaine";
+$copy-font: "Proxima Nova";
+
+// Other
+
+// END Variables
+
 
 @import "compass/css3";
 
@@ -75,14 +85,13 @@ a, a:active, a:visited, a:focus{
 }
 
 %header{
-	text-transform:uppercase;
-	font-family: $base-header-font;
+	font-family: $head-font;
 }
 
 %copy{
-	font-family: $base-copy-font;	
+	font-family: $copy-font;
 	color:white;
-	opacity:$base-opacity-value;
+	opacity: 0.5;
 }
 
 %inputreset {
@@ -99,8 +108,6 @@ a, a:active, a:visited, a:focus{
 .h2{
 	font-size: 11px;
 	line-height: 16px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
 	margin:0;
 	padding:36px 0 0 0;
 	@include breakpoint(baby-bear){
@@ -163,7 +170,7 @@ a, a:active, a:visited, a:focus{
 }
 
 .semi-transparent{
-	opacity:$base-opacity-value;
+    opacity:0.5;
 }
 
 .is-visible-mobile{
@@ -240,11 +247,11 @@ i>a:active {
 
 /*  Titles ------------------------------ */
 
-h1, h2, h3, h4, h5 { 
+h1, h2, h3 { 
+    font-family: 'Domaine';
+    font-weight: 500;
+    font-style: normal;
     color: #303133;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
     margin: 0;
 }
 
@@ -283,6 +290,7 @@ h3 {
       padding: 24px 0 12px 0;
     }
 }
+
 
 
 
@@ -527,8 +535,7 @@ img{
 
 .form {
     padding: 0;
-   /* font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
-    font-family: "proxima-nova";
+    font-family: "Proxima Nova";
     font-size: 19px;
     font-weight: 400;
 }
@@ -695,7 +702,7 @@ hr.empty {
 
 
 #mc_embed_signup #mce-success-response #mce-error-response  {
-    font-family: "proxima-nova";
+    font-family: "Proxima Nova";
     font-style: normal;
     font-weight: 400;
 }

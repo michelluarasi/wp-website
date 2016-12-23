@@ -8,7 +8,7 @@
  */
 ?>
 
-
+<!-- FACEBOOK
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -27,6 +27,7 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
+-->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>

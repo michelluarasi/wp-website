@@ -56,8 +56,8 @@
 .work-list__item{
 	position:relative;
 	float:left;
-	width:49.5%;
-	margin:0 0.5% 0.5% 0;
+	width:45.75%;
+	margin:0 8% 8% 0;
 	padding-bottom: 48px;
 }
 
@@ -95,8 +95,6 @@
 	@extend %header;
 	padding: 12px 0 0 0;
 	margin:0;
-	font-weight:800;
-	letter-spacing: 2px;
 	width:auto;
 	@include breakpoint(baby-bear){
     padding: 6px 0 0 0;
@@ -106,12 +104,15 @@
 .work-list__item__info__subtitle{
 	margin:0;
 	padding:0;
-	line-height: normal;
+	font-size: 16px;
 	@include breakpoint(baby-bear){
 		font-size:13px;
 	}
 }
 
 // END Work List
+
+
+
 
 
