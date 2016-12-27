@@ -15,9 +15,9 @@
 }
 
 .portrait-wrapper{
-	text-align:center;
-	background-color:#f5f7fa;
-	margin:120px auto 0;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 120px;
 }
 
 .portrait-img-container{
@@ -28,6 +28,7 @@
 	@extend %header;
 	color:#303133;
 	font-size:48px;
+	text-align: center;
 	@include breakpoint(mama-bear){
 		font-size: 36px;
 	}
@@ -45,6 +46,7 @@
 	font-size:30px;
 	line-height:40px;
 	padding:0 20px;
+	text-align: center;
 	// padding:0 20%;
 	@include breakpoint(papa-bear){
 		width:920px;

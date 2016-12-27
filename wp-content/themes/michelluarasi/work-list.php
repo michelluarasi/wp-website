@@ -20,8 +20,9 @@ query_posts( $args );
 get_header();?>
 
 <div class="work-wrapper">
-	<ul class="work-filter-menu">
-	</ul>
+
+	<!--  <ul class="work-filter-menu"></ul>  -->
+
 	<ul class="work-list">
 	<?php
 		while ( have_posts() ) : the_post();

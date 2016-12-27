@@ -8,6 +8,16 @@
 $head-font: "Domaine";
 $copy-font: "Proxima Nova";
 
+// Colors
+
+$color-main: #5259D4;
+$color-dark: #303133;
+$color-grey-1: #595F64;
+$color-grey-2: #8F9599;
+$color-grey-3: #BCC2CC;
+$color-grey-4: #E5E5E5;
+$color-bright: #F5F7FA;
+
 // Other
 
 // END Variables
@@ -248,7 +258,7 @@ i>a:active {
 /*  Titles ------------------------------ */
 
 h1, h2, h3 { 
-    font-family: 'Domaine';
+    font-family: $head-font;
     font-weight: 500;
     font-style: normal;
     color: #303133;
@@ -269,8 +279,8 @@ h1 {
 
 
 h2 {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 32px;
+    line-height: 32px;
     padding: 48px 0 18px 0;
     @include breakpoint(baby-bear){
        font-size: 24px;
@@ -281,8 +291,8 @@ h2 {
 
 h3 {
 
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 24px;
+    line-height: 24px;
     padding: 24px 0 12px 0;
     @include breakpoint(baby-bear){
       font-size: 16px;
@@ -292,18 +302,20 @@ h3 {
 }
 
 
-
-
 h4 {
+    font-family: $copy-font;
+    font-weight: bold;
     font-size: 11px;
     line-height: 11px;
     padding: 24px 0 6px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /*  Paragraphs ------------------------------ */
 
 em, p {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 30px;
     color: #5c6066;
@@ -319,7 +331,7 @@ em, p {
 
 p.lead {
     font-size: 24px;
-    line-height: 36px;
+    line-height: 40px;
     color: #5259d4;
     padding: 0px 0 36px 0;
     margin: 0;
@@ -525,7 +537,6 @@ img{
     border-color: rgba(128, 128, 128, 0.2);
     background-color: rgba(255, 255, 255, 0);
 }
-
 
 
 /* ------------------------------ /BUTTONS ------------------------------ */

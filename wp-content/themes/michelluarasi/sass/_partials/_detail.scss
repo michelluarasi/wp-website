@@ -154,33 +154,35 @@
 	text-align:center;
 }
 
-.detail-header__content__client, .detail-header__content__subtitle{
+.detail-header__content__subtitle{
 	@extend %header;
-	font-size:19px;
-	opacity:0.5;
 	color:#fff;
 	margin:0;
+	padding:0;
 	text-transform:none;
-	@include breakpoint(mama-bear){
-		font-size:16px;
-	}
+	opacity: 0.5;
+	
+  animation: 1s ease-out 0s 1 FadeReveal;
 
 	@include breakpoint(baby-bear){
 		font-size:13px;
 	}
 }
 
-.detail-header__content__subtitle{
-	padding:0;
-}
 
 
 .detail-header__content__project-name{
 	@extend %header;
 	margin:0;
 	padding:0 0 6px 0;
-	color:white;
+	color: white;
+	font-size: 64px;
+	line-height: 64px;
+
+  animation: 0.4s ease-out 0s 1 SlideReveal;
+
 }
+
 
 
 .detail-content__body{
@@ -705,7 +707,6 @@
 	color: #d5dae1;
 	text-align: center;
 	font-size: 240px;
-	margin:20px;
 	line-height:120px;
 	@include breakpoint(mama-bear){
 		margin: 15px 0px 0px 0px;

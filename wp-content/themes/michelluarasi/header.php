@@ -77,7 +77,6 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 		<!--  	OTHER		-->
 
-
         <?php wp_head(); ?>
         <?php if(!empty($detail_stylesheet)) :?>
         	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/work_detail/<?php echo $detail_stylesheet; ?>.css">
@@ -85,55 +84,106 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
         <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.1.min.js"></script>
 
     </head>
+
     <!-- put project class names for specific template-->
     <body <?php body_class($body_class_extra); ?>>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-        <header class="header">
-        	<div class="wrapper">
+
+
+
+
+
+    <!-- START NAVIGATION -->
+
+    <header class="header">
+
+      <div class="wrapper">
 				<div class="logo-container">
-					<a href="/" title="Return to homepage" class="site-logo"><span aria-hidden="true" class="ml-otherml-icon-signet site-logo__icon"></span>
-					<span class="site-logo__text">Michel Luarasi</span></a>
+					<a href="/" title="Go to Homepage" class="site-logo">
+						<svg class="site-logo__signet" width="32px" height="32" viewBox="0 0 256 256" version="1.1">
+						      <g>
+						          <polygon id="Shape" points="128 183.7 64 145.3 64 90.6 128 129 192 90.6 192 130.1 224 149.3 224 34.1 128 91.7 32 34.1 32 163.4 128 221 204.7 175 173.6 156.3">
+						          </polygon>
+						      </g>
+						</svg>
+						<span class="site-logo__text">Michel Luarasi</span> 
+					</a>
 				</div>
 
-				<div class="menu-toggler-container">
-					<a href="#" class="selected-menu-item"><?php echo $menu_item; ?></a>
-					<div class="detail-content-nav">
-						<a href="<?php echo $prev_page; ?>" class="detail-content-nav__link detail-content-nav__link--prev ml-icon-nav-back"></a>
-						<a href="<?php echo $next_page; ?>" class="detail-content-nav__link detail-content-nav__link--next ml-icon-nav-next"></a>
-					</div>
+				<div class="menu-container">
 
-					<a href="#" class="menu-link ml-icon-nav-menu" ></a>    
-				</div>    		
-        	</div>
+				<a href="#" class="selected-menu-item"><?php echo $menu_item; ?></a>
+
+				<div class="menu-qqGwJO">
+				  <span class="menu-circle"></span>
+				  <a href="#" class="menu-toggle-qqGwJO">
+				    <span class="menu-icon-qqGwJO">
+				      <span class="menu-line menu-line-1"></span>
+				      <span class="menu-line menu-line-2"></span>
+				    </span>
+				  </a>
+				</div>
+
+				    <!-- START MENU CONTENT -->
+
+						<div class="menu-overlay">
+
+								<nav class="main-nav" role="navigation">
+										<a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">About</a>
+										<a class="main-nav__list-item__link <?php echo $current_page == "design" ? "main-nav__list-item__link--active" : "" ; ?>" href="/design">Work</a>
+										<a class="main-nav__list-item__link <?php echo $current_page == "photography" ? "main-nav__list-item__link--active" : "" ; ?>" href="/photography">Services</a>
+										<a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal</a>
+								</nav>
+
+								<div class="main-nav-container__footer">
+										<p>
+											<a class="hidden main-nav-container__footer__item" target="_blank" href="http://instagram.com/michelluarasi">Instagram
+												<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
+												    <g id="ml-external-link" fill="#5259D4">
+												      <polygon id="Triangle" points="2 0 8 0 8 6"></polygon>
+												      <rect id="Rectangle" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
+												    </g>
+												</svg>
+											</a>
+
+											<a class="hidden main-nav-container__footer__item" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat
+												<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
+												    <g id="ml-external-link" fill="#5259D4">
+												      <polygon id="Triangle" points="2 0 8 0 8 6"></polygon>
+												      <rect id="Rectangle" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
+												    </g>
+												</svg>
+											</a>
+
+											<a class="hidden main-nav-container__footer__item" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn
+												<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
+												    <g id="ml-external-link" fill="#5259D4">
+												      <polygon id="Triangle" points="2 0 8 0 8 6"></polygon>
+												      <rect id="Rectangle" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
+												    </g>
+												</svg>
+											</a>
+
+										</p>
+								</div>
+
+						</div>
+
+				    <!-- END MENU CONTENT -->
+
+
+				</div>  
+       </div>
+
 		</header>
 
-		<div class="main-nav-container">
-			<div class="nav-wrapper">
-				<div class="main-nav-container__header">
-				</div>
-				<nav class="main-nav" role="navigation">
-					<ul class="main-nav__list">
-						<li class="main-nav__list-item"><a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">Portrait</a></li>
-						<li class="main-nav__list-item"><a class="main-nav__list-item__link <?php echo $current_page == "design" ? "main-nav__list-item__link--active" : "" ; ?>" href="/design">Design</a></li>
-						<li class="main-nav__list-item"><a class="main-nav__list-item__link <?php echo $current_page == "photography" ? "main-nav__list-item__link--active" : "" ; ?>" href="/photography">Photography</a></li>
-						<li class="main-nav__list-item"><a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal</a></li>
-					</ul>
-				</nav>
-				<div class="main-nav-container__footer">
+    <!-- END NAVIGATION -->
 
 
-					<div class="footer--container">
-						<p>
-							<a class="hidden" target="_blank" href="http://instagram.com/michelluarasi">Instagram</a>
-							<a class="hidden" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat</a>
-							<a class="hidden" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn</a>
-						</p>
-					</div>
 
 
-				</div>
-			</div>			
-		</div>
+
+
 

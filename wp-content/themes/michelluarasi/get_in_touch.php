@@ -1,41 +1,43 @@
-<?php
-?>
+<?php?>
+
 <div class="footer">	
+
 	<div class="footer__body">
-		<h2 class="h2">Get in touch</h2>
-		<p class="body_text">Feel free to contact me. I'd love to hear from you!</p>
+
+		<h4>Get in touch</h4>
+		<a class="footer-main-link" href="mailto:michel@luarasi.com">michel@luarasi.com</a></br><a class="footer-main-link"" href="tel:+41787225079">+41 78 722 50 79</a>
+
+
+
+		<div class="footer-social-wrapper">
 		
-		<ul class="footer__list">
-			<li class="footer__list__item">
-				<a class="footer__list__item__link" href="mailto:michel@luarasi.com">
-					<span class="ml-otherml-icon-mail icon-font"></span>
-					<span class="footer__list__item__link__title">mail</span>
-				</a>
-			</li>
+			<a class="hidden main-nav-container__footer__item" target="_blank" href="http://instagram.com/michelluarasi">Instagram
+				<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
+				    <g id="ml-external-link" fill="#5259D4">
+				      <polygon id="Rectangle" points="2 0 8 0 8 6"></polygon>
+				      <rect id="Rectangle-2" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
+				    </g>
+				</svg>
+			</a>
 
-			<li class="footer__list__item">
-				<a class="footer__list__item__link" href="tel:+41787225079">
-					<span class="ml-otherml-icon-phone icon-font"></span>
-					<span class="footer__list__item__link__title">call</span>
-				</a>
-			</li>
+			<a class="hidden main-nav-container__footer__item" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat
+				<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
+				    <g id="ml-external-link" fill="#5259D4">
+				      <polygon id="Rectangle" points="2 0 8 0 8 6"></polygon>
+				      <rect id="Rectangle-2" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
+				    </g>
+				</svg>
+			</a>
 
-			<li class="footer__list__item">
-				<a class="footer__list__item__link" href="http://maps.apple.com/maps?q=Limmatstrasse 217, Zurich, Switzerland">
-					<span class="ml-otherml-icon-pin icon-font"></span>
-					<span class="footer__list__item__link__title">visit</span>
-				</a>
-			</li>
-
-		</ul> 
-
-<?php /*
-		<div class="newsletter-subscription">
-			<?php include("newsletter-subscription.php");  ?>
-		</div>
-
-		<p class="footer_body__notification">I do not Spam. Check how my <a href="#">last Newsletter</a> looked like.</p>
-*/?>
+			<a class="hidden main-nav-container__footer__item" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn
+				<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
+				    <g id="ml-external-link" fill="#5259D4">
+				      <polygon id="Rectangle" points="2 0 8 0 8 6"></polygon>
+				      <rect id="Rectangle-2" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
+				    </g>
+				</svg>
+			</a>
 
 	</div>
+
 </div>

@@ -1,212 +1,36 @@
-.footer{
-	text-align: center;
-	padding:80px 0;
-	background-color: white;
-	border-top:1px solid #e6e6e6;
 
-	@include breakpoint(baby-bear){
-		padding:40px 0;
+	.footer{
+		text-align: center;
+		padding: 40px 20px 20px 20px;
+		background-color: white;
 	}
 
 	.footer__body{
-		@include breakpoint(baby-bear){
-			width: 100%;
-      padding: 0 20px;
-			margin:0 auto;
-		}
-	}
-	
-	.footer__body__header{
-		font-size:11px;
-		font-weight: 800;
-		text-transform: uppercase;
-	}
-	.footer__body__text{
-		font-size:19px;
-		line-height: 30px;
-	}
-
-	.footer__list{
-		display:inline-block;
-		border:1px solid #e5e5e5;
-		@include border-radius(4px);
-		font-size:0;
-		margin-top:20px;
-		margin-bottom: 10px;
-		width:480px;
-		.icon-font{
-			font-size:40px;
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		@include breakpoint(baby-bear){
-			width:100%;
-		}
-	}
-
-	.footer__list__item{
-		width:33.3%;
-		display:inline-block;
-		font-size:16px;
-
-		&:last-child .footer__list__item__link{
-			border-right:none;
-		}
-	}
-
-	.footer__list__item__link{
-		display:inline-block;
-		text-transform: uppercase;
-		width:100%;		
-		border-right: 1px solid #e5e5e5;	
-		text-decoration: none;
-		font-size: 11px;
-		padding:2px 0;
-		color:#303133;
-		letter-spacing: 2px;
-		background-color: #f5f7fa;
-	
-		> span{
-			margin-left:-12px;
-			@include breakpoint(baby-bear){
-				margin-left:0;
-			}
-		}
-
-		&:hover{
-			background-color:#fafbfc;		
-		}
-
-		&:active{
-			background-color: #fff;
-		}
-	}
-
-	.footer__list__item__link__title{
-		vertical-align: middle;
-		width:48px;
-		display:inline-block;
-		font-weight: 800;
-		@include breakpoint(baby-bear){
-			display:none;
-		}
-	}
-
-	.footer_body__notification{
-		font-size:13px;
-		line-height: 24px;
-		font-style:italic;
-		color:#999;
-	}
-
-	.newsletter-subscription{
-		@extend .cf;
-		width:480px;
+		width: 100%;
+	  padding: 0 20px;
 		margin:0 auto;
-		.textfield{
-			@extend %inputreset;
-			border:1px solid #e1e5eb;
-			@include border-radius(4px);
-			height:50px;
-			padding: 0 10px;
-			width:316px;
-		}
+	}
+	
 
-		.btn{
-			vertical-align: top;
-			height:49px;
-			padding:10px 27px;
-		}
-		@include breakpoint(baby-bear){
-			width:100%;
-		}
+	.footer-main-link{
+		color: $color-dark;
+		font-family: $head-font;
+    font-weight: 500;
+    font-style: normal;
+		font-size: 32px;
+		line-height: 48px;
+		text-decoration: none;
+		padding: 0;
 	}
 
-	#mc_embed_signup{
-		background-color: transparent;
+	.footer-main-link:hover{
+		color: $color-main;
+	}
 
-		form{
-			padding:0;
-		}
-
-		.mc-field-group{
-			label{
-				display:none;
-			}
-		}
-		
-		.mc-field-group{
-			display:block;
-			float:left;
-			width:auto;
-			@include breakpoint(baby-bear){
-				float:none;
-				margin-bottom: 10px;
-			}
-		}
-
-		#mce-EMAIL{
-			@extend %inputreset;
-			border:1px solid #e1e5eb;
-			@include border-radius(4px);
-			height:50px;
-			padding: 0 10px;
-			width:316px;
-			font-size:16px;
-			font-weight: 400;
-			letter-spacing: 1px;
-			@include breakpoint(baby-bear){
-				width:100%;
-			}
-		}
-
-		.button{
-			@extend .btn;
-			margin:0;
-			vertical-align: top;
-			height:49px;
-			padding:10px 27px;
-			@include breakpoint(baby-bear){
-				width:100%;
-			}			
-		}
-
-		.clear{
-			clear:none;
-			display:block;
-			float:right;
-			@include breakpoint(baby-bear){
-				float:none;
-				width:100%;
-			}
-		}
-
-		div#mce-responses{
-			padding:0;
-			margin:0;
-			width:100%;
-			top:0;
-			text-align: center;
-			padding-top:10px;
-		}
-
-		div.response{
-			margin:0;
-			padding:0;
-			float:none;
-			width:auto;
-			top:0;
-		}
-
-		#mce-error-response{
-			color:red;
-		}
-
-		.mc-field-group{
-			padding-bottom: 0;
-		}
+	.footer-social-link{
 	}
 
 
-}
+	.footer-social-wrapper{
+		padding-top: 48px;
+	}

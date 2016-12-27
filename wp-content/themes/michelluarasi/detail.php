@@ -52,7 +52,7 @@ get_header();
 		</div>
 		<div class="detail-header__content detail-header__content">
 			<p class="detail-header__content__subtitle"><?php echo $header_subtitle;?></p>
-			<h1 class="detail-header__content__project-name detail-header__content__project-name"><?php echo $header_title; ?></h1>			
+			<h1 class="detail-header__content__project-name"><?php echo $header_title; ?></h1>			
 		</div>
 		<div class="detail-header__arrow ml-icon-nav-down"></div>
 	</div>

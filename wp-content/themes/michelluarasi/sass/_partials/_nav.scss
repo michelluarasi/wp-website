@@ -1,3 +1,5 @@
+
+
 .work-detail header, .journal-detail header{
 	background-color:transparent;
 
@@ -15,11 +17,13 @@ header{
 	padding:15px 20px;
 	z-index:900;
 
+
 	@include breakpoint(baby-bear){
 		.site-logo__text{
 			display:none;
 		}
 	}
+
 
 	@include breakpoint(baby-height){
 		padding-top:20px;
@@ -60,46 +64,21 @@ header{
 
 }
 
+
+
+.header{
+	opacity: 1;
+  animation: 0.4s ease-out 0s 1 SlideReveal;
+}
+
 header.header--visible{
 	display:block;
 }
-
-.site-logo{
-	display:table;
-	height:100%;
-}
-
-.site-logo__icon{
-	// font-size:26px;
-	// font-size:48px;
-	font-size:24px;
-	vertical-align: middle;
-	&:before{
-		// vertical-align: baseline;
-		// vertical-align: -8px;
-	}
-}
-
-.site-logo__icon,.site-logo__text{
-	display:table-cell;
-	
-}
-
-
-.site-logo__text{
-	padding-left:10px;
-	vertical-align:middle;
- 	font-family: $copy-font;
- 	text-transform: uppercase;
- }
 
 
 header.header--sticky{
 	top:0;
 	z-index:999;
-	// background-color:white;
-	// @include box-shadow(inset 0 -1px 0 rgba(255, 255, 255, 0.2));
-	// @include box-shadow(inset 0 0px 1px rgba(0, 0, 0, 0.6));
 
 	.logo-container{
 		display:none;
@@ -118,25 +97,22 @@ header.header--sticky{
 	}
 
 
-
-	.menu-link{
-		color:white;
-	}
-
 	.selected-menu-item{
 		display:none;
 	}	
 }
 
+
+
+// START HEADER ACTIVE //
+
+
 .header--active header{
-	background-color: white;
+	// background-color: red;
 	.logo-container{
 		display:block;
 	}
 
-	.menu-link{
-		background-color:transparent;
-	}
 
 	.site-logo__text{
 		display:table-cell;
@@ -146,8 +122,7 @@ header.header--sticky{
 		display:none;
 	}
 
-	&.header--sticky .menu-link{
-		color:#d6d6d6;
+	&.header--sticky{
 
 		&:hover{
 			color:black;
@@ -159,6 +134,10 @@ header.header--sticky{
 		display:none;
 	}
 }
+
+
+// END HEADER ACTIVE //
+
 
 .header-bg{
 	@include transition-property(opacity);
@@ -181,55 +160,56 @@ header.header--sticky{
 	opacity:transparent;
 }
 
+
+//  START Logo Styles
+
+
 .logo-container{
 	float:left;
 	height:40px;
+	position: relative;
+  z-index: 1200;
 }
 
 .site-logo{
 	@extend %header;
+	display:table;
+	height:100%;
 	color:black;
+	fill:black;
 	text-decoration:none;
-	font-size:11px;
-	font-weight:800;
-	line-height:32px;
-	letter-spacing:2px;
-	opacity:0.9;
 }
 
-
-
-.home .header--active .site-logo::before, .site-logo::before{
-	// content:" ";
-	// display:block;
-	// float:left;
-	// background: url(../img/logo-black.svg) no-repeat center center;
-	// background-size: 24px 23px;
-	// width:24px;
-	// height:23px;
-	// margin:-3px 10px 0 0;
-
+.site-logo:hover{
+	opacity: 0.8;
 }
 
+.site-logo__signet{
+	position: relative;
+	height: 100%;
+	width: 100%;
+ }
 
 
+.site-logo__text{
+	@extend h4;
+	padding: 10px 8px;
+	vertical-align:middle;
+ 	display:table-cell;
+ }
 
 
-// .site-logo::after{
-// 	content: "Muster Mustermann";
-// }
+//  END Logo Styles
+
+
+//  START Logo Color For Special Pages
 
 .home .site-logo, .work-detail .site-logo, .journal-detail .site-logo, .inprogress-detail .site-logo{
 	color:white;
+	fill:white;
 }
 
-// .home .site-logo::before, .work-detail .site-logo::before,
-// .journal-detail .site-logo::before{
-	// background: url(../img/logo-white.svg) no-repeat center center;
-	// background-size: 24px 23px;
-	// width:24px;
-	// height:23px;
-// }
+//  END Logo Color For Special Pages
 
 
 .main-nav-container{
@@ -274,32 +254,28 @@ header.header--sticky{
 	background-color: white;
 }
 
-.main-nav-container__footer{
-	background: #f5f7fa;
-	-webkit-box-shadow: inset 0px -5px 0 -2.5px #e4e4e4;
-	-moz-box-shadow: inset 0px -5px 0 -2.5px #e4e4e4;
-	box-shadow: inset 0px -5px 0 -2.5px #e4e4e4;
-	position: relative;
-	height: 85px;
-	text-align: center;
 
-	.social-links{
-		.social-links__item__link{
-			@include transition-property(all);
-			@include transition-duration(0.2s);
-			@include transition-timing-function(ease-out);
-			font-size:54px;
-			color:#c0c5cc;
-			&:hover{
-				color:#323233
-			}
-		}
-	}
+// START MENU FOOTER  //
+
+.main-nav-container__footer{
+	position: absolute;
+  bottom: 0;
 }
+
+.main-nav-container__footer__item{
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+.main-nav-container__footer__item:hover{
+	text-decoration: none;
+}
+
+// END MENU FOOTER  //
 
 
 .main-nav{
-	background-color:#f5f7fa;
+	background-color: white;
 }
 
 .header--sticky .main-nav{
@@ -322,42 +298,21 @@ header.header--sticky{
 
 
 .main-nav__list-item__link{
-	@include transition-property(all);
-	@include transition-duration(0.2s);
-	@include transition-timing-function(ease-out);
 	text-align: center;
 	font-family:$head-font;
-	font-weight:600;
-	color:#c0c5cc;
+	color:#303133;
 	text-decoration:none;
-	letter-spacing:2px;
-	font-size:14px;
-	line-height: 60px;
+	font-size:48px;
+	line-height: 96px;
 	display:block;
 	width:100%;
 
 	&:hover, &.main-nav__list-item__link--active{
-		color:#323233;
+		color:#5259D4;
 	}
-
-
 }
 
 
-
-.menu-link{
-	width:40px;
-	height:30px;
-	float:right;
-	display:inline-block;
-	font-size: 32px;
-	line-height:30px;	
-	text-decoration: none;
-	color:black;
-	vertical-align: middle;
-	text-align: center;
-	margin-top: 5px;
-}
 
 .selected-menu-item{
 	float:left;
@@ -367,6 +322,7 @@ header.header--sticky{
 	line-height:30px;
 	height:30px;
 	margin-top: 6px;
+	margin-right: 6px;
 	color:black;
 	text-decoration: none;
 }
@@ -376,16 +332,18 @@ header.header--sticky{
 	color:white;
 }
 
-.home .menu-link, .work-detail .menu-link,
-.journal-detail .menu-link,
-.inprogress-detail .menu-link{
+.home .menu-link, .work-detail .menu-link, .journal-detail .menu-link, .inprogress-detail .menu-link{
 	color:white;
 }
 
-.menu-toggler-container{
+
+
+.menu-container{
 	float:right;
 	@extend .cf;
 }
+
+
 
 .detail-content-nav{
 	display:none;
@@ -428,6 +386,7 @@ header.header--sticky{
 
 	.site-logo{
 		color:black !important;
+		fill:black !important;
 	}
 
 	.menu-link{
@@ -450,26 +409,15 @@ header.header--sticky{
 			-o-transform: translate3d(0, 0px, 0);
 			transform: translate3d(0, 0px, 0);
 		}
-
-		// opacity: 1 !important;
-		// -webkit-overflow-scrolling: touch;
-		
-	 //    @include transition(transform .5s);
-		// overflow-y:auto;
 	}
 }
 
-// .header--close .main-nav{
-// 	@include breakpoint(baby-bear){
-//        @include transition(transform .5s);
-// 	}
-// }
 
 .header--active .detail-content-nav__link:hover{
 	border: 2px #000 solid;
 }
 
-.header--sticky .main-nav__list-item__link{
+.header--sticky{
 	color:black;
 	@include breakpoint(baby-bear){
 		color:white;
@@ -493,10 +441,12 @@ header.header--sticky{
 	}
 }
 
+// ...
 
-.work-detail .header, .journal-detail .header,
-.inprogress-detail .header{
+.work-detail .header, .journal-detail .header, .inprogress-detail .header{
+
 	.menu-link{
+
 		&:hover{
 			background-color:rgba(0,0,0,0.2);
 		}
@@ -506,7 +456,7 @@ header.header--sticky{
 		}
 	}
 
-	&.header--sticky .menu-link{
+	&.header--sticky .menu-toggle{
 		&:hover{
 			background-color:rgba(0,0,0,0.4);
 		}
@@ -516,6 +466,8 @@ header.header--sticky{
 		}
 	}
 }
+
+// ...
 
 .header--active{
 	.home .header, .work-detail .header, .journal-detail .header, .inprogress-detail .header{

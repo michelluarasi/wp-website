@@ -10,27 +10,23 @@ License URI: license.txt
 Tags:
 */
 
-
 html,body{
+	width:100%;
+	height:100%;
 	background-color:#f5f7fa;
 	font-family: "Proxima Nova";
 	font-style:normal;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-
 }
 
-// Import Font Files Styles
-
 @import "_partials/fonts";
-@import "_partials/royal-slider";
-@import "_partials/royal-slider-skin-default";
 @import "compass/css3";
-@import "_partials/icon-fonts";
 @import "_partials/animations";
 @import "_partials/media";
 @import "_partials/base";
 @import "_partials/nav";
+@import "_partials/menu";
 @import "_partials/home";
 @import "_partials/work";
 @import "_partials/journal";
@@ -39,15 +35,9 @@ html,body{
 @import "_partials/footer";
 @import "_partials/states";
 @import "_partials/fullPage";
+@import "_partials/royal-slider";
+@import "_partials/royal-slider-skin-default";
 
-
-
-
-html,body{
-	width:100%;
-	height:100%;
-
-}
 
 p{
 	> a{
