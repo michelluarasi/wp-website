@@ -1,5 +1,5 @@
 
-var MOBILE_WIDTH = 640;
+// var MOBILE_WIDTH = 640;
 
 
 // START NEW MENU
@@ -7,16 +7,14 @@ var MOBILE_WIDTH = 640;
 // http://codepen.io/mugi/pen/qqGwJO
 
 $(function() {
-  $(".menu-toggle-qqGwJO").click(function(e) {
+  $(".menu-toggle").click(function(e) {
     e.preventDefault();
-    $(".menu-overlay").toggleClass("open-qqGwJO");
-    $(".menu-qqGwJO").toggleClass("open-qqGwJO");
+    $(".menu-overlay").toggleClass("menu-open");
+    $(".menu-qqGwJO").toggleClass("menu-open");
   });
 });
 
 // END NEW MENU
-
-
 
 // START "Variables, Functions" NAVIGATION
 
@@ -27,12 +25,12 @@ var Nav = (function(){
 			htmlTag: $('html'),
 			header: $(".header"),
 			headerStickyClass: "header--sticky",
-			menuLink: $(".menu-toggle-qqGwJO"),
+			menuToggle: $(".menu-toggle"),
 			selectedMenuItem: $(".selected-menu-item"),
-			activeClass: "header--active",
-			mainNav: $(".main-nav-container"),
-			mainNavAnimateClass: ".main-nav-container--animate",
-			navWrapper: $(".main-nav-container .nav-wrapper"),
+			activeClass: "menu-open",
+			mainNav: $(".main-nav"),
+			mainNavAnimateClass: "main-nav-animate",
+			navWrapper: $(".main-nav .menu-overlay"),
 			ns: ".nav"
 		},
 
@@ -44,7 +42,7 @@ var Nav = (function(){
 		},
 
 		bindUIActions: function(){
-			s.menuLink.click(function(event){
+			s.menuToggle.click(function(event){
 				Module.menuClickHandler(event);
 			});
 
@@ -53,8 +51,8 @@ var Nav = (function(){
 			});
 
 			$(document).on("scroll", function(event) {
-                Module.scrollHandler();
-            });
+        Module.scrollHandler();
+      });
 
 			$(document).on("touchmove", function(event) {
 				Module.scrollHandler();
@@ -75,7 +73,7 @@ var Nav = (function(){
 		},
 
 		scrollHandler:function(event){
-			if($(window).scrollTop() <= 10){
+			if($(window).scrollTop() <= 20){
 				s.header.removeClass(s.headerStickyClass);
 			}else{
 				s.header.addClass(s.headerStickyClass);
@@ -102,15 +100,15 @@ var Nav = (function(){
 		},
 
 		close:function(){
-			s.mainNav.removeClass(s.mainNavAnimateClass);
 			s.htmlTag.removeClass(s.activeClass);
+			s.mainNav.removeClass(s.mainNavAnimateClass);
 			$(document).off("click"+s.ns);
 		},
 
 		resizeHandler: function(){
 			// if($(window).width() > MOBILE_WIDTH ){
 			// 	s.htmlTag.removeClass(s.activeClass).removeClass(s.closeClass);
-			// 	s.menuLink.addClass(s.navMenuClass).removeClass(s.closeBtnClass);
+			// 	s.menuToggle.addClass(s.navMenuClass).removeClass(s.closeBtnClass);
 			// }
 
 		}
@@ -572,7 +570,7 @@ var ScrollReveal = (function() {
 
 						setTimeout(function() {
 							entry.target.classList.add('is-visible'); // Class will be added to trigger CSS Animation
-						}, i * 240);  // Delay for next transition in Miliseconds
+						}, i * 200);  // Delay for next transition in Miliseconds
 					}());
 				}
 			};
@@ -589,6 +587,7 @@ var ScrollReveal = (function() {
 
 	return Module;
 }());
+
 // END show on scroll
 
 

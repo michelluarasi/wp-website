@@ -1,18 +1,9 @@
-@include keyframes(fadeinImage) {
-  0% {
-  	opacity:0;
-    top:-10%;
-    left:-10%;
-	height:120%;	
-  }
-  10% {
-    opacity:0.4;	
-  }
-  100% {
-    opacity:0;
-	height:170%;	
-  } 
-}
+/***************
+*
+*  Portrait
+*
+****************/
+
 
 .portrait-wrapper{
   margin: 0 auto;
@@ -66,7 +57,6 @@
 	}
 
 	@include breakpoint(baby-bear){
-		
 		font-size: 21px;
 		padding:0 20px;
 	}
@@ -128,63 +118,6 @@
 }
 
 
-.portrait__body__head{
-	@extend .cf;
-	max-width:1200px;
-	margin:0 auto;
-	padding:0 35px 100px;
-	@include breakpoint(papa-bear){
-		width:640px;
-		margin:0 auto;
-		float:none;
-	}
-
-	@include breakpoint(baby-bear){
-		width:100%;
-		padding:0 20px 100px;
-	}	
-}
-
-.portrait__body__media{
-	width:50%;
-	padding-right:40px;
-	float:left;
-	height:100%;
-	@include breakpoint(papa-bear){
-		float:none;
-		width:90%;
-		margin:0 auto;
-		height:auto;
-		padding-right:0;
-	}
-
-	@include breakpoint(baby-bear){
-		width:100%;
-	}
-}
-
-.portrait__body__media__main-pic{
-	width:100%;
-	opacity:0.5;
-}
-
-.portrait__body__media__text{
-	font-family: "Proxima Nova";
-	font-size:18px;
-	color:#c8c9cc;
-	text-align:right;
-	color:#909399;
-	a, a:hover, a:active, a:visited{
-		color:#969799;
-	}
-}
-
-.tumblr-follow-btn{
-	padding:0px 0 0 10px;
-	width:179px;
-	vertical-align:middle;
-}
-
 .portrait__body__details{
 	width:50%;
 	padding: 40px 0 020px;
@@ -196,114 +129,8 @@
 	}
 }
 
-.portrait__body__details__header{
-	text-align:left;
-	font-size:21px;
-	line-height:30px;
-	margin:0;
-	width:640px;
-	@include breakpoint(mama-bear){
-		font-size: 18px;
-	}	
-}
 
-.portrait__body__details__text{
-	width:640px;
-	text-align:left;
-	font-size:21px;
-	line-height:30px;
-	padding:0;
-	margin:0 0 1.5em;
-
-
-	@include breakpoint(mama-bear){
-		font-size: 18px;
-		line-height:24px;
-	}
-	
-	@include breakpoint(teen-bear){
-		width: 100%;
-	}
-
-	@include breakpoint(baby-bear){
-		width:100%;
-		font-size: 16px;
-	}
-}
-
-.portrait__body__media-wrapper{
-	position:relative;
-	padding-bottom: 100%;
-	height: 0;
-	z-index:800;
-	overflow:hidden;
-
-	#vid{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-		z-index: -1;
-		background-color:#000;
-	}
-}
-
-.portrait__body__media__pic-list{
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-}
-
-/*.portrait__body__media__pic-list__item{
-	position:absolute;
-	display:none;
-	width:100%;
-	height:100%;
-}
-
-.portrait__body__media__pic-list__item__img{
-	position:relative;
-	display:block;
-	z-index:810;
-}
-
-.portrait__body__media__pic-list__item--current{
-	display:block;
-	.portrait__body__media__pic-list__item__img{
-		top:-10%;
-		// left:-10%;
-		opacity:0;
-		height:120%;	
-		animation:fadeinImage 10s;
-	}
-}*/
-
-
-.portrait__body_media_pic-list__item--animate{
-	.portrait__body__media__pic-list__item__img{
-		// -webkit-animation-name:fadeinImage;
-		// -moz-animation-name:fadeinImage;
-		// -ms-animation-name:fadeinImage;
-		// -o-animation-name:fadeinImage;
-		// animation-name:fadeinImage;
-
-		// -webkit-animation-duration:10s;
-		// -moz-animation-duration:10s;
-		// -ms-animation-duration:10s;
-		// -o-animation-duration:10s;
-		// animation-duration:10s;
-
-		// -webkit-animation-timing-function:linear;
-		// -moz-animation-timing-function:linear;
-		// -ms-animation-timing-function:linear;
-		// -o-animation-timing-function:linear;
-		// animation-timing-function:linear;
-	}
-}
+// START Clients
 
 .clients-wrapper{
 	padding:60px 0;
@@ -316,11 +143,6 @@
 	}
 }
 
-.clients-wrapper__header{
-	@extend %header;
-	font-size:21px;
-	margin:0;
-}
 
 .clients-list{
 	@extend .cf;
@@ -347,9 +169,7 @@
 	}
 }
 
-.clients-list__item__img{
-	width:100%;
-}
+// END Clients
 
 
 .portrait-img{
@@ -380,48 +200,4 @@
 }
 
 
-.portrait__body__section{
-	position:relative;
-	width:100%;
-	overflow:hidden;
-	padding:64px 0;
-	h3{
-		@extend %header;
-		text-align: center;
-		font-size:21px;			
-	}
-	p{
-		width: 640px;
-		font-size:21px;
-		font-family:$copy-font;
-		margin:0 auto 36px;
-		@include breakpoint(mama-bear){
-			padding:0 45px;
-			font-size:18px;
-		}
 
-		@include breakpoint(teen-bear){
-			width:100%;
-		}
-
-		
-		@include breakpoint(baby-bear){
-			width:100%;
-			padding:0 20px;
-			font-size: 16px;
-			margin-bottom:21px;
-		}
-	}
-
-	img{
-		display:block;
-		margin:0 auto;
-
-		&.responsive{
-			max-width: 100%;
-			height: auto;
-			width: auto;
-		}
-	}
-
-}

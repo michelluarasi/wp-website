@@ -9,7 +9,7 @@
 
 
 
-		<div class="footer-social-wrapper">
+		<p class="footer-social-wrapper">
 		
 			<a class="hidden main-nav-container__footer__item" target="_blank" href="http://instagram.com/michelluarasi">Instagram
 				<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
@@ -38,6 +38,6 @@
 				</svg>
 			</a>
 
-	</div>
+	</p>
 
 </div>

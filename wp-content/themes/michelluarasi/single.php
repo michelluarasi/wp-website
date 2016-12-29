@@ -7,11 +7,8 @@
 		while ( have_posts() ) : the_post();
 				$categoryIds = get_the_category();
 				$slug = $categoryIds[0]->slug;
-				if ($slug == 'design') {
-						include ("single-design.php");
-				}
-				if ($slug == 'photography') {
-						include ("single-photography.php");
+				if ($slug == 'work') {
+						include ("single-work.php");
 				}
 				elseif ($slug == 'journal') {
 						include ("single-journal.php");

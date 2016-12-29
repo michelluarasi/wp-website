@@ -34,7 +34,6 @@ get_header();?>
 
 <div class="portrait-wrapper">
 	<div class="portrait-img-container">
-		<!--<img class="detail-img" src="/img/work-detail-main-img.jpg" /> -->
 		<div class="portrait-img" style='background-image:url("<?php echo $portrait_big_img_url; ?>")'></div>			
 	</div>
 	<h1 class="portrait__header"><?php echo $portrait_headline; ?></h1>
@@ -42,15 +41,26 @@ get_header();?>
 	<div class="portrait__intro-text">
 		<?php echo $portrait_intro_text; ?>
 	</div>
+
+
+
 	<div class="portrait__body">
 		<?php echo $portrait_body; ?>
+<!--
 		<div class="portrait__body__btn-container">
 			<a class="portrait__body__btn btn">Download Résumé</a>	
 		</div>
+-->
 	</div>
+
+
+
 	<div class="clients-wrapper">
-		<h3 class="portrait-content-header">Selected Clients</h3>
-		<p class="portrait-content-text">Brands I've workded for in the past few years.</p>
+		<div class="one-column" style="text-align: center;">
+		<h3>Selected Clients</h3>
+		<p>Brands I've workded for in the past few years.</p>
+		</div>
+
 		<ul class="clients-list">
 			<li class="clients-list__item"><img class="bmw clients-list__item__img" src="<?php bloginfo('template_url'); ?>/img/clients/ml-icon-client-bmw.svg" alt="BMW Logo"></li>
 			<li class="clients-list__item"><img class="bucherer clients-list__item__img" src="<?php bloginfo('template_url'); ?>/img/clients/ml-icon-client-bucherer.svg" alt="Bucherer 1888 Logo"></li>

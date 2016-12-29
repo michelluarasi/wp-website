@@ -25,7 +25,6 @@ $sections = get_the_content();
 $footer = simple_fields_get_post_value(get_the_id(), "Footer", true);
 
 
-
 global $body_class_extra, $next_page, $prev_page, $category_id, $detail_stylesheet, $post_description, $open_graph_image_url, $post_title;
 $post_title = get_the_title(get_the_id());
 $detail_stylesheet = simple_fields_get_post_value(get_the_id(), "Class Name", true);
@@ -37,6 +36,7 @@ $open_graph_image_url = wp_get_attachment_url($open_graph_image);
 list($prev_page,$next_page) = get_prev_next_posts($category_id);
 get_header();
 ?>
+
 
 <div class="detail-wrapper detail-wrapper main-content">
 	<div class="detail-header detail-header--img">
@@ -51,8 +51,8 @@ get_header();
 			<div class="cover picturefill-img detail-img" data-images='{"large":"<?php echo $header_big_pic_url; ?>", "medium":"<?php echo $header_medium_pic_url; ?>", "small":"<?php echo $header_small_pic_url; ?>"}'></div>
 		</div>
 		<div class="detail-header__content detail-header__content">
-			<p class="detail-header__content__subtitle"><?php echo $header_subtitle;?></p>
 			<h1 class="detail-header__content__project-name"><?php echo $header_title; ?></h1>			
+			<p class="detail-header__content__subtitle"><?php echo $header_subtitle;?></p>
 		</div>
 		<div class="detail-header__arrow ml-icon-nav-down"></div>
 	</div>

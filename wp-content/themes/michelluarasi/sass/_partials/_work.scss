@@ -1,3 +1,11 @@
+/***************
+*
+*  Work Overview
+*
+****************/
+
+
+
 .work-wrapper{
 	max-width: 1200px;
 	margin:0 auto;
@@ -6,44 +14,6 @@
 	padding-top:120px;
 }
 
-// START Work Filter
-
-.work-filter-menu{
-	margin:80px 0;
-	text-align:center;
-	font-family:merriweatherlight_italic;
-	@include breakpoint(teen-bear){
-		margin:40px 0;
-		padding:0 18px;
-	}
-}
-
-.work-filter-menu__item{
-	display:inline-block;
-}
-
-.work-filter-menu__item__link{
-	@include transition-property(color);
-	@include transition-duration(0.2s);
-	@include transition-timing-function(ease-out);
-	text-decoration:none;
-	color:#c8c9cc;
-
-	&:hover{
-		color:#323233;
-	}
-}
-
-.work-filter-menu__item__link--active{
-	color:#323233;
-	border-bottom:1px #323233 solid;
-}
-
-.work-filter-menu__item__separator{
-	color:#c8c9cc;
-}
-
-// END Work Filter
 
 // START Work List
 

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template Design
+Template Name: Template Work
 */
 /**
  * The template for displaying all pages.
@@ -12,8 +12,39 @@ Template Name: Template Design
  *
  * @package michelluarasi
  */
-global $category_name, $current_page;
-$current_page = "design";
-$category_name = "design";
-include (get_template_directory()."/work-list.php");
+
+global $body_class_extra,$current_page;
+$current_page = "work";
+$body_class_extra = "work";
+$args = "category_name=work&orderby=date&order=DESC";
+query_posts( $args );
+get_header();?>
+
+<div class="work-wrapper">
+  <ul class="work-list">
+  <?php
+    while ( have_posts() ) : the_post();
+    setup_postdata( $post );
+    $thumbnail_image = simple_fields_get_post_value(get_the_id(), "Thumbnail Image", true);
+    $thumbnail_image_url = wp_get_attachment_url($thumbnail_image);
+    $thumbnail_title = simple_fields_get_post_value(get_the_id(), "Thumbnail Title", true);
+    $thumbnail_subtitle = simple_fields_get_post_value(get_the_id(), "Thumbnail Subtitle", true);
+  ?>
+
+    <li class="work-list__item js-scroll_reveal scroll_reveal-slide_in">
+      <a class="work-list__item__link" href="<?php echo get_permalink()?>">
+        <img class="work-list__item__img" src="<?php echo $thumbnail_image_url; ?>" />
+        <h2 class="work-list__item__info__header"><?php echo $thumbnail_title; ?></h2>
+        <p class="work-list__item__info__subtitle"><?php echo $thumbnail_subtitle; ?></p>
+      </a>
+    </li>
+  <?php           
+    endwhile;
+  ?>
+  </ul>
+ 
+</div>
+<?php
+  include (get_template_directory()."/get_in_touch.php"); 
+  get_footer(); 
 ?>

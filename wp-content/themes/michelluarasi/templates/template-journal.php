@@ -12,12 +12,12 @@ Template Name: Template Journal
  *
  * @package michelluarasi
  */
+
 global $body_class_extra,$current_page;
 $current_page = "journal";
 $body_class_extra = "journal";
-$args = 'category_name=journal&orderby=date&order=DESC';
+$args = "category_name=journal&orderby=date&order=DESC";
 query_posts( $args );
-
 get_header();?>
 
 <div class="journal-wrapper">
@@ -29,9 +29,6 @@ get_header();?>
 		$thumbnail_image_url = wp_get_attachment_url($thumbnail_image);
 		$thumbnail_title = simple_fields_get_post_value(get_the_id(), "Thumbnail Title", true);
 		$thumbnail_subtitle = simple_fields_get_post_value(get_the_id(), "Thumbnail Subtitle", true);
-		$description = simple_fields_get_post_value(get_the_id(), "Description", true);
-		$description = strip_tags($description);
-		$description = substr($description, 0, 100);
 	?>
 
 		<li class="journal-list__item js-scroll_reveal scroll_reveal-slide_in">
@@ -45,7 +42,7 @@ get_header();?>
 		endwhile;
 	?>
 	</ul>
-	<p class="signature ml-otherml-icon-signature"></p>
+
 </div>
 <?php
 	include (get_template_directory()."/get_in_touch.php"); 

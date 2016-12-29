@@ -59,4 +59,6 @@ $counter = 0;
 	</article>
 <?php } ?>
 </div>
+
+
 <?php get_footer(); ?>

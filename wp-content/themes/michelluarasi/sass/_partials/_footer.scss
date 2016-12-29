@@ -1,3 +1,9 @@
+/***************
+*
+*  Footer
+*
+****************/
+
 
 	.footer{
 		text-align: center;
@@ -24,13 +30,12 @@
 	}
 
 	.footer-main-link:hover{
-		color: $color-main;
+		color: $color-key;
+	}
+
+	.footer-social-wrapper{
+	padding: 48px 0 0 0;
 	}
 
 	.footer-social-link{
-	}
-
-
-	.footer-social-wrapper{
-		padding-top: 48px;
 	}

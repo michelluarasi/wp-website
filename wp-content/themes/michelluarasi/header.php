@@ -95,9 +95,11 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 
 
-    <!-- START NAVIGATION -->
 
     <header class="header">
+
+
+    <!-- START NAVIGATION -->
 
       <div class="wrapper">
 				<div class="logo-container">
@@ -118,22 +120,27 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 				<div class="menu-qqGwJO">
 				  <span class="menu-circle"></span>
-				  <a href="#" class="menu-toggle-qqGwJO">
-				    <span class="menu-icon-qqGwJO">
+				  <a href="#" class="menu-toggle">
+				    <span class="menu-icon">
 				      <span class="menu-line menu-line-1"></span>
 				      <span class="menu-line menu-line-2"></span>
 				    </span>
 				  </a>
 				</div>
+				</div>  
+       </div>
 
-				    <!-- START MENU CONTENT -->
+		    <!-- END NAVIGATION -->
+
+
+		    <!-- START MENU CONTENT -->
 
 						<div class="menu-overlay">
 
 								<nav class="main-nav" role="navigation">
 										<a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">About</a>
-										<a class="main-nav__list-item__link <?php echo $current_page == "design" ? "main-nav__list-item__link--active" : "" ; ?>" href="/design">Work</a>
-										<a class="main-nav__list-item__link <?php echo $current_page == "photography" ? "main-nav__list-item__link--active" : "" ; ?>" href="/photography">Services</a>
+										<a class="main-nav__list-item__link <?php echo $current_page == "work" ? "main-nav__list-item__link--active" : "" ; ?>" href="/work">Work</a>
+										<a class="main-nav__list-item__link <?php echo $current_page == "services" ? "main-nav__list-item__link--active" : "" ; ?>" href="/services">Services</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal</a>
 								</nav>
 
@@ -171,15 +178,10 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 						</div>
 
-				    <!-- END MENU CONTENT -->
-
-
-				</div>  
-       </div>
+		    <!-- END MENU CONTENT -->
 
 		</header>
 
-    <!-- END NAVIGATION -->
 
 
 
