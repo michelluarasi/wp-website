@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template Services
+Template Name: Template Expertise
 */
 /**
  * The template for displaying all pages.
@@ -13,15 +13,14 @@ Template Name: Template Services
  * @package michelluarasi
  */
 global $body_class_extra, $current_page;
-$current_page = "services";
-$body_class_extra = "services";
+$current_page = "expertise";
+$body_class_extra = "expertise";
 
 
 get_header();?>
 
-
-
 <?php
-	include (get_template_directory()."/get_in_touch.php"); 
-	get_footer(); 
+  // include (get_template_directory()."/get_in_touch.php"); 
+  get_footer(); 
 ?>
+  

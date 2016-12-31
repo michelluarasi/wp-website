@@ -12,7 +12,6 @@ Template Name: Template Journal
  *
  * @package michelluarasi
  */
-
 global $body_class_extra,$current_page;
 $current_page = "journal";
 $body_class_extra = "journal";
@@ -45,7 +44,7 @@ get_header();?>
 
 </div>
 <?php
-	include (get_template_directory()."/get_in_touch.php"); 
+	// include (get_template_directory()."/get_in_touch.php"); 
 	get_footer(); 
 ?>
 	

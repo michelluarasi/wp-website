@@ -1,16 +1,17 @@
 
-// var MOBILE_WIDTH = 640;
+ var MOBILE_WIDTH = 640;
 
 
 // START NEW MENU
 
 // http://codepen.io/mugi/pen/qqGwJO
 
+
 $(function() {
-  $(".menu-toggle").click(function(e) {
+  $(".menu-link").click(function(e) {
     e.preventDefault();
-    $(".menu-overlay").toggleClass("menu-open");
-    $(".menu-qqGwJO").toggleClass("menu-open");
+    $(".menu-toggle").toggleClass("menu-open");				// Hamburger Animation
+    $(".menu-overlay").toggleClass("menu-open"); 		// Menu Animation
   });
 });
 
@@ -21,17 +22,20 @@ $(function() {
 var Nav = (function(){
 	var s,
 	Module = {
-		settings:{
+		settings: {
 			htmlTag: $('html'),
 			header: $(".header"),
 			headerStickyClass: "header--sticky",
-			menuToggle: $(".menu-toggle"),
+			menuLink: $(".menu-link"),
 			selectedMenuItem: $(".selected-menu-item"),
 			activeClass: "menu-open",
 			mainNav: $(".main-nav"),
 			mainNavAnimateClass: "main-nav-animate",
-			navWrapper: $(".main-nav .menu-overlay"),
-			ns: ".nav"
+			navWrapper: $(".menu-overlay"),
+			ns: ".nav",
+			LogoContainer: $('logo-container'),
+			LogoMenu: ".show-logo-in-menu"
+
 		},
 
 		init: function(){
@@ -42,7 +46,7 @@ var Nav = (function(){
 		},
 
 		bindUIActions: function(){
-			s.menuToggle.click(function(event){
+			s.menuLink.click(function(event){
 				Module.menuClickHandler(event);
 			});
 
@@ -95,6 +99,7 @@ var Nav = (function(){
 			s.htmlTag.addClass(s.activeClass);
 			setTimeout(function(){
 				s.mainNav.addClass(s.mainNavAnimateClass);
+				s.LogoContainer.addClass(s.LogoMenu);
 				$(document).on("click"+s.ns,Module.clickHandler);
 			},10);	
 		},
@@ -106,10 +111,10 @@ var Nav = (function(){
 		},
 
 		resizeHandler: function(){
-			// if($(window).width() > MOBILE_WIDTH ){
-			// 	s.htmlTag.removeClass(s.activeClass).removeClass(s.closeClass);
-			// 	s.menuToggle.addClass(s.navMenuClass).removeClass(s.closeBtnClass);
-			// }
+			 if($(window).width() > MOBILE_WIDTH ){
+			 	s.htmlTag.removeClass(s.activeClass);
+			 	s.menuLink.addClass(s.navMenuClass);
+			 }
 
 		}
 	};
@@ -483,11 +488,11 @@ var Detail = (function(){
 	var s,
 	Module = {
 		settings: {
-			centeredContent: $(".detail-content__body__section--centered"),
+			// centeredContent: $(".detail-content__body__section--centered"),
 			workContainer: $(".detail-content--work"),
 			headerContainer: $(".detail-header--work"),
 			projectYear: $(".detail-content__header__year"),
-			centeredContentProportion: 0.5,
+			// centeredContentProportion: 0.5,
 			backgroundProportion: 2.7,
 			breakPoint: 960,
 			backgroundTopPos:0,
@@ -532,7 +537,7 @@ var Detail = (function(){
 		},
 
 		scrollToContent: function(){
-			$("html,body").animate({scrollTop: window.innerHeight}, 250, "swing")
+			$("html,body").animate({scrollTop: window.innerHeight}, 400, "swing")
 		},		
 
 		resizeHandler: function(){

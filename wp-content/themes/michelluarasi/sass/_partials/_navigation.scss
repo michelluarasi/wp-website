@@ -8,14 +8,14 @@
 
 /* ------  Menu Button ------- */
 
-.menu-qqGwJO {
+.menu-toggle {
   position: relative;
   float: left;
   height: 48px;
   width: 48px;
 }
 
-.menu-toggle {
+.menu-link {
   width: 64px;
   height: 64px;
   bottom: -8px;
@@ -57,18 +57,18 @@
   top: 10px;
 }
 
-.menu-toggle:hover .menu-line-2 {
+.menu-link:hover .menu-line-2 {
   transform: translateY(2px);
 }
 
-.menu-toggle:hover .menu-line-1 {
+.menu-link:hover .menu-line-1 {
   transform: translateY(-2px);
 }
 
-.menu-qqGwJO.menu-open .menu-line-1 {
+.menu-toggle.menu-open .menu-line-1 {
   transform: translateY(4px) translateY(-50%) rotate(-225deg);
 }
-.menu-qqGwJO.menu-open .menu-line-2 {
+.menu-toggle.menu-open .menu-line-2 {
   transform: translateY(-4px) translateY(50%) rotate(225deg);
 }
 
@@ -92,7 +92,7 @@
 }
 
 
-.menu-qqGwJO:hover .menu-circle {
+.menu-toggle:hover .menu-circle {
   transform: scale(1.2);
   transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
 
@@ -102,7 +102,7 @@
 
 }
 
-.menu-qqGwJO.menu-open .menu-circle {
+.menu-toggle.menu-open .menu-circle {
   transform: scale(25);
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1), opacity 800ms cubic-bezier(0.19, 1, 0.22, 1);
   opacity: 0;
@@ -171,11 +171,6 @@ header{
 		max-width:960px;
 		margin:0 auto;
 		position: relative;
-	}
-
-
-	.menu-link{
-		@include border-radius(4px);
 	}
 
 
@@ -336,6 +331,8 @@ header.header--sticky{
 
 .show-logo-in-menu{
 	display: block;
+  color:black;
+  fill:black;
 }
 
 //  END Logo Styles
@@ -454,7 +451,9 @@ header.header--sticky{
 
 
 .home .menu-link, .work-detail .menu-link, .journal-detail .menu-link, .inprogress-detail .menu-link{
-	color:white;
+	color:red;
+  background-color:green;
+
 }
 
 
@@ -505,8 +504,8 @@ header.header--sticky{
 	}
 
 	.site-logo{
-		color:black !important;
-		fill:black !important;
+		color:black; // !important;
+		fill:black; // !important;
 	}
 
 	.menu-link{
@@ -570,7 +569,7 @@ header.header--sticky{
 		}
 	}
 
-	&.header--sticky .menu-toggle{
+	&.header--sticky .menu-link{
 		&:hover{
 			background-color:red;
 		}

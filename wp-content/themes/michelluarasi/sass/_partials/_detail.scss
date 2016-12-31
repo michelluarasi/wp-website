@@ -155,20 +155,15 @@
 }
 
 .detail-header__content__subtitle{
-	@extend %header;
+	@extend p;
 	color:#fff;
 	margin:0;
 	padding:0;
 	text-transform:none;
-	opacity: 0.5;
-	
+	opacity: 0.5;	
+
   animation: 1s ease-out 0s 1 FadeReveal;
-
-	@include breakpoint(baby-bear){
-		font-size:13px;
-	}
 }
-
 
 
 .detail-header__content__project-name{
@@ -452,7 +447,6 @@
 
 
 
-
 .col-2-3 {
   width: 66.66%;
 }
@@ -520,44 +514,10 @@
 
 .detail-header--work{ 
 	.detail-img{
-
-		// opacity:0.8;
 		opacity:1;
 	}
-
-	// .img-container::before{
-	// 	content:" ";
-	// 	position:absolute;
-	// 	top:0;
-	// 	left:0;
-	// 	right:0;
-	// 	bottom:0;
-	// 	background: url(../img/pattern.gif) repeat;
-	// }
 }
 
-
-.detail-header__content--journal{
-
-	// .detail-header__content__project-name, .detail-header__content__year,.detail-header__content__desc{
-	// 	color:#323233;
-	// }
-
-	// .detail-header__content__year{
-	// 	opacity: 0.2;
-	// }
-
-	// .detail-header__content__year{
-	// 	margin-top:10px;
-	// }
-
-	// .detail-header__content__desc{
-	// 	// padding-top:30px;
-	// 	padding:20px 20px 40px 20px;
-	// }
-
-	// padding:0 35px;
-}
 
 .detail-header__content__project-name--journal{
 	@include breakpoint(mama-bear){
@@ -635,6 +595,7 @@
 }
 
 
+/*
 .detail-content__body__section--centered{
 	.detail-content__body__section__img-container{
 		span{
@@ -656,6 +617,7 @@
 	}
 
 }
+/*
 
 
 /* BOX LIST */
@@ -692,16 +654,6 @@
 }
 
 
-.comments-wrapper{
-	border-top: 5px solid #e1e3e6;
-	background-color: #ebedf0;
-}
-
-.comments{
-	padding: 30px;
-	max-width: 1280px;
-	margin: 0 auto;
-}
 
 .signature{
 	color: #d5dae1;
@@ -718,6 +670,9 @@
 	}
 	
 }
+
+
+/* START Detail Navigation */
 
 .detail-nav{
 	// background-color:#ffffff;
@@ -760,6 +715,7 @@
 
 }
 
+
 .detail-nav__link-list__item__link{
 	background-color:#f5f7fa;
 	display:inline-block;
@@ -786,42 +742,10 @@
 	
 }
 
-
-.share-menu{
-	
-	.share-menu__list-item{
-		vertical-align: top;
-		display:inline-block;
-	}
-
-	.share-menu__list-item__link{
-		text-decoration: none;
-		font-size: 50px;
-		line-height: 50px;
-		color:#303133;
-
-		&.ml-otherml-icon-mail{
-			font-size: 36px;
-		}
-	}
-}
+/* END Detail Navigation */
 
 .detail-video{
 	height:100%;
 }
 
 
-/* BOX LIST END */
-
-/* STATES */
-
-.detail-wrapper--journal .detail-header--img{
-	// padding-bottom:33%;
-	// @include breakpoint(papa-bear){
-	// 	padding-bottom:50%;
-	// }
-	// @include breakpoint(baby-bear){
-	// 	padding-bottom:71%;
-	// }
-}
-/* STATES END */

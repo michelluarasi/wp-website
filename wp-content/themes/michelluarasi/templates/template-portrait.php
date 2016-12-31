@@ -80,7 +80,7 @@ get_header();?>
 </div>
 
 <?php
-	include (get_template_directory()."/get_in_touch.php"); 
+	// include (get_template_directory()."/get_in_touch.php"); 
 	get_footer(); 
 ?>
 	

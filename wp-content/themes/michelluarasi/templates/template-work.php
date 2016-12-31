@@ -12,7 +12,6 @@ Template Name: Template Work
  *
  * @package michelluarasi
  */
-
 global $body_class_extra,$current_page;
 $current_page = "work";
 $body_class_extra = "work";
@@ -44,7 +43,9 @@ get_header();?>
   </ul>
  
 </div>
+
 <?php
-  include (get_template_directory()."/get_in_touch.php"); 
+  // include (get_template_directory()."/get_in_touch.php"); 
   get_footer(); 
 ?>
+  

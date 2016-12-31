@@ -96,39 +96,40 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 
 
-    <header class="header">
-
+<header class="header">
 
     <!-- START NAVIGATION -->
 
-      <div class="wrapper">
+    <div class="wrapper">
+
 				<div class="logo-container">
-					<a href="/" title="Go to Homepage" class="site-logo">
-						<svg class="site-logo__signet" width="32px" height="32" viewBox="0 0 256 256" version="1.1">
-						      <g>
-						          <polygon id="Shape" points="128 183.7 64 145.3 64 90.6 128 129 192 90.6 192 130.1 224 149.3 224 34.1 128 91.7 32 34.1 32 163.4 128 221 204.7 175 173.6 156.3">
-						          </polygon>
-						      </g>
-						</svg>
-						<span class="site-logo__text">Michel Luarasi</span> 
-					</a>
+						<a href="/" title="Go to Homepage" class="site-logo">
+								<svg class="site-logo__signet" width="32px" height="32" viewBox="0 0 256 256" version="1.1">
+								      <g>
+								          <polygon id="Shape" points="128 183.7 64 145.3 64 90.6 128 129 192 90.6 192 130.1 224 149.3 224 34.1 128 91.7 32 34.1 32 163.4 128 221 204.7 175 173.6 156.3">
+								          </polygon>
+								      </g>
+								</svg>
+								<span class="site-logo__text">Michel Luarasi</span> 
+						</a>
 				</div>
 
 				<div class="menu-container">
 
-				<a href="#" class="selected-menu-item"><?php echo $menu_item; ?></a>
+						<a href="#" class="selected-menu-item"><?php echo $menu_item; ?></a>
+						<div class="menu-toggle">
 
-				<div class="menu-qqGwJO">
-				  <span class="menu-circle"></span>
-				  <a href="#" class="menu-toggle">
-				    <span class="menu-icon">
-				      <span class="menu-line menu-line-1"></span>
-				      <span class="menu-line menu-line-2"></span>
-				    </span>
-				  </a>
-				</div>
+							  <a href="#" class="menu-link">
+							    <span class="menu-icon">
+							      <span class="menu-line menu-line-1"></span>
+							      <span class="menu-line menu-line-2"></span>
+							    </span>
+							  </a>
+
+					  		<span class="menu-circle"></span>
+						</div>
 				</div>  
-       </div>
+    </div>
 
 		    <!-- END NAVIGATION -->
 
@@ -140,7 +141,7 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 								<nav class="main-nav" role="navigation">
 										<a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">About</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "work" ? "main-nav__list-item__link--active" : "" ; ?>" href="/work">Work</a>
-										<a class="main-nav__list-item__link <?php echo $current_page == "services" ? "main-nav__list-item__link--active" : "" ; ?>" href="/services">Services</a>
+										<a class="main-nav__list-item__link <?php echo $current_page == "expertise" ? "main-nav__list-item__link--active" : "" ; ?>" href="/expertise">Expertise</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal</a>
 								</nav>
 
@@ -180,7 +181,7 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 		    <!-- END MENU CONTENT -->
 
-		</header>
+</header>
 
 
 
