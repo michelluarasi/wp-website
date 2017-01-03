@@ -139,8 +139,8 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 						<div class="menu-overlay">
 
 								<nav class="main-nav" role="navigation">
-										<a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">About</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "work" ? "main-nav__list-item__link--active" : "" ; ?>" href="/work">Work</a>
+										<a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">Portrait</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "expertise" ? "main-nav__list-item__link--active" : "" ; ?>" href="/expertise">Expertise</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal</a>
 								</nav>

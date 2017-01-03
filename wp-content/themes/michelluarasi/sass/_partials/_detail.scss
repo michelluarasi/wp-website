@@ -181,7 +181,7 @@
 
 
 .detail-content__body{
-	max-width:1120px;
+	max-width:1280px;
 	padding:60px 20px;
 	margin:0 auto;
 }
@@ -595,31 +595,6 @@
 }
 
 
-/*
-.detail-content__body__section--centered{
-	.detail-content__body__section__img-container{
-		span{
-			position:relative;
-			left:50%; 
-			display:block;
-			@include breakpoint(mama-bear){
-				left:0 !important;
-			}
-		}
-		img{
-
-			@include breakpoint(mama-bear){
-
-				width:100%;
-				height:auto;
-			}
-		}
-	}
-
-}
-/*
-
-
 /* BOX LIST */
 .box-list{
 	margin:50px auto;
@@ -653,8 +628,6 @@
 	font-size:16px;
 }
 
-
-
 .signature{
 	color: #d5dae1;
 	text-align: center;
@@ -672,80 +645,68 @@
 }
 
 
-/* START Detail Navigation */
-
-.detail-nav{
-	// background-color:#ffffff;
-	// padding:80px 0;
-	text-align: center;
-	padding-bottom:80px;
-	// border:1px solid #e6e6e6;
-}
-
-.detail-nav__link-list{
-	margin-top: 15px;
-	display:inline-block;
-	border:1px solid #e5e5e5;
-	@include border-radius(4px);
-	font-size:0;
-	overflow:hidden;
-	padding:0;
-}
-
-.detail-nav__link-list__item{
-	display:inline-block;
-	font-size:16px;
-	.detail-nav__link-list__item__link{
-		border-right:1px solid #e5e5e5;
-		text-decoration: none;
-		font-size:32px;
-		line-height:32px;
-
-		&:hover{
-			background-color: #fafbfc;
-		}
-		&:active{
-			background-color: #fff;
-		}		
-	}
-
-	&:last-child .detail-nav__link-list__item__link{
-		border-right:none;
-	}
-
-}
-
-
-.detail-nav__link-list__item__link{
-	background-color:#f5f7fa;
-	display:inline-block;
-	vertical-align: middle;
-	text-align: center;
-	padding:6px 25px;
-	color:#303133;
-}
-
-.detail-information{
-	text-align: center;
-	// margin-bottom: 80px;
-	padding:0 20px;
-	.detail-information__row{
-		padding-top:20px;
-		> h2{
-			@extend .h2;
-		}
-
-		> p{
-			@extend .body_text;
-		}
-	}
-	
-}
-
-/* END Detail Navigation */
-
 .detail-video{
 	height:100%;
 }
+
+
+/* START Next Content */
+
+
+.detail-next-content{
+	text-align: center;
+	width: 100%;
+	height: 480px;
+  background: no-repeat center center; 
+	background-color: $color-key;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+	text-decoration: none;
+	padding-top: 148px;
+
+}
+
+.detail-next-content:hover {
+} 
+
+
+.detail-next-content__subtitle{
+	margin: 0;
+	color: white;
+}
+
+.detail-next-content__title{
+	margin: 0;
+	padding: 24px 0 18px 0;
+	font-size: 48px;
+	color: white;
+}
+
+
+/* END Next Content */
+
+
+/* START Password Protected */
+
+.post-password-form{
+	text-align: center;
+	padding-bottom: 120px;
+}
+
+.post-password-field{
+	padding: 0 12px 0 12px;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+
+/* END Password Protected */
+
+
 
 

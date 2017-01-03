@@ -5,7 +5,6 @@
 ****************/
 
 
-
 .work-wrapper{
 	max-width: 1200px;
 	margin:0 auto;
@@ -27,9 +26,32 @@
 	position:relative;
 	float:left;
 	width:45.75%;
-	margin:0 8% 8% 0;
+	margin:0 4% 4% 0;
 	padding-bottom: 48px;
+
+	@include breakpoint(baby-bear){
+	width: 100%;
+	margin: 0;
+	padding-bottom: 0;
+
+	}
 }
+
+.work-list__item__img{
+	width: 100%
+}
+
+// Row Logic
+
+.work-list__item:nth-of-type(2n+2){
+	margin-right:0;
+	margin-left:0.5%;
+
+	@include breakpoint(teen-bear){
+		margin-left:0;
+	}
+}
+
 
  .work-list__item__link{
 	transition: opacity 400ms ease-out;
@@ -48,16 +70,7 @@
     opacity: 0.8;
 }
 
-// Row Logic
 
-.work-list__item:nth-of-type(2n+2){
-	margin-right:0;
-	margin-left:0.5%;
-
-	@include breakpoint(teen-bear){
-		margin-left:0;
-	}
-}
 
 // Text
 

@@ -37,8 +37,8 @@ list($prev_page,$next_page) = get_prev_next_posts($category_id);
 get_header();
 ?>
 
-
 <div class="detail-wrapper detail-wrapper main-content">
+
 	<div class="detail-header detail-header--img">
 		<?php if( $hasVideo ): ?>
 			<div class="video-container">
@@ -59,19 +59,21 @@ get_header();
 	
 	<div class="detail-content">
 		<div class="detail-content__body">
-		<!-- 
-				class="detail-content__body__row">
-		-->
 			<?php echo $sections; ?>
 		</div>
 	</div>
-	<?php
-		echo $footer;
-		include ("detail-navigation.php");
-		include ("get_in_touch.php");
-	?>
+
+    <a href="<?php echo $next_page;?>" style="text-decoration: none;">
+    	<div class="detail-next-content" style="background-image: url('<?php echo $header_big_pic_url; ?>')">
+	      <h4 class="detail-next-content__subtitle">Next Project</h4>
+	      <h2 class="detail-next-content__title"><?php echo $header_title; ?></h2>
+      </div>
+    </a>
+    
+<?php
+  get_footer(); 
+?>
+  
 </div>
 
-<?php
-	get_footer();
-?>	
+

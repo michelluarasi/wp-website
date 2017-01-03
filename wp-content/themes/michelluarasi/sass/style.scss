@@ -156,30 +156,15 @@ p{
 	// height:48px;
 }
 
+// START 404 ERROR PAGE
+
 .page-not-found{
 	text-align: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -60%);
-	-moz-transform: translate(-50%, -60%);
-	-ms-transform: translate(-50%, -60%);
-	-o-transform: translate(-50%, -60%);
-	transform: translate(-50%, -60%);
+	position: relative;
+	padding: 240px 0;
 }
 
-.page-not-found__title{
-	font-size:11px;
-	line-height:30px;
-	margin:0;
-}
-
-.page-not-found__text{
-	font-size: 19px;
-	line-height:30px;
-	margin-top:0px;
-	margin-bottom: 30px;
-}
+// END 404 ERROR PAGE
 
 
 .video-wrapper{

@@ -19,6 +19,10 @@ $body_class_extra = "expertise";
 
 get_header();?>
 
+
+
+<iframe style="width: 100%; height: 100%; border: none; position: absolute;" src="http://michelluarasi.tumblr.com/"></iframe>
+
 <?php
   // include (get_template_directory()."/get_in_touch.php"); 
   get_footer(); 
