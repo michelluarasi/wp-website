@@ -33,7 +33,7 @@ get_header();?>
 		<li class="journal-list__item js-scroll_reveal scroll_reveal-slide_in">
 			<a class="journal-list__item__link" href="<?php echo get_permalink()?>">
 				<img class="journal-list__item__img" src="<?php echo $thumbnail_image_url; ?>" />
-				<h2 class="journal-list__item__body__header"><?php echo $thumbnail_title ?></h2>
+				<h3 class="journal-list__item__body__header"><?php echo $thumbnail_title ?></h3>
 				<p class="journal-list__item__body__subtitle"><?php echo $thumbnail_subtitle;?></p>
 			</a>
 		</li>

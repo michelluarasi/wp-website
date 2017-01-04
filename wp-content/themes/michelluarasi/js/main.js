@@ -1,22 +1,6 @@
 
  var MOBILE_WIDTH = 640;
 
-
-// START NEW MENU
-
-// http://codepen.io/mugi/pen/qqGwJO
-
-
-$(function() {
-  $(".menu-link").click(function(e) {
-    e.preventDefault();
-    $(".menu-toggle").toggleClass("menu-open");				// Hamburger Animation
-    $(".menu-overlay").toggleClass("menu-open"); 		// Menu Animation
-  });
-});
-
-// END NEW MENU
-
 // START "Variables, Functions" NAVIGATION
 
 var Nav = (function(){
@@ -31,6 +15,7 @@ var Nav = (function(){
 			activeClass: "menu-open",
 			mainNav: $(".main-nav"),
 			mainNavAnimateClass: "main-nav-animate",
+			navToggle: $(".menu-toggle"),
 			navWrapper: $(".menu-overlay"),
 			ns: ".nav",
 			LogoContainer: $('logo-container'),
@@ -68,12 +53,12 @@ var Nav = (function(){
 		},
 
 		menuClickHandler: function(event){
+			event.preventDefault();
 			if(s.htmlTag.hasClass(s.activeClass)){
 				Module.close();
 			}else{					
 				Module.open();
 			}
-			event.preventDefault();
 		},
 
 		scrollHandler:function(event){
@@ -99,13 +84,17 @@ var Nav = (function(){
 			s.htmlTag.addClass(s.activeClass);
 			setTimeout(function(){
 				s.mainNav.addClass(s.mainNavAnimateClass);
+				s.navWrapper.addClass(s.activeClass);
 				s.LogoContainer.addClass(s.LogoMenu);
+				s.navToggle.addClass(s.activeClass);
 				$(document).on("click"+s.ns,Module.clickHandler);
 			},10);	
 		},
 
 		close:function(){
 			s.htmlTag.removeClass(s.activeClass);
+			s.navWrapper.removeClass(s.activeClass);
+			s.navToggle.removeClass(s.activeClass);
 			s.mainNav.removeClass(s.mainNavAnimateClass);
 			$(document).off("click"+s.ns);
 		},

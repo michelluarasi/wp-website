@@ -47,40 +47,6 @@ a, a:active, a:visited, a:focus{
 }
 
  
-// START show on scroll animation
-
-// Variant Slide In
-
-.scroll_reveal-slide_in {
-  transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  visibility: hidden;
-  opacity: 0;
-  transform: translate3d(0,40px,0);
-
-  &.is-visible {
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(0,0,0);
-  }
-}
-
-// Variant Fade In
-.scroll_reveal-fade_in {
-  transition: transform 300ms ease-out, visibility 300ms ease-out;
-  visibility: hidden;
-  transform: translateY(100px);
-
-  &.is-visible {
-    transform: none;
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-// END show on scroll animation
-
-
-
 
 /**
  * For IE 6/7 only
@@ -267,8 +233,8 @@ h1, h2, h3 {
 
 
 h1 {
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 64px;
+    line-height: 64px;
     padding: 48px 0 24px 0;
     @include breakpoint(baby-bear){
       font-size: 30px;
@@ -279,9 +245,9 @@ h1 {
 
 
 h2 {
-    font-size: 32px;
-    line-height: 32px;
-    padding: 48px 0 18px 0;
+    font-size: 48px;
+    line-height: 48px;
+    padding: 36px 0 18px 0;
     @include breakpoint(baby-bear){
        font-size: 24px;
        line-height: 30px;
@@ -291,8 +257,8 @@ h2 {
 
 h3 {
 
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 32px;
+    line-height: 32px;
     padding: 24px 0 12px 0;
     @include breakpoint(baby-bear){
       font-size: 16px;

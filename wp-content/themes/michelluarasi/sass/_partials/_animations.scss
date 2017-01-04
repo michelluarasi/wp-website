@@ -32,7 +32,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 
@@ -49,5 +49,38 @@
     opacity: 1;
   }
 }
+
+
+// START JS Show On Scroll
+
+// Variant Slide In
+
+.scroll_reveal-slide_in {
+  transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Variant Fade In
+.scroll_reveal-fade_in {
+  transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  visibility: hidden;
+  opacity: 0;
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// END JS Show On Scroll
 
 
