@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template Expertise
+Template Name: Template Moods
 */
 /**
  * The template for displaying all pages.
@@ -13,11 +13,14 @@ Template Name: Template Expertise
  * @package michelluarasi
  */
 global $body_class_extra, $current_page;
-$current_page = "expertise";
-$body_class_extra = "expertise";
+$current_page = "moods";
+$body_class_extra = "moods";
 
 
 get_header();?>
+
+
+<iframe style="width: 100%; height: 100%; border: none; position: absolute;" src="http://michelluarasi.tumblr.com/"></iframe>
 
 <?php
   // include (get_template_directory()."/get_in_touch.php"); 

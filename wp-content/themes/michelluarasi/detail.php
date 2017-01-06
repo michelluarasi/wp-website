@@ -24,6 +24,13 @@ $description = simple_fields_get_post_value(get_the_id(), "Description", true);
 $sections = get_the_content();
 $footer = simple_fields_get_post_value(get_the_id(), "Footer", true);
 
+list($prev_page,$next_page) = get_prev_next_posts($category_id);
+
+// next post parameters
+$nextpost_id = url_to_postid( $next_page );
+$nextpost_title = simple_fields_get_post_value($nextpost_id, "Header Title", true);
+$nextpost_big_pic = simple_fields_get_post_value($nextpost_id, "Header Big Image", true);
+$nextpost_big_pic_url = wp_get_attachment_url($nextpost_big_pic);
 
 global $body_class_extra, $next_page, $prev_page, $category_id, $detail_stylesheet, $post_description, $open_graph_image_url, $post_title;
 $post_title = get_the_title(get_the_id());
@@ -33,7 +40,8 @@ $post_description = get_the_content();
 $open_graph_image = simple_fields_get_post_value(get_the_id(), "Open Graph Image", true);
 $open_graph_image_url = wp_get_attachment_url($open_graph_image);
 
-list($prev_page,$next_page) = get_prev_next_posts($category_id);
+
+
 get_header();
 ?>
 
@@ -62,12 +70,11 @@ get_header();
 			<?php echo $sections; ?>
 		</div>
 	</div>
-
   <a href="<?php echo $next_page;?>" class="detail-next-content-link js-scroll_reveal scroll_reveal-fade_in">
-    <div class="detail-next-content-parent" style="background-image: url('<?php echo $header_big_pic_url; ?>')">
+    <div class="detail-next-content-parent" style="background-image: url('<?php echo $nextpost_big_pic_url; ?>')">
         <div class="detail-next-content-child">
             <h4 class="detail-next-content__subtitle">Next</h4>    
-            <h2 class="detail-next-content__title"><?php echo $header_title; ?></h2>    
+            <h2 class="detail-next-content__title"><?php echo $nextpost_title; ?></h2>    
         </div>
     </div>
   </a>
