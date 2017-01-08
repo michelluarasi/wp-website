@@ -73,12 +73,12 @@ get_header();
   <a href="<?php echo $next_page;?>" class="detail-next-content-link js-scroll_reveal scroll_reveal-fade_in">
     <div class="detail-next-content-parent" style="background-image: url('<?php echo $nextpost_big_pic_url; ?>')">
         <div class="detail-next-content-child">
-            <h4 class="detail-next-content__subtitle">Next</h4>    
+            <h4 class="detail-next-content__subtitle">View Next</h4>
             <h2 class="detail-next-content__title"><?php echo $nextpost_title; ?></h2>    
+      <!--  <button class="btn btn-m btn-white" href="<?php echo $next_page;?>" title="View Next">Open</button> -->
         </div>
     </div>
   </a>
-
 
 	<?php
 	  get_footer(); 

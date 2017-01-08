@@ -46,7 +46,6 @@
   left: 0;
 
   transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-
 }
 
 .menu-line-1 {
@@ -125,6 +124,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 .menu-overlay.menu-open {
   opacity: 1;
@@ -153,6 +153,12 @@ html.menu-open {
   .site-logo{
     fill: black !important;
     color: black !important;
+  }
+  .site-logo__text{     // Show Logo Text on Mobile wehen Menu Open
+    vertical-align: middle;
+    display: table-cell;
+    padding: 8px;
+    padding-bottom: 14px;
   }
 }
 
@@ -194,7 +200,6 @@ header{
 		margin:0 auto;
 		position: relative;
 	}
-
 
 	// Detail Navigation Links Next/Prev
 
@@ -391,7 +396,7 @@ header.header--sticky{
 
 .main-nav-container__footer{
     position: absolute;
-    width: 640px;
+    width: 100%;
     bottom: 0;
     margin: 0 auto;
 }

@@ -101,10 +101,9 @@ var Nav = (function(){
 
 		resizeHandler: function(){
 			 if($(window).width() > MOBILE_WIDTH ){
-			 	s.htmlTag.removeClass(s.activeClass);
+			// 	s.htmlTag.removeClass(s.activeClass);
 			 	s.menuLink.addClass(s.navMenuClass);
 			 }
-
 		}
 	};
 

@@ -234,7 +234,7 @@ h1, h2, h3 {
 
 h1 {
     font-size: 64px;
-    line-height: 64px;
+    line-height: 72px;
     padding: 48px 0 24px 0;
     @include breakpoint(baby-bear){
       font-size: 30px;
@@ -246,7 +246,7 @@ h1 {
 
 h2 {
     font-size: 48px;
-    line-height: 48px;
+    line-height: 64px;
     padding: 36px 0 18px 0;
     @include breakpoint(baby-bear){
        font-size: 24px;
@@ -607,11 +607,35 @@ select{
     margin: 20px auto;
     max-width: 640px;
     padding: 0;
+
+    @include breakpoint(baby-bear){
+        margin: 20px;
+    }
 }
 
-.one-column {
+.content-narrow{      //Rename all One-Column To Content Narrow
     margin: 20px auto;
     max-width: 640px;
+    padding: 0;
+
+    @include breakpoint(baby-bear){
+        margin: 20px;
+    }
+}
+
+.content-wide {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 40px;
+    @include breakpoint(baby-bear){
+        padding: 0 20px;
+
+    }
+}
+
+.content-fullwidth {
+    margin: 20px auto;
+    width: 100%;
     padding: 0;
     @include breakpoint(baby-bear){
             margin: 20px;
