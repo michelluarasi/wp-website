@@ -30,7 +30,7 @@ get_header();?>
     $thumbnail_subtitle = simple_fields_get_post_value(get_the_id(), "Thumbnail Subtitle", true);
   ?>
 
-    <li class="journal-list__item js-scroll_reveal scroll_reveal-slide_in">
+    <li class="journal-list__item js-vp_reveal js-slide_up">
       <a class="journal-list__item__link" href="<?php echo get_permalink()?>">
         <img class="journal-list__item__img" src="<?php echo $thumbnail_image_url; ?>" />
         <h3 class="journal-list__item__body__header"><?php echo $thumbnail_title ?></h3>

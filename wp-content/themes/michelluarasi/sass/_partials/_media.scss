@@ -6,10 +6,9 @@
 
 
 @mixin breakpoint($point) {
-  @if $point == greatgrandfather-bear {
-    @media (max-width: 1920px) { @content; }
-  }
-  @else if $point == grandpapa-bear {
+
+  // Width
+  @if $point == grandpapa-bear {
     @media (max-width: 1600px) { @content; }
   }
   @else if $point == papa-bear {
@@ -24,7 +23,15 @@
   @else if $point == baby-bear {
     @media (max-width: 640px)  { @content; }
   }
+
+  // Heigth
   @else if $point == short-bear {
+    @media (max-height: 880px)  { @content; }
+  }
+  @else if $point == little-bear {
+    @media (max-height: 640px)  { @content; }
+  }
+  @else if $point == tiny-bear {
     @media (max-height: 480px)  { @content; }
   }
 }

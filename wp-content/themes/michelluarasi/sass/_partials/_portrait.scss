@@ -5,33 +5,82 @@
 ****************/
 
 
+
 .portrait-wrapper{
   margin: 0 auto;
   width: 100%;
   padding-top: 120px;
 }
 
+
+// START Profile
+
+.profile-wrapper{
+  margin: 0 auto;
+  width: 100%;
+  padding: 140px 0 60px 0;
+  background-color: #18181C;
+
+	@include breakpoint(baby-bear){
+	padding: 100px 0;
+	}
+}
+
+// Image
+
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+  &:after {
+    position: absolute;
+    content: "";
+    top: $y;
+    left: $x;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale($size);
+    -webkit-filter: blur($spread);
+    -moz-filter: blur($spread);
+    -ms-filter: blur($spread);
+    filter: blur($spread);
+    background: linear-gradient(270deg, $colorA, $colorB);
+    background-size: 200% 200%;
+
+		animation-name: animateGlow;
+		animation-timing: linear;
+		animation-duration: $duration;
+		animation-iteration-count: infinite;
+		animation-delay: 0;
+
+    @keyframes animateGlow {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+  }
+}
+
 .portrait-img-container{
 	padding-bottom: 6px;
 }
 
-.portrait-img{
-	margin:0 auto;
-	display:block;
-	overflow:hidden;
+.portrait-img {
+	margin: 0 auto;
+  position: relative;
 	width:320px;
 	height:320px;
-	@include border-radius(50em);	
-	@include box-shadow(0 0 0 6px #f5f7fa, 0 0 0 7px #e4e8ef);
-	background-position: center center;
 	background-size: 320px;
-	@include breakpoint(mama-bear){
-		width:360px;
-		height:360px;
-		background-size: 360px;
-	}
-	
-	@include breakpoint(baby-bear){
+	background-position: center center;
+	border-radius: 180px;	
+  line-height: 30vw;
+  text-align: center;
+  color: #252B37;
+  background-color: #151823;
+
+  @include backlight(0, 0, 5vw, 0.75, #0fffc1, #7e0fff, 10s);
+    
+  @include breakpoint(baby-bear){
 		width:240px;
 		height:240px;
 		background-size: 240px;
@@ -42,119 +91,106 @@
 	}
 }
 
-.portrait__header{
-	@extend %header;
-	color:#303133;
-	font-size:48px;
+
+.profile__title{
 	text-align: center;
+	color: white;
+}
+
+.profile__copy{
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+	color: $color-grey-3;
+}
+
+
+// END Portrait
+
+
+// START Expertise
+
+
+.expertise-wrapper{
+  margin: 0 auto;
+  width: 100%;
+  padding: 120px 0;
+  background-color: white;
+	
+	@include breakpoint(baby-bear){
+	padding: 80px 0;
+	}
+}
+
+.expertise__title{
+	text-align: center;
+}
+
+.expertise__copy{
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+	color: $color-grey-2;
+}
+
+
+// END Expertise
+
+
+
+
+// START Services
+
+.services-wrapper{
+	padding: 120px 0;
+	margin:0;
+
+	@include breakpoint(baby-bear){
+	padding: 80px 0;
+	}
+}
+
+.services-list{
+	@extend .cf;
+}
+
+.services-list__item{
+	display: block;
+  width: 50%;
+  margin: 0 auto;
+  float: left;
+  position: relative;
+  text-align: left;
+	padding: 40px 80px;
+
 	@include breakpoint(mama-bear){
-		font-size: 36px;
+		padding: 20px 40px;
 	}
 
 	@include breakpoint(baby-bear){
-		font-size: 24px;
+		width:100%;
+		padding: 20px 0;
 	}
 }
 
-.portrait__intro-text > p, .portrait__body__details__text{
-	width:960px;
-	margin:0 auto 100px;
-	font-family:$copy-font;
-	color:#303133;
-	font-size:30px;
-	line-height:40px;
-	padding:0 20px;
-	text-align: center;
-	// padding:0 20%;
-	@include breakpoint(papa-bear){
-		width:920px;
-	}
+.services-list__item:after{
+}
 
-	@include breakpoint(mama-bear){
-		width:720px;
-		font-size:24px;
-		line-height:30px;
-		margin-bottom:72px;
-		padding:0;
-	}
-
-	@include breakpoint(teen-bear){
-		width:100%;
-		padding:0 20px;
-	}
+.services-list__item-svg{
+	width: 66%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
 
 	@include breakpoint(baby-bear){
-		font-size: 21px;
-		padding:0 20px;
-	}
-
-}
-
-.portrait__body{
-	padding:60px 20px 100px;
-	text-align: left;
-	background-color:white;
-	.portrait__body__details__list{
-		@extend .cf;
-		list-style:none;
-		padding:0;
-		margin:0 auto;
-		max-width: 960px;
-		@include breakpoint(mama-bear){
-			width:100%;
-			max-width: 640px;
-		}
-	}
-	
-
-
-
-	.portrait__body__details__list__item{
-		float:left;
-		width:45%;
-		padding: 0 10px;
-		margin:0 2.5%;
-		
-		@include breakpoint(mama-bear){
-			width:100%;
-			margin:0;
-		}
-	}
-	
-	.portrait__body__btn-container{
-		text-align: center;
-		margin-top: 30px;
-	}
-	
-}
-
-.portrait-content-header, .portrait-content-text{
-	font-family:$copy-font;
-	padding:0;
-}
-
-.portrait-content-header{
-	margin:40px 0 0 0;
-	font-size:11px;
-	line-height: 16px;
-}
-
-.portrait-content-text{
-	@extend .detail-content__body__row__column__text__copy;
-	margin:5px 0;
-}
-
-
-.portrait__body__details{
-	width:50%;
-	padding: 40px 0 020px;
-	float:right;
-
-	@include breakpoint(papa-bear){
-		float:none;
-		width:100%;
 	}
 }
+
+// END Services
+
 
 
 // START Clients
@@ -162,14 +198,18 @@
 .clients-wrapper{
 	padding: 10% 0;
 	background-color:#18181C;
-	margin-bottom:20px;
-
-	.portrait-content-text{
-		max-width:960px;
-		margin:5px auto;
-	}
 }
 
+.clients__title{
+	color: white;
+	text-align: center;
+}
+
+.clients__copy{
+	text-align: center;
+	color: white;
+	padding-top: 0;
+}
 
 .clients-list{
 	@extend .cf;
@@ -182,6 +222,8 @@
 }
 
 
+
+
 .clients-list__item{
 	display: block;
   width: 33%;
@@ -190,8 +232,7 @@
   position: relative;
   text-align: center;
   fill: white;
-
-	@include breakpoint(baby-bear){
+	@include breakpoint(mama-bear){
 		width:50%;
 	}
 }
@@ -213,65 +254,15 @@
   right: 0;
   margin: auto;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
 
 	@include breakpoint(baby-bear){
 	}
 }
+
 
 // END Clients
 
 
 
 
-// START Services
-
-.services-wrapper{
-	padding: 10% 0;
-	background-color: white;
-	margin:0;
-}
-
-
-.services-list{
-	@extend .cf;
-	padding:0 ;
-	@include breakpoint(mama-bear){
-	}
-}
-
-
-.services-list__item{
-	display: block;
-  width: 50%;
-  margin: 0 auto;
-  float: left;
-  position: relative;
-  text-align: left;
-
-	@include breakpoint(baby-bear){
-		width:50%;
-	}
-}
-
-.services-list__item:after{
-}
-
-.services-list__item-svg{
-	width: 66%;
-  height: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-
-	@include breakpoint(baby-bear){
-	}
-}
-
-// END Services
 

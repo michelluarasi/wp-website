@@ -1,8 +1,8 @@
 /*!
 Theme Name: michelluarasi
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
+Theme URI: http://michelluarasi.com/
+Author: Michel Luarasi
+Author URI: http://michelluarasi.com/
 Description: Description
 Version: 1.0
 License: GNU General Public License
@@ -31,6 +31,7 @@ html,body{
 @import "_partials/journal";
 @import "_partials/detail";
 @import "_partials/portrait";
+@import "_partials/contact";
 @import "_partials/footer";
 @import "_partials/states";
 @import "_partials/fullPage";
@@ -186,6 +187,9 @@ p{
 	}
 }
 
+
+// START Royal Slider
+
 .royal-slider-wrapper{
 	position:relative;
 }
@@ -336,3 +340,6 @@ p{
 		}	
 	}	
 }
+
+// END Royal Slider
+

@@ -1,0 +1,102 @@
+/***************
+*
+*  Cotnact
+*
+****************/
+
+
+// START Contact
+
+.contact-wrapper{
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: $color-key;
+}
+
+.contact-content{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-main-link{
+    color: white;
+    font-family: $head-font;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 72px;
+    text-decoration: none;
+    padding: 0;
+    transition: opacity 400ms ease-out;
+
+    @include breakpoint(mama-bear){
+    font-size: 48px;
+    line-height: 60px;
+    }
+    @include breakpoint(baby-bear){
+    font-size: 32px;
+    line-height: 36px;
+    }
+
+  }
+
+.contact-main-link:hover{
+    opacity: 0.5;
+    text-decoration: none;
+  }
+
+.contact-footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 20px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.contact-social{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+.contact-social-link{
+    text-decoration: none;
+    transition: opacity 200ms ease-out;
+}
+
+.contact-social-link:hover{
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+
+.contact-legal{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+.contact-legal-link{
+    color: white;
+    text-decoration: none;
+    transition: opacity 200ms ease-out;
+}
+
+.contact-legal-link:hover{
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+
+

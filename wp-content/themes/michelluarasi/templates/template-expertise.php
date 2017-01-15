@@ -23,4 +23,3 @@ get_header();?>
   // include (get_template_directory()."/get_in_touch.php"); 
   get_footer(); 
 ?>
-  

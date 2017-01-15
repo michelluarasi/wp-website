@@ -161,10 +161,8 @@
 	padding:0;
 	text-transform:none;
 	// opacity: 0.5;	
-
-  animation: 1s ease-out 0s 1 FadeReveal;
+  // animation: 1s ease-out 0s 1 FadeReveal;
 }
-
 
 .detail-header__content__project-name{
 	@extend %header;
@@ -174,7 +172,7 @@
 	font-size: 64px;
 	line-height: 64px;
 
-  animation: 0.4s ease-out 0s 1 SlideReveal;
+  // animation: 0.4s ease-out 0s 1 SlideRevealDown;
 
 }
 
@@ -491,9 +489,20 @@
 
 .work-detail  {
 	.footer{
-		display:none; // Hide FOOTER on DETAIL Pages
+		display:none; // Hide FOOTER on WORK-DETAIL Pages
 	}
+}
 
+.journal-detail  {
+	.footer{
+		display:none; // Hide FOOTER on WORK-DETAIL Pages
+	}
+}
+
+.contact  {
+	.footer{
+		display:none; // Hide FOOTER on Contact Page
+	}
 }
 
 .inprogress-detail {

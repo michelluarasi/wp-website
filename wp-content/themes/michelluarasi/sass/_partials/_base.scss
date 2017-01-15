@@ -28,9 +28,9 @@ $color-bright: #F5F7FA;
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 ul{
-	margin:0;
-	padding:0;
-	list-style:none;
+    margin:0;
+    padding:0;
+    list-style:none;
 }
 
 a, a:active, a:visited, a:focus{
@@ -57,92 +57,92 @@ a, a:active, a:visited, a:focus{
 }
 
 .hide{
-	display:none;
+    display:none;
 }
 
 %header{
-	font-family: $head-font;
+    font-family: $head-font;
 }
 
 %copy{
-	font-family: $copy-font;
-	color:white;
-	opacity: 0.5;
+    font-family: $copy-font;
+    color:white;
+    opacity: 0.5;
 }
 
 %inputreset {
-	outline:0;
-  	border:none;
-	-webkit-appearance: none;
-	background-color: white;
-	border-radius: 0;
-	&:focus {
-		outline: 0;
-	}
+    outline:0;
+    border:none;
+    -webkit-appearance: none;
+    background-color: white;
+    border-radius: 0;
+    &:focus {
+        outline: 0;
+    }
 }
 
 .h2{
-	font-size: 11px;
-	line-height: 16px;
-	margin:0;
-	padding:36px 0 0 0;
-	@include breakpoint(baby-bear){
-		padding-top: 20px;
-	}
+    font-size: 11px;
+    line-height: 16px;
+    margin:0;
+    padding:36px 0 0 0;
+    @include breakpoint(baby-bear){
+        padding-top: 20px;
+    }
 }
 
 .body_text{
-	font-size:19px;
-	line-height: 30px;
-	margin:0;
-	padding:0;
-	color:#666;
-	a{
-		text-decoration: none;
-		color:#5259d4;
-		&:hover{
-			text-decoration: underline;
-		}
+    font-size:19px;
+    line-height: 30px;
+    margin:0;
+    padding:0;
+    color:#666;
+    a{
+        text-decoration: none;
+        color:#5259d4;
+        &:hover{
+            text-decoration: underline;
+        }
 
-		&:active{
-			color:#9094e4;
-		}
-	}
+        &:active{
+            color:#9094e4;
+        }
+    }
 
-	@include breakpoint(baby-bear){
-		width:100%;
-		margin-top:0px;
-		font-size: 16px;
-		line-height: 24px;
-		margin-bottom: 21px;
-		padding:0 20px;
-	}
+    @include breakpoint(baby-bear){
+        width:100%;
+        margin-top:0px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 21px;
+        padding:0 20px;
+    }
 }
 
 .btn{
-	@extend %inputreset;
-	display:inline-block;
-	border-radius: 4px;
-	letter-spacing: 2px;
-	padding:12px 40px;
-	text-transform: uppercase;
-	background-color: #333333;
-	color:#fff;
-	font-size: 11px;
-	font-weight:800;
-	text-decoration: none;
+    @extend %inputreset;
+    display:inline-block;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    padding:12px 40px;
+    text-transform: uppercase;
+    background-color: #333333;
+    color:#fff;
+    font-size: 11px;
+    font-weight:800;
+    text-decoration: none;
 
-	&:hover{
-		background-color: #000;
-	}
+    &:hover{
+        background-color: #000;
+    }
 
-	&:active{
-		background-color: #333;
-	}
+    &:active{
+        background-color: #333;
+    }
 }
 
 .emphasis{
-	opacity:1;
+    opacity:1;
 }
 
 .semi-transparent{
@@ -150,16 +150,16 @@ a, a:active, a:visited, a:focus{
 }
 
 .is-visible-mobile{
-	visibility: hidden !important;
+    visibility: hidden !important;
 }
 
 @include breakpoint(baby-bear){
-	.is-visible-mobile{
-		visibility: visible !important;
-	}
-	.is-hidden-mobile{
-		visibility: hidden !important;
-	}
+    .is-visible-mobile{
+        visibility: visible !important;
+    }
+    .is-hidden-mobile{
+        visibility: hidden !important;
+    }
 }
 
 
@@ -231,7 +231,7 @@ h1, h2, h3 {
     margin: 0;
 }
 
-
+/* Header H1
 h1 {
     font-size: 64px;
     line-height: 72px;
@@ -242,11 +242,23 @@ h1 {
       padding: 36px 0 21px 0;
     }
 }
+*/
+
+h1 {
+    font-size: 48px;
+    line-height: 64px;
+    padding: 36px 0 24px 0;
+    @include breakpoint(baby-bear){
+      font-size: 30px;
+      line-height: 30px;
+      padding: 36px 0 21px 0;
+    }
+}
 
 
 h2 {
-    font-size: 48px;
-    line-height: 64px;
+    font-size: 32px;
+    line-height: 36px;
     padding: 36px 0 18px 0;
     @include breakpoint(baby-bear){
        font-size: 24px;
@@ -257,12 +269,12 @@ h2 {
 
 h3 {
 
-    font-size: 32px;
-    line-height: 32px;
-    padding: 24px 0 12px 0;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 32px 0 12px 0;
     @include breakpoint(baby-bear){
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 18px;
+      line-height: 18px;
       padding: 24px 0 12px 0;
     }
 }
@@ -285,7 +297,7 @@ em, p {
     font-weight: 400;
     line-height: 30px;
     color: #5c6066;
-    padding: 0px 0 24px 0;
+    padding: 6px 0 24px 0;
     margin: 0;
     @include breakpoint(baby-bear){
         font-size: 16px;
@@ -324,7 +336,6 @@ p.footnote {
 
 /*  Quotes ------------------------------ */
 
-
 blockquote {
     border-left: none;
     color: #303133;
@@ -361,6 +372,16 @@ ul, ol{
 ol {
   list-style: decimal;
 }
+
+/*  Other ------------------------------ */
+
+
+strong { 
+    font-weight: bold;
+    color: $color-dark;
+
+}
+
 
 
 /*  List Debugging ------------------------------ */
@@ -604,41 +625,56 @@ select{
 
 
 .one-column {
-    margin: 20px auto;
+    margin: 0 auto;
     max-width: 640px;
     padding: 0;
-
     @include breakpoint(baby-bear){
-        margin: 20px;
+        margin: 0 auto;
     }
 }
 
-.content-narrow{      //Rename all One-Column To Content Narrow
-    margin: 20px auto;
+.content-640{      //Rename all One-Column To Content Narrow
+    margin: 0 auto;
     max-width: 640px;
     padding: 0;
-
     @include breakpoint(baby-bear){
-        margin: 20px;
+    padding: 0 20px;
     }
 }
 
-.content-wide {
+.content-720{      //Rename all One-Column To Content Narrow
+    margin: 0 auto;
+    max-width: 720px;
+    padding: 0;
+    @include breakpoint(baby-bear){
+    padding: 0 20px;
+    }
+}
+
+.content-960 {
     margin: 0 auto;
     max-width: 960px;
     padding: 0 40px;
     @include breakpoint(baby-bear){
-        padding: 0 20px;
-
+    padding: 0 20px;
     }
 }
 
-.content-fullwidth {
+.content-1280 {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 40px;
+    @include breakpoint(baby-bear){
+    padding: 0 20px;
+    }
+}
+
+.content-full {
     margin: 20px auto;
     width: 100%;
     padding: 0;
     @include breakpoint(baby-bear){
-            margin: 20px;
+        margin: 0;
     }
 }
 

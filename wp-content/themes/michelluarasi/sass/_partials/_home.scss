@@ -60,12 +60,10 @@
 		margin-top:260px;
 	}
 
-	@include breakpoint(short-bear){
+	@include breakpoint(tiny-bear){
 		margin-top:200px;
 	}
 }
-
-
 
 .home-footer{
 	@extend .cf;

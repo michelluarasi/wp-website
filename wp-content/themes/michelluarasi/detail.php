@@ -8,7 +8,7 @@
 $header_video = simple_fields_get_post_value(get_the_id(), "Header Video", true);
 $hasVideo = empty($header_video) ? false : true;
 
-// Home Values
+// Images
 $header_big_pic = simple_fields_get_post_value(get_the_id(), "Header Big Image", true);
 $header_big_pic_url = wp_get_attachment_url($header_big_pic);
 
@@ -18,23 +18,25 @@ $header_medium_pic_url = wp_get_attachment_url($header_medium_pic);
 $header_small_pic = simple_fields_get_post_value(get_the_id(), "Header Small Image", true);
 $header_small_pic_url = wp_get_attachment_url($header_small_pic);
 
-$header_title = simple_fields_get_post_value(get_the_id(), "Header Title", true);
-$header_subtitle = simple_fields_get_post_value(get_the_id(), "Header Subtitle", true);
+//Titles
+$title = simple_fields_get_post_value(get_the_id(), "Title", true);
+$subtitle = simple_fields_get_post_value(get_the_id(), "Subtitle", true);
 $description = simple_fields_get_post_value(get_the_id(), "Description", true);
+
+//Content
 $sections = get_the_content();
-$footer = simple_fields_get_post_value(get_the_id(), "Footer", true);
 
 list($prev_page,$next_page) = get_prev_next_posts($category_id);
 
 // next post parameters
 $nextpost_id = url_to_postid( $next_page );
-$nextpost_title = simple_fields_get_post_value($nextpost_id, "Header Title", true);
+$nextpost_title = simple_fields_get_post_value($nextpost_id, "Title", true);
 $nextpost_big_pic = simple_fields_get_post_value($nextpost_id, "Header Big Image", true);
 $nextpost_big_pic_url = wp_get_attachment_url($nextpost_big_pic);
 
 global $body_class_extra, $next_page, $prev_page, $category_id, $detail_stylesheet, $post_description, $open_graph_image_url, $post_title;
 $post_title = get_the_title(get_the_id());
-$detail_stylesheet = simple_fields_get_post_value(get_the_id(), "Class Name", true);
+$detail_stylesheet = simple_fields_get_post_value(get_the_id(), "Custom CSS", true);
 $body_class_extra .= " ".$detail_stylesheet;
 $post_description = get_the_content();
 $open_graph_image = simple_fields_get_post_value(get_the_id(), "Open Graph Image", true);
@@ -59,8 +61,8 @@ get_header();
 			<div class="cover picturefill-img detail-img" data-images='{"large":"<?php echo $header_big_pic_url; ?>", "medium":"<?php echo $header_medium_pic_url; ?>", "small":"<?php echo $header_small_pic_url; ?>"}'></div>
 		</div>
 		<div class="detail-header__content detail-header__content">
-			<h1 class="detail-header__content__project-name"><?php echo $header_title; ?></h1>			
-			<p class="detail-header__content__subtitle"><?php echo $header_subtitle;?></p>
+			<h1 class="detail-header__content__project-name js-vp_reveal js-slide_down"><?php echo $title; ?></h1>	
+			<p class="detail-header__content__subtitle js-vp_reveal js-fade_in"><?php echo $subtitle;?></p>
 		</div>
 		<div class="detail-header__arrow ml-icon-nav-down"></div>
 	</div>
@@ -70,7 +72,7 @@ get_header();
 			<?php echo $sections; ?>
 		</div>
 	</div>
-  <a href="<?php echo $next_page;?>" class="detail-next-content-link js-scroll_reveal scroll_reveal-fade_in">
+  <a href="<?php echo $next_page;?>" class="detail-next-content-link js-vp_reveal js-fade_in">
     <div class="detail-next-content-parent" style="background-image: url('<?php echo $nextpost_big_pic_url; ?>')">
         <div class="detail-next-content-child">
             <h4 class="detail-next-content__subtitle">View Next</h4>

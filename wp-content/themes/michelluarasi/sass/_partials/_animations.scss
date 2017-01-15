@@ -1,4 +1,6 @@
-// keyframes mixin
+
+
+// Keyframes Mixin
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
     @content; 
@@ -15,18 +17,10 @@
 }
 
 
-// CSS Animation Header Reveal
-@keyframes HeaderReveal {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
+// START CSS Animations
 
-// CSS Animation FadeReveal
+// FadeReveal
 @keyframes FadeReveal {
   0% {
     opacity: 0;
@@ -36,10 +30,8 @@
   }
 }
 
-
-// CSS Animation SlideReveal
-
-@keyframes SlideReveal {
+// SlideRevealDown
+@keyframes SlideRevealDown {
   0% {
     transform: translateY(-32px);
     opacity: 0;
@@ -50,16 +42,32 @@
   }
 }
 
+// END CSS Animations
 
-// START JS Show On Scroll
+// START JS-Triggered Animations
 
-// Variant Slide In
-
-.scroll_reveal-slide_in {
+// Fade In
+.js-fade_in {
   transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
   visibility: hidden;
   opacity: 0;
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Slide Up
+.js-slide_up {
+  transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  visibility: hidden;
+  opacity: 0;
+
   transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  -webkit-transform: translateY(40px);
 
   &.is-visible {
     visibility: visible;
@@ -68,12 +76,16 @@
   }
 }
 
-// Variant Fade In
-.scroll_reveal-fade_in {
+// Slide Down
+.js-slide_down {
   transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
   visibility: hidden;
   opacity: 0;
 
+  transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  -webkit-transform: translateY(-40px);
+
   &.is-visible {
     visibility: visible;
     opacity: 1;
@@ -81,6 +93,40 @@
   }
 }
 
-// END JS Show On Scroll
+// Scale In
+.js-scale_in {
+  transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  visibility: hidden;
+  opacity: 0;
+
+  transform: scale(0.8,0.8);
+  -ms-transform: scale(0.8,0.8);
+  -webkit-transform: scale(0.8,0.8);
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Scale Out
+.js-scale_out {
+  transition: transform 800ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  visibility: hidden;
+  opacity: 0;
+
+  transform: scale(1.2,1.2);
+  -ms-transform: scale(1.2,1.2);
+  -webkit-transform: scale(1.2,1.2);
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// END JS-Triggered Animations
 
 

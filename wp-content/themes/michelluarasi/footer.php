@@ -18,29 +18,29 @@
         <p class="footer-social-wrapper">
         
             <a class="hidden main-nav-container__footer__item" target="_blank" href="http://instagram.com/michelluarasi">Instagram
-                <svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
-                    <g id="ml-external-link" fill="#5259D4">
-                      <polygon id="Rectangle" points="2 0 8 0 8 6"></polygon>
-                      <rect id="Rectangle-2" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
-                    </g>
+                <svg width="8px" height="8px"  viewBox="0 0 8 8">
+                  <g fill="#5259D4" fill-rule="evenodd">
+                    <path d="M2 0h6v6"/>
+                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
+                  </g>
                 </svg>
             </a>
 
             <a class="hidden main-nav-container__footer__item" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat
-                <svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
-                    <g id="ml-external-link" fill="#5259D4">
-                      <polygon id="Rectangle" points="2 0 8 0 8 6"></polygon>
-                      <rect id="Rectangle-2" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
-                    </g>
+                <svg width="8px" height="8px"  viewBox="0 0 8 8">
+                  <g fill="#5259D4" fill-rule="evenodd">
+                    <path d="M2 0h6v6"/>
+                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
+                  </g>
                 </svg>
             </a>
 
             <a class="hidden main-nav-container__footer__item" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn
-                <svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
-                    <g id="ml-external-link" fill="#5259D4">
-                      <polygon id="Rectangle" points="2 0 8 0 8 6"></polygon>
-                      <rect id="Rectangle-2" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
-                    </g>
+                <svg width="8px" height="8px"  viewBox="0 0 8 8">
+                  <g fill="#5259D4" fill-rule="evenodd">
+                    <path d="M2 0h6v6"/>
+                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
+                  </g>
                 </svg>
             </a>
 

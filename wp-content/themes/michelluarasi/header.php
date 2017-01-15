@@ -96,7 +96,7 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 
 
-<header class="header">
+<header class="header js-vp_reveal js-slide_down">
 
     <!-- START NAVIGATION -->
 
@@ -104,11 +104,8 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 				<div class="logo-container">
 						<a href="/" title="Go to Homepage" class="site-logo">
-								<svg class="site-logo__signet" width="32px" height="32" viewBox="0 0 256 256" version="1.1">
-								      <g>
-								          <polygon id="Shape" points="128 183.7 64 145.3 64 90.6 128 129 192 90.6 192 130.1 224 149.3 224 34.1 128 91.7 32 34.1 32 163.4 128 221 204.7 175 173.6 156.3">
-								          </polygon>
-								      </g>
+								<svg class="site-logo__signet" width="32px" height="32" viewBox="0 0 256 256">
+  								<path d="M128 183.7l-64-38.4V90.6l64 38.4 64-38.4v39.5l32 19.2V34.1l-96 57.6-96-57.6v129.3l96 57.6 76.7-46-31.1-18.7"/>
 								</svg>
 								<span class="site-logo__text">Michel Luarasi</span> 
 						</a>
@@ -141,37 +138,38 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 								<nav class="main-nav" role="navigation">
 										<a class="main-nav__list-item__link <?php echo $current_page == "work" ? "main-nav__list-item__link--active" : "" ; ?>" href="/work">Work</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">Portrait</a>
-										<a class="main-nav__list-item__link <?php echo $current_page == "expertise" ? "main-nav__list-item__link--active" : "" ; ?>" href="/expertise">Expertise</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal</a>
+                    <a class="main-nav__list-item__link <?php echo $current_page == "contact" ? "main-nav__list-item__link--active" : "" ; ?>" href="/contact">Contact</a>
+
 								</nav>
 
 								<div class="main-nav-container__footer">
 										<p>
 											<a class="hidden main-nav-container__footer__item" target="_blank" href="http://instagram.com/michelluarasi">Instagram
-												<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
-												    <g id="ml-external-link" fill="#5259D4">
-												      <polygon id="Triangle" points="2 0 8 0 8 6"></polygon>
-												      <rect id="Rectangle" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
-												    </g>
-												</svg>
+                <svg width="8px" height="8px"  viewBox="0 0 8 8">
+                  <g fill="#5259D4" fill-rule="evenodd">
+                    <path d="M2 0h6v6"/>
+                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
+                  </g>
+                </svg>
 											</a>
 
 											<a class="hidden main-nav-container__footer__item" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat
-												<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
-												    <g id="ml-external-link" fill="#5259D4">
-												      <polygon id="Triangle" points="2 0 8 0 8 6"></polygon>
-												      <rect id="Rectangle" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
-												    </g>
-												</svg>
+                <svg width="8px" height="8px"  viewBox="0 0 8 8">
+                  <g fill="#5259D4" fill-rule="evenodd">
+                    <path d="M2 0h6v6"/>
+                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
+                  </g>
+                </svg>
 											</a>
 
 											<a class="hidden main-nav-container__footer__item" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn
-												<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
-												    <g id="ml-external-link" fill="#5259D4">
-												      <polygon id="Triangle" points="2 0 8 0 8 6"></polygon>
-												      <rect id="Rectangle" transform="translate(2.831981, 5.181981) rotate(-45.000000) translate(-2.831981, -5.181981) " x="-1.16801948" y="4.68198052" width="8" height="1"></rect>
-												    </g>
-												</svg>
+                <svg width="8px" height="8px"  viewBox="0 0 8 8">
+                  <g fill="#5259D4" fill-rule="evenodd">
+                    <path d="M2 0h6v6"/>
+                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
+                  </g>
+                </svg>
 											</a>
 
 										</p>

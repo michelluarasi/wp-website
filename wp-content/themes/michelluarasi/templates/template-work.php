@@ -24,17 +24,19 @@ get_header();?>
   <?php
     while ( have_posts() ) : the_post();
     setup_postdata( $post );
-    $thumbnail_image = simple_fields_get_post_value(get_the_id(), "Thumbnail Image", true);
+
+    $title = simple_fields_get_post_value(get_the_id(), "Title", true);
+    $subtitle = simple_fields_get_post_value(get_the_id(), "Subtitle", true);
+
+    $thumbnail_image = simple_fields_get_post_value(get_the_id(), "Teaser Image", true);
     $thumbnail_image_url = wp_get_attachment_url($thumbnail_image);
-    $thumbnail_title = simple_fields_get_post_value(get_the_id(), "Thumbnail Title", true);
-    $thumbnail_subtitle = simple_fields_get_post_value(get_the_id(), "Thumbnail Subtitle", true);
   ?>
 
-    <li class="work-list__item js-scroll_reveal scroll_reveal-slide_in">
+    <li class="work-list__item js-vp_reveal js-slide_up">
       <a class="work-list__item__link" href="<?php echo get_permalink()?>">
         <img class="work-list__item__img" src="<?php echo $thumbnail_image_url; ?>" />
-        <h3 class="work-list__item__info__header"><?php echo $thumbnail_title; ?></h3>
-        <p class="work-list__item__info__subtitle"><?php echo $thumbnail_subtitle; ?></p>
+        <h2 class="work-list__item__info__header"><?php echo $title; ?></h2>
+        <p class="work-list__item__info__subtitle"><?php echo $subtitle; ?></p>
       </a>
     </li>
   <?php           

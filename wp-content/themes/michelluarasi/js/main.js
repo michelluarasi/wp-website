@@ -540,8 +540,8 @@ var Detail = (function(){
 // END "Variables, Functions" Detail
 
 
-// START show on scroll
-var ScrollReveal = (function() {
+// START Viewport Reveal
+var ViewportReveal = (function() {
 	var s,
 	Module = {
 		settings:{
@@ -570,7 +570,7 @@ var ScrollReveal = (function() {
 
 			var observer = new IntersectionObserver(callback, options);
 	
-			var $elements = $('.js-scroll_reveal');
+			var $elements = $('.js-vp_reveal');
 
 			for (var i = 0, len = $elements.length; i < len; i++) {
 				observer.observe($elements[i]);
@@ -593,7 +593,7 @@ $(window).load(function(){
 	FastClick.attach(document.body);
 	Nav.init();
 
-	ScrollReveal.init();
+	ViewportReveal.init();
 
 	if($(".home").length > 0){
 		Home.init();
@@ -611,3 +611,5 @@ $(window).load(function(){
 });
 
 // END Fade In Home, Image Header, Video Header
+
+
