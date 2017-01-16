@@ -32,6 +32,7 @@ html,body{
 @import "_partials/detail";
 @import "_partials/portrait";
 @import "_partials/contact";
+@import "_partials/credits";
 @import "_partials/footer";
 @import "_partials/states";
 @import "_partials/fullPage";
@@ -150,11 +151,8 @@ p{
 	@include transition-duration(0.2s);
 	@include transition-timing-function(ease-out);
 	display:inline-block;
-	// text-indent:999999px;
 	text-decoration: none;
 	color:white;
-	// width:48px;
-	// height:48px;
 }
 
 // START 404 ERROR PAGE

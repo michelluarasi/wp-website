@@ -13,11 +13,9 @@
 	}
 }
 
-
 .home .video-container{
 	z-index:0;
 }
-
 
 .home-bg__img__desktop img{
 	width:1600px;
@@ -29,74 +27,8 @@
 	height:575px;	
 }
 
-.home-content{
-	text-align:center;
-	width:1200px;
-	height:230px;
-	position:absolute;
-	top:50%;
-	left:50%;
-	margin-top: -210px;
-	margin-left:-600px;
-
-	@include breakpoint(grandpapa-bear){
-		width:960px;
-		margin-left:-480px;
-		margin-top: -210px;
-	}
-	@include breakpoint(mama-bear){
-		width:650px;
-		margin-left:-325px;
-		margin-top: -210px;
-	}
-	@include breakpoint(baby-bear){
-		position:relative;
-		width:100%;
-		height:auto;
-		padding:0 18px;
-		margin-left:0;
-		top:0;
-		left:0;
-		margin-top:260px;
-	}
-
-	@include breakpoint(tiny-bear){
-		margin-top:200px;
-	}
-}
-
-.home-footer{
-	@extend .cf;
-	position:absolute;
-	bottom:15px;
-	font-size:14px;
-	width:100%;
-	padding:0 35px;
-	text-align:center;
-	overflow:hidden;
-	
-	@include breakpoint(baby-bear){
-		padding:0;
-	}
-
-	.social-links{
-		float:right;
-		.social-links__item__link{
-			opacity:0.5;
-			&:hover{
-				opacity:1;
-			}
-		}
-		@include breakpoint(baby-bear){
-			float:none;
-		}
-	}
-}
-
-
 
 .home-nav-on-hover .main-nav, 
-.home-nav-on-hover .thank-you, 
 .home-nav-on-hover .social-links,
 .home-nav-on-hover .home-content__text,
 .home-nav-on-hover .home-content__headline,
