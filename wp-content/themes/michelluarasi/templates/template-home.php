@@ -17,13 +17,32 @@ $current_page ="home";
 
 get_header();?>
 
-		<div id="container" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%;"></div>
 
-    <script src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/webgl/DeviceOrientationControls.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/webgl/Maf.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/webgl/THREE.FBOHelper.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/webgl/isMobile.min.js"></script>
+
+
+
+  
+<div class="home-wrapper">
+
+  <div class="home-content content-960">
+      <h4 class="js-vp_reveal js-fade_in" style="color: white;">Welcome</h4>
+      <h1 class="js-vp_reveal js-slide_down" style="color: white; padding-top: 0;">I build exeptional websites and digital experiences that transform brands.</h1>
+      <p class="profile__copy js-vp_reveal js-slide_up"><a class="btn btn-m btn-violet" href="/work" title="Work">Learn More</a></p>
+  </div>
+
+  <div id="webglcontainer"></div>
+
+</div>
+
+
+
+
+
+<script src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/webgl/DeviceOrientationControls.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/webgl/Maf.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/webgl/THREE.FBOHelper.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/webgl/isMobile.min.js"></script>
 
 
 <script type="x-shader/x-vertex" id="clear-vs">
@@ -295,7 +314,7 @@ void main() {
 
 'use strict';
 
-var container, renderer, camera, controls, scene, sphere;
+var webglcontainer, renderer, camera, controls, scene, sphere;
 var mesh, targets, positionShader, simulationShader, textureShader, clearShader;
 var rtScene, rtQuad, rtCamera;
 var orthoScene, orthoMesh, orthoQuad, orthoCamera;
@@ -308,7 +327,7 @@ var streakType = 0;
 
 var cameraPosition = 0;
 
-var container = document.getElementById( 'container' );
+var webglcontainer = document.getElementById( 'webglcontainer' );
 
 function createRenderTarget() {
 
@@ -319,7 +338,6 @@ function createRenderTarget() {
     stencilBuffer: false,
     depthBuffer: true
   });
-
 }
 
 function initScene() {
@@ -507,7 +525,7 @@ function initScene() {
 
 function init() {
 
-  container = document.getElementById( 'container' );
+  webglcontainer = document.getElementById( 'webglcontainer' );
 
   scene = new THREE.Scene();
 
@@ -519,7 +537,7 @@ function init() {
   renderer = new THREE.WebGLRenderer( { antialias: true, preserveDrawingBuffer: true } );
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setClearColor( 0, 1 );
-  container.appendChild( renderer.domElement );
+  webglcontainer.appendChild( renderer.domElement );
 
   helper = new FBOHelper( renderer );
   helper.show( false );
@@ -539,8 +557,8 @@ function init() {
 
 function onWindowResized( event ) {
 
-  var w = container.clientWidth;
-  var h = container.clientHeight;
+  var w = webglcontainer.clientWidth;
+  var h = webglcontainer.clientHeight;
 
   renderer.setSize( w, h );
   camera.aspect = w / h;
