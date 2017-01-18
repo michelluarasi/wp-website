@@ -5,37 +5,36 @@
 ****************/
 
 
-	.footer{
-		text-align: center;
-		padding: 40px 20px 20px 20px;
-		background-color: white;
-	}
+.footer {
+	text-align: center;
+	padding: 40px 20px 20px 20px;
+	background-color: white;
+}
 
-	.footer__body{
-		width: 100%;
-	  padding: 0 20px;
-		margin:0 auto;
-	}
-	
+.footer__body {
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+}
 
-	.footer-main-link{
-		color: $color-dark;
-		font-family: $head-font;
-    font-weight: 500;
-    font-style: normal;
-		font-size: 32px;
-		line-height: 48px;
-		text-decoration: none;
-		padding: 0;
-	}
+.footer-main-link {
+	color: $color-dark;
+	font-family: $head-font;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 32px;
+	line-height: 48px;
+	text-decoration: none;
+	padding: 0;
+}
 
-	.footer-main-link:hover{
-		color: $color-key;
-	}
+.footer-main-link:hover {
+	color: $color-key;
+}
 
-	.footer-social-wrapper{
+.footer-social-wrapper {
 	padding: 48px 0 0 0;
-	}
+}
 
-	.footer-social-link{
-	}
+.footer-social-link {
+}

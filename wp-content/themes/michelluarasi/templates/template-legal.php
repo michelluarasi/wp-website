@@ -16,11 +16,12 @@ global $body_class_extra, $current_page;
 $current_page = "menu";
 $body_class_extra = "legal";
 
-
 get_header();?>
 
   <div class="detail-content">
     <div class="detail-content__body">
+
+
 
         <div class="one-column">
 
@@ -69,8 +70,8 @@ get_header();?>
         <hr>
 
         <p class="footnote">Last update: January 2017</p>
+</div>
 
-        </div>
 
     </div>
   </div>

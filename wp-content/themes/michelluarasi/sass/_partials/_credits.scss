@@ -7,17 +7,17 @@
 
 // START Contact
 
-.credits-wrapper{
+.credits-wrapper {
     padding: 80px 0;
-    width:100%;
-    height:auto;
-    background: -moz-linear-gradient(top, #F5F7FA 0%, #E36262 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F5F7FA), color-stop(100%,#E36262));
-    background: -webkit-linear-gradient(top, #F5F7FA 0%,#E36262 100%);
-    background: linear-gradient(top, #F5F7FA 0%,#E36262 100%);
+    width: 100%;
+    height: auto;
+    background: -moz-linear-gradient(top, #f5f7fa 0%, #e36262 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f7fa), color-stop(100%, #e36262));
+    background: -webkit-linear-gradient(top, #f5f7fa 0%, #e36262 100%);
+    background: linear-gradient(top, #f5f7fa 0%, #e36262 100%);
 }
 
-.credits-content{
+.credits-content {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -33,10 +33,9 @@
 // START Heart
 
 // Colors
-
-$heart-color-1: #F50A45;
-$heart-color-2: #D5093C;
-$heart-color-3: #B80734;
+$heart-color-1: #f50a45;
+$heart-color-2: #d5093c;
+$heart-color-3: #b80734;
 
 /* 
 $heart-color-1: #656CE3;
@@ -48,77 +47,90 @@ $heart-color-3: #363B9C;
 // Keyframes heartbeat
 
 @keyframes heartbeat {
-    0% {transform: scale(1) rotate(225deg); box-shadow:0 0 40px $heart-color-2;}
-    50% {transform: scale(1.1) rotate(225deg); box-shadow:0 0 70px $heart-color-2;}
-    100% {transform: scale(1) rotate(225deg); box-shadow:0 0 40px $heart-color-2;}
+    0% {
+        transform: scale(1) rotate(225deg);
+        box-shadow: 0 0 40px $heart-color-2;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(225deg);
+        box-shadow: 0 0 70px $heart-color-2;
+    }
+
+    100% {
+        transform: scale(1) rotate(225deg);
+        box-shadow: 0 0 40px $heart-color-2;
+    }
 }
 
-
 .heart-container {
-    @include breakpoint(mama-bear){
-    transform: scale(0.8,0.8);
+    @include breakpoint(mama-bear) {
+        transform: scale(0.8, 0.8);
     }
-    @include breakpoint(baby-bear){
-    transform: scale(0.6,0.6);
+    @include breakpoint(baby-bear) {
+        transform: scale(0.6, 0.6);
     }
 }
 
 .heart-animation {
-    position:relative;
-    width:500px;
-    height:500px;
-    margin:0 auto;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
 
-    @include breakpoint(mama-bear){
-    transform: scale(0.8,0.8);
+    @include breakpoint(mama-bear) {
+        transform: scale(0.8, 0.8);
     }
-    @include breakpoint(baby-bear){
-    transform: scale(0.6,0.6);
+    @include breakpoint(baby-bear) {
+        transform: scale(0.6, 0.6);
     }
 }
-
 
 .credits-heart {
-    position:absolute;
-    z-index:2;
+    position: absolute;
+    z-index: 2;
     background: -moz-linear-gradient(-90deg, $heart-color-1 0%, $heart-color-2 40%);
-    background: -webkit-gradient(linear, right 50%, left 50%, color-stop(0%,$heart-color-1), color-stop(40%,$heart-color-2));
-    background: -webkit-linear-gradient(-90deg, $heart-color-1 0%,$heart-color-2 40%);
-    background: linear-gradient(-90deg, $heart-color-1 0%,$heart-color-2 40%);
-    -webkit-animation: heartbeat 0.7s ease 0s infinite normal;
-    -moz-animation: heartbeat 0.7s ease 0s infinite normal;
-    animation: heartbeat 0.7s ease 0s infinite normal;
+    background: -webkit-gradient(linear, right 50%, left 50%, color-stop(0%, $heart-color-1), color-stop(40%, $heart-color-2));
+    background: -webkit-linear-gradient(-90deg, $heart-color-1 0%, $heart-color-2 40%);
+    background: linear-gradient(-90deg, $heart-color-1 0%, $heart-color-2 40%);
+    -webkit-animation: heartbeat 1.2s ease 0s infinite normal;
+    -moz-animation: heartbeat 1.2s ease 0s infinite normal;
+    animation: heartbeat 1.2s ease 0s infinite normal;
 }
+
 .credits-heart.heart-center {
     background: -moz-linear-gradient(-45deg, $heart-color-3 0%, $heart-color-2 40%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$heart-color-3), color-stop(40%,$heart-color-2));
-    background: -webkit-linear-gradient(-45deg, $heart-color-3 0%,$heart-color-2 40%);
-    background: linear-gradient(-45deg, $heart-color-3 0%,$heart-color-2 40%);
-}
-.credits-heart.heart-top {
-    z-index:3;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $heart-color-3), color-stop(40%, $heart-color-2));
+    background: -webkit-linear-gradient(-45deg, $heart-color-3 0%, $heart-color-2 40%);
+    background: linear-gradient(-45deg, $heart-color-3 0%, $heart-color-2 40%);
 }
 
+.credits-heart.heart-top {
+    z-index: 3;
+}
 
 .heart-side {
-    top:100px;
-    width:220px;
-    height:220px;
+    top: 100px;
+    width: 220px;
+    height: 220px;
     border-radius: 220px;
 }
+
 .heart-center {
-    width:210px;
-    height:210px;
-    bottom:100px;
-    left:145px;
-    font-size:0;
-    text-indent:-9999px;
+    width: 210px;
+    height: 210px;
+    bottom: 100px;
+    left: 145px;
+    font-size: 0;
+    text-indent: -9999px;
 }
+
 .heart-left {
-    left:62px;
+    left: 62px;
 }
+
 .heart-right {
-    right:62px;
+    right: 62px;
 }
 
 // END Heart

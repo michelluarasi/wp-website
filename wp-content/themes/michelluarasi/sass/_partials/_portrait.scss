@@ -6,98 +6,116 @@
 
 
 
-.portrait-wrapper{
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 120px;
+.portrait-wrapper {
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 120px;
 }
 
 
 // START Profile
 
-.profile-wrapper{
-  margin: 0 auto;
-  width: 100%;
-  padding: 140px 0 60px 0;
-  background-color: #18181C;
+.profile-wrapper {
+	margin: 0 auto;
+	width: 100%;
+	padding: 140px 0 60px 0;
+	background-color: #18181c;
 
-	@include breakpoint(baby-bear){
-	padding: 100px 0;
+	@include breakpoint(baby-bear) {
+		padding: 100px 0;
 	}
 }
 
 // Image
 
 @mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
-  &:after {
-    position: absolute;
-    content: "";
-    top: $y;
-    left: $x;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale($size);
-    -webkit-filter: blur($spread);
-    -moz-filter: blur($spread);
-    -ms-filter: blur($spread);
-    filter: blur($spread);
-    background: linear-gradient(270deg, $colorA, $colorB);
-    background-size: 200% 200%;
-
+	&:after {
+		position: absolute;
+		content: "";
+		top: $y;
+		left: $x;
+		right: 0;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		margin: 0 auto;
+		transform: scale($size);
+		-webkit-filter: blur($spread);
+		-moz-filter: blur($spread);
+		-ms-filter: blur($spread);
+		filter: blur($spread);
+		background: linear-gradient(270deg, $colorA, $colorB);
+		background-size: 200% 200%;
 		animation-name: animateGlow;
-		animation-timing: linear;
+		animation-timing-function: linear;
 		animation-duration: $duration;
 		animation-iteration-count: infinite;
-		animation-delay: 0;
 
-    @keyframes animateGlow {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-  }
+		@keyframes animateGlow {
+			0% {
+				background-position: 0% 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+	}
 }
 
-.portrait-img-container{
+.portrait-img-container {
 	padding-bottom: 6px;
 }
 
 .portrait-img {
 	margin: 0 auto;
-  position: relative;
-	width:320px;
-	height:320px;
+	position: relative;
+	width: 320px;
+	height: 320px;
 	background-size: 320px;
 	background-position: center center;
-	border-radius: 180px;	
-  line-height: 30vw;
-  text-align: center;
-  color: #252B37;
-  background-color: #151823;
+	border-radius: 180px;
+	line-height: 30vw;
+	text-align: center;
+	color: #252b37;
+	z-index: 0;
+	background-color: #151823;
 
-  @include backlight(0, 0, 5vw, 0.75, #0fffc1, #7e0fff, 10s);
-    
-  @include breakpoint(baby-bear){
-		width:240px;
-		height:240px;
+	@include backlight(0, 0, 5vw, 0.75, #0fffc1, #7e0fff, 10s);
+
+	@include breakpoint(baby-bear) {
+		width: 240px;
+		height: 240px;
 		background-size: 240px;
 	}
 
-	img{
-		width:100%;
+	img {
+		width: 100%;
 	}
 }
 
+.portrait-img--inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: inherit;
+	background-position: inherit;
+	border-radius: inherit;
+	line-height: inherit;
+}
 
-.profile__title{
+.profile__title {
 	text-align: center;
 	color: white;
 }
 
-.profile__copy{
+.profile__copy {
 	text-align: center;
 	font-size: 24px;
 	line-height: 36px;
@@ -111,22 +129,21 @@
 // START Expertise
 
 
-.expertise-wrapper{
-  margin: 0 auto;
-  width: 100%;
-  padding: 120px 0;
-  background-color: white;
-	
-	@include breakpoint(baby-bear){
-	padding: 80px 0;
+.expertise-wrapper {
+	margin: 0 auto;
+	width: 100%;
+	padding: 120px 0;
+	background-color: white;
+	@include breakpoint(baby-bear) {
+		padding: 80px 0;
 	}
 }
 
-.expertise__title{
+.expertise__title {
 	text-align: center;
 }
 
-.expertise__copy{
+.expertise__copy {
 	text-align: center;
 	font-size: 24px;
 	line-height: 36px;
@@ -141,49 +158,49 @@
 
 // START Services
 
-.services-wrapper{
+.services-wrapper {
 	padding: 120px 0;
-	margin:0;
+	margin: 0;
 
-	@include breakpoint(baby-bear){
-	padding: 80px 0;
+	@include breakpoint(baby-bear) {
+		padding: 80px 0;
 	}
 }
 
-.services-list{
+.services-list {
 	@extend .cf;
 }
 
-.services-list__item{
+.services-list__item {
 	display: block;
-  width: 50%;
-  margin: 0 auto;
-  float: left;
-  position: relative;
-  text-align: left;
+	width: 50%;
+	margin: 0 auto;
+	float: left;
+	position: relative;
+	text-align: left;
 	padding: 40px 80px;
 
-	@include breakpoint(mama-bear){
+	@include breakpoint(mama-bear) {
 		padding: 20px 40px;
 	}
 
-	@include breakpoint(baby-bear){
-		width:100%;
+	@include breakpoint(baby-bear) {
+		width: 100%;
 		padding: 20px 0;
 	}
 }
 
-.services-list__item:after{
+.services-list__item:after {
 }
 
-.services-list__item-svg{
+.services-list__item-svg {
 	width: 66%;
-  height: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 50%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 50%;
 
 	@include breakpoint(baby-bear){
 	}
@@ -195,65 +212,62 @@
 
 // START Clients
 
-.clients-wrapper{
+.clients-wrapper {
 	padding: 10% 0;
-	background-color:#18181C;
+	background-color: #18181c;
 }
 
-.clients__title{
+.clients__title {
 	color: white;
 	text-align: center;
 }
 
-.clients__copy{
+.clients__copy {
 	text-align: center;
 	color: white;
 	padding-top: 0;
 }
 
-.clients-list{
+.clients-list {
 	@extend .cf;
-	max-width:1440px;
-	margin:0 auto;
-	padding:0 ;
-	@include breakpoint(mama-bear){
-		max-width:720px;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0;
+	@include breakpoint(mama-bear) {
+		max-width: 720px;
 	}
 }
 
-
-
-
-.clients-list__item{
+.clients-list__item {
 	display: block;
-  width: 33%;
-  margin: 0 auto;
-  float: left;
-  position: relative;
-  text-align: center;
-  fill: white;
-	@include breakpoint(mama-bear){
-		width:50%;
+	width: 33%;
+	margin: 0 auto;
+	float: left;
+	position: relative;
+	text-align: center;
+	fill: white;
+	@include breakpoint(mama-bear) {
+		width: 50%;
 	}
 }
 
-.clients-list__item:after{
+.clients-list__item:after {
 	content: "";
-  padding-top: 50%;
-  display: block;
-  padding-bottom: 35%;
+	padding-top: 50%;
+	display: block;
+	padding-bottom: 35%;
 	@include breakpoint(baby-bear){
 	}
 }
 
-.clients-list__item-svg{
+.clients-list__item-svg {
 	width: 66%;
-  height: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 50%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 50%;
 
 	@include breakpoint(baby-bear){
 	}

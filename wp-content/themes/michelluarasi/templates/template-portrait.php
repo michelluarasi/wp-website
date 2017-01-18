@@ -35,13 +35,16 @@ get_header();?>
 <div class="profile-wrapper">
 	<div class="content-720 js-vp_reveal js-fade_in">
 
-		<div class="portrait-img-container js-vp_reveal js-scale_in">
-			<div class="portrait-img" style='background-image:url("<?php echo $portrait_big_img_url; ?>")'></div>			
-		</div>
+			<div class="portrait-img-container js-vp_reveal js-scale_in">
+					<div class="portrait-img">
+						<div class="portrait-img--inner" style='background-image:url("<?php echo $portrait_big_img_url; ?>")'></div>
+					</div>			
+				</div>
 
-		<h1 class="profile__title"><?php echo $portrait_headline; ?></h1>
-		<p class="profile__copy"><?php echo $portrait_intro_text; ?></p>
-		<p class="profile__copy"><a class="btn btn-m btn-violet" href="/work" title="Work">View My Work</a></p>
+			<h1 class="profile__title"><?php echo $portrait_headline; ?></h1>
+			<p class="profile__copy"><?php echo $portrait_intro_text; ?></p>
+			<p class="profile__copy"><a class="btn btn-m btn-violet" href="/work" title="Work">View My Work</a></p>
+		</div>
 
 	</div>
 </div>
