@@ -7,7 +7,7 @@ var Nav = (function(){
 	var s,
 	Module = {
 		settings: {
-			htmlTag: $('html'),
+			htmlTag: $("html"),
 			header: $(".header"),
 			headerStickyClass: "header--sticky",
 			menuLink: $(".menu-link"),
@@ -18,9 +18,8 @@ var Nav = (function(){
 			navToggle: $(".menu-toggle"),
 			navWrapper: $(".menu-overlay"),
 			ns: ".nav",
-			LogoContainer: $('logo-container'),
-			LogoMenu: ".show-logo-in-menu"
-
+			LogoContainer: $(".logo-container"),
+			LogoMenu: "show-logo-in-menu"
 		},
 
 		init: function(){

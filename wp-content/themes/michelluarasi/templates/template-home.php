@@ -36,8 +36,6 @@ get_header();?>
 
 
 
-
-
 <script src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/webgl/DeviceOrientationControls.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/webgl/Maf.min.js"></script>
@@ -375,7 +373,7 @@ function initScene() {
     minFilter: THREE.NearestFilter,
     magFilter: THREE.NearestFilter,
     format: THREE.RGBAFormat,
-    type: THREE.FloatType,
+    type: THREE.HalfFloatType,  // With "Half" is mobile ready
     stencilBuffer: false,
     depthBuffer: false,
     generateMipmaps: false
