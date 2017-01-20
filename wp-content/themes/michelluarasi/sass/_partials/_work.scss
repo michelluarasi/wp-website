@@ -32,6 +32,13 @@
 		clear: left;
 	}
 
+
+	@include breakpoint(short-bear) {
+		width: 43.75%;
+		margin: 0 12% 4% 0;
+	}
+
+
 	@include breakpoint(baby-bear) {
 		width: 100%;
 		margin: 0;
@@ -40,11 +47,6 @@
 		&:nth-child(odd) {
 			clear: none;
 		}
-	}
-
-	@include breakpoint(short-bear) {
-		width: 43.75%;
-		margin: 0 12% 6% 0;
 	}
 }
 

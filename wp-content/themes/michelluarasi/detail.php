@@ -5,44 +5,44 @@
  * @package michelluarasi
  */
 
-$header_video = simple_fields_get_post_value(get_the_id(), "Header Video", true);
-$hasVideo = empty($header_video) ? false : true;
-
-// Images
-$header_big_pic = simple_fields_get_post_value(get_the_id(), "Header Big Image", true);
-$header_big_pic_url = wp_get_attachment_url($header_big_pic);
-
-$header_medium_pic = simple_fields_get_post_value(get_the_id(), "Header Medium Image", true);
-$header_medium_pic_url = wp_get_attachment_url($header_medium_pic);
-
-$header_small_pic = simple_fields_get_post_value(get_the_id(), "Header Small Image", true);
-$header_small_pic_url = wp_get_attachment_url($header_small_pic);
-
 //Titles
 $title = simple_fields_get_post_value(get_the_id(), "Title", true);
 $subtitle = simple_fields_get_post_value(get_the_id(), "Subtitle", true);
 $description = simple_fields_get_post_value(get_the_id(), "Description", true);
 
+
+// Images
+$header_img_large = simple_fields_get_post_value(get_the_id(), "Header Image Large", true);
+$header_img_large_url = wp_get_attachment_url($header_img_large);
+$header_img_small = simple_fields_get_post_value(get_the_id(), "Header Image Small", true);
+$header_img_small_url = wp_get_attachment_url($header_img_small);
+
+
+// Videos
+$header_video = simple_fields_get_post_value(get_the_id(), "Header Video", true);
+$hasVideo = empty($header_video) ? false : true;
+
+
 //Content
-$sections = get_the_content();
+$post_content = get_the_content();
+
 
 list($prev_page,$next_page) = get_prev_next_posts($category_id);
 
 // next post parameters
 $nextpost_id = url_to_postid( $next_page );
 $nextpost_title = simple_fields_get_post_value($nextpost_id, "Title", true);
-$nextpost_big_pic = simple_fields_get_post_value($nextpost_id, "Header Big Image", true);
-$nextpost_big_pic_url = wp_get_attachment_url($nextpost_big_pic);
+$nextpost_image_large = simple_fields_get_post_value($nextpost_id, "Header Image Large", true);
+$nextpost_image_large_url = wp_get_attachment_url($nextpost_image_large);
 
-global $body_class_extra, $next_page, $prev_page, $category_id, $detail_stylesheet, $post_description, $open_graph_image_url, $post_title;
+global $body_class_extra, $next_page, $prev_page, $category_id, $detail_stylesheet, $post_content, $open_graph_image_url, $post_title;
 $post_title = get_the_title(get_the_id());
 $detail_stylesheet = simple_fields_get_post_value(get_the_id(), "Custom CSS", true);
 $body_class_extra .= " ".$detail_stylesheet;
-$post_description = get_the_content();
+
+
 $open_graph_image = simple_fields_get_post_value(get_the_id(), "Open Graph Image", true);
 $open_graph_image_url = wp_get_attachment_url($open_graph_image);
-
-
 
 get_header();
 ?>
@@ -58,7 +58,7 @@ get_header();
 			</div>			
 		<?php endif; ?>
 		<div class="img-container <?php echo ($hasVideo ? 'img-fallback' : 'picturefill'); ?> ">
-			<div class="cover picturefill-img detail-img" data-images='{"large":"<?php echo $header_big_pic_url; ?>", "medium":"<?php echo $header_medium_pic_url; ?>", "small":"<?php echo $header_small_pic_url; ?>"}'></div>
+			<div class="cover picturefill-img detail-img" data-images='{"large":"<?php echo $header_img_large_url; ?>", "small":"<?php echo $header_img_small_url; ?>"}'></div>
 		</div>
 		<div class="detail-header__content detail-header__content">
 			<h1 class="detail-header__content__project-name js-vp_reveal js-slide_down"><?php echo $title; ?></h1>	
@@ -69,15 +69,14 @@ get_header();
 	
 	<div class="detail-content">
 		<div class="detail-content__body">
-			<?php echo $sections; ?>
+			<?php echo $post_content; ?>
 		</div>
 	</div>
   <a href="<?php echo $next_page;?>" class="detail-next-content-link js-vp_reveal js-fade_in">
-    <div class="detail-next-content-parent" style="background-image: url('<?php echo $nextpost_big_pic_url; ?>')">
+    <div class="detail-next-content-parent" style="background-image: url('<?php echo $nextpost_image_large_url; ?>')">
         <div class="detail-next-content-child">
             <h4 class="detail-next-content__subtitle">View Next</h4>
             <h2 class="detail-next-content__title"><?php echo $nextpost_title; ?></h2>    
-      <!--  <button class="btn btn-m btn-white" href="<?php echo $next_page;?>" title="View Next">Open</button> -->
         </div>
     </div>
   </a>
@@ -87,5 +86,6 @@ get_header();
 	?>
   
 </div>
+
 
 

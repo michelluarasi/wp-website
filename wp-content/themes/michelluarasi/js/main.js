@@ -294,7 +294,7 @@ var PictureFill = (function(){
 		settings: {
 			matchedImageCounter: 0,
 			isImagesChanged: false,
-			breakpoints: [["medium","960px"],["small","640px"]],
+			breakpoints: [["small","640px"]],
 			currentBreakpoint: "",
 			detailImgContainer: $(".picturefill-img"),
 			backgroundImages: [],
