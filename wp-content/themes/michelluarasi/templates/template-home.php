@@ -30,11 +30,11 @@ get_header();?>
 
 </div>
 
-<script src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/webgl/DeviceOrientationControls.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/webgl/Maf.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/webgl/THREE.FBOHelper.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/webgl/isMobile.min.js"></script>
+<script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
+<script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/DeviceOrientationControls.min.js"></script>
+<script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/Maf.min.js"></script>
+<script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/THREE.FBOHelper.js"></script>
+<script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/isMobile.min.js"></script>
 
 
 <script data-cfasync="false" type="x-shader/x-vertex" id="clear-vs">
