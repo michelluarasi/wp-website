@@ -18,10 +18,6 @@ $current_page ="home";
 get_header();?>
 
 
-
-
-
-  
 <div class="home-wrapper">
 
   <div class="home-content content-960">
@@ -34,8 +30,6 @@ get_header();?>
 
 </div>
 
-
-
 <script src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/webgl/DeviceOrientationControls.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/webgl/Maf.min.js"></script>
@@ -43,7 +37,7 @@ get_header();?>
 <script src="<?php bloginfo('template_url'); ?>/js/webgl/isMobile.min.js"></script>
 
 
-<script type="x-shader/x-vertex" id="clear-vs">
+<script data-cfasync="false" type="x-shader/x-vertex" id="clear-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -65,7 +59,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-fragment" id="clear-fs">
+<script data-cfasync="false" type="x-shader/x-fragment" id="clear-fs">
 precision highp float;
 
 uniform sampler2D texture;
@@ -82,7 +76,7 @@ void main() {
 }
 
 </script>
-<script type="x-shader/x-vertex" id="texture-vs">
+<script data-cfasync="false" type="x-shader/x-vertex" id="texture-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -129,7 +123,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-fragment" id="texture-fs">
+<script data-cfasync="false" type="x-shader/x-fragment" id="texture-fs">
 precision highp float;
 
 void main() {
@@ -144,7 +138,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-vertex" id="particle-vs">
+<script data-cfasync="false" type="x-shader/x-vertex" id="particle-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -167,7 +161,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-fragment" id="particle-fs">
+<script data-cfasync="false" type="x-shader/x-fragment" id="particle-fs">
 precision highp float;
 
 void main() {
@@ -177,7 +171,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-vertex" id="simulation-vs">
+<script data-cfasync="false" type="x-shader/x-vertex" id="simulation-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -197,7 +191,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-fragment" id="simulation-fs">
+<script data-cfasync="false" type="x-shader/x-fragment" id="simulation-fs">
 precision highp float;
 
 uniform sampler2D positions;
