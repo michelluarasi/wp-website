@@ -9,7 +9,7 @@
 global $body_class_extra, $detail_stylesheet, $parent_page, $next_page, $prev_page, $current_page , $post_description, $open_graph_image_url, $post_title;
 
 if(empty($post_description)){
-	$post_description = "Designer &#38; Art Director from Zurich, Switzerland";
+	$post_description = "Art Director &#38; Experience Designer from Zurich, Switzerland";
 }
 
 if(empty($open_graph_image_url)){
@@ -86,14 +86,11 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
     </head>
 
     <!-- put project class names for specific template-->
-    <body <?php body_class($body_class_extra); ?>>
+
+<body <?php body_class($body_class_extra); ?>>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-
-
-
-
 
 
 <header class="header js-vp_reveal js-slide_down">

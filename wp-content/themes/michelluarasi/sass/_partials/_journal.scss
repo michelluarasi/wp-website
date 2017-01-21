@@ -16,10 +16,11 @@
 }
 
 .journal-list__item {
-	margin-bottom: 90px;
+	padding-bottom: 80px;
 	overflow: hidden;
+
 	@include breakpoint(baby-bear) {
-		margin-bottom: 40px;
+	padding-bottom: 10%;
 	}
 }
 
