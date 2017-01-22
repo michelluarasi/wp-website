@@ -105,7 +105,7 @@ get_header();?>
 
 	<div class="clients-wrapper js-vp_reveal js-fade_in">
 		<div class="content-960" style="text-align: center; color: white;">
-			<h4 class="clients__title">Expertise</h4>
+			<h4 class="clients__title">Clients</h4>
 			<h2 class="clients__copy"">Emerging from different industries, these bold brands are allowing me to learn a little more each day.</h2>
 		</div>
 
