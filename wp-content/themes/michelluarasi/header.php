@@ -6,27 +6,7 @@
  *
  * @package michelluarasi
  */
-global $body_class_extra, $detail_stylesheet, $parent_page, $next_page, $prev_page, $current_page , $post_description, $open_graph_image_url, $post_title;
-
-if(empty($post_description)){
-	$post_description = "Art Director &#38; Experience Designer from Zurich, Switzerland";
-}
-
-if(empty($open_graph_image_url)){
-	$open_graph_image_url = get_bloginfo('template_url')."/img/open-graph-default.jpg";
-}
-
-$page_title = "";
-
-if($current_page == "home"){
-	$page_title = ucfirst($current_page);
-}else if($current_page == "portrait" || $current_page == "journal" || $current_page == "design" || $current_page == "photography" || $current_page == "inprogress"){
-	if(empty($next_page)){
-		$page_title =  ucfirst($current_page);
-	}else{
-		$page_title = $post_title;
-	}
-}
+global $body_class_extra, $detail_stylesheet, $current_page;
 
 $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu" : $current_page;
 
@@ -79,7 +59,7 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
         <?php wp_head(); ?>
         <?php if(!empty($detail_stylesheet)) :?>
-        	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/work_detail/<?php echo $detail_stylesheet; ?>.css">
+        	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/custom/<?php echo $detail_stylesheet; ?>.css">
         <?php endif;?>
         <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.1.min.js"></script>
 
