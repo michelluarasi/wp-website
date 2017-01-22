@@ -178,8 +178,13 @@
 
 .detail-content__body {
 	max-width: 1280px;
-	padding: 60px 20px;
+	padding: 60px 0;
 	margin: 0 auto;
+
+	@include breakpoint(grandpapa-bear) {
+	padding: 60px 20px;
+	}
+
 }
 
 .work-detail .detail-content__body,

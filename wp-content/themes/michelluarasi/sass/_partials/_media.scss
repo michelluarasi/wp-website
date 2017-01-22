@@ -9,7 +9,7 @@
 
   // Width
   @if $point == grandpapa-bear {
-    @media (max-width: 1600px) { @content; }
+    @media (max-width: 1440px) { @content; }
   }
   @else if $point == papa-bear {
     @media (max-width: 1280px) { @content; }
