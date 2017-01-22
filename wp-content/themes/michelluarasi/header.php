@@ -28,14 +28,10 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 		<meta name="MobileOptimized" content="320" />
 
 		<!--  	APPLE		-->
-	  <meta name="apple-mobile-web-app-capable" content="yes" />
-	  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 	  <meta name="apple-mobile-web-app-title" content="Michel Luarasi" />
-
-
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 	  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php bloginfo('template_url'); ?>/img/apple-touch-icon-precomposed.png" />
 
