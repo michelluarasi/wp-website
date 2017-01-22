@@ -4,12 +4,12 @@
 /* --------------------------- HEADER ------------------------------ */
 
 /* - Project Title - */
-.suissemania h1.detail-header__content__project-name {
+.dark-theme h1.detail-header__content__project-name {
 color: white;
 }
 
 /* - Project Subtitle - */
-.suissemania p.detail-header__content__subtitle {
+.dark-theme p.detail-header__content__subtitle {
 color: white;
 }
 
@@ -25,22 +25,22 @@ color: white;
 
 
 /* - Background - */
-.suissemania .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
+.dark-theme .detail-content, .detail-information, .detail-nav, .detail-nav__link-list__item__link {
 	background-color: #212224;
 }
 
 /* - Lead - */
-.suissemania p.lead {
+.dark-theme p.lead {
 	color: #F5F7FA;
 }
 
 /* - Titles - */
-.suissemania h2, h3, h4 {
+.dark-theme h2, h3, h4 {
 	color: #F5F7FA;
 }
 
 /* - Paragraph, Hidden Link, Share - */
-.suissemania p, a.hidden:link, a.hidden:visited, .suissemania .share-menu .share-menu__list-item__link{
+.dark-theme p, a.hidden:link, a.hidden:visited, .dark-theme .share-menu .share-menu__list-item__link{
 	color: #5C6066;
 }
 
@@ -59,22 +59,22 @@ a.hidden:hover{
 
 
 /* - Border - */
-.suissemania .detail-nav__link-list, .suissemania .detail-nav__link-list__item__link {
+.dark-theme .detail-nav__link-list, .dark-theme .detail-nav__link-list__item__link {
 	border-color: #5C6066;
 }
 
 /* - States - */
-.suissemania .detail-nav a, .detail-nav a:visited {
+.dark-theme .detail-nav a, .detail-nav a:visited {
     color: #F5F7FA;
     background-color: #212224;
  }
 
-.suissemania .detail-nav a:hover {
+.dark-theme .detail-nav a:hover {
     color: #F5F7FA;
     background-color: #5C6066;
 }
 
-.suissemania .detail-nav a:active {
+.dark-theme .detail-nav a:active {
     color: #303133;
     background-color: #F5F7FA;
 }
