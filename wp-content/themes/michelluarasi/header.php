@@ -43,11 +43,9 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 	  <link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/img/splashes/splash-iphone-old-retina.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px) and (-webkit-min-device-pixel-ratio: 2)" />
 
 		<!--  	NORMALISE.CSS	-->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
 
 		<!--  	OTHER		-->
-
         <?php wp_head(); ?>
         <?php if(!empty($detail_stylesheet)) :?>
         	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/custom/<?php echo $detail_stylesheet; ?>.css">

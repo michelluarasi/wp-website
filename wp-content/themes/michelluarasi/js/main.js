@@ -582,8 +582,6 @@ var ViewportReveal = (function() {
 
 // END show on scroll
 
-
-
 // START Fade In Home, Image Header, Video Header
 
 $(window).load(function(){
@@ -607,8 +605,23 @@ $(window).load(function(){
 	}
 
 	$('body').addClass('is-loaded');
+
+	onParticleScreenClick();
 });
 
 // END Fade In Home, Image Header, Video Header
+var incrValue = 0.001; 
+var isPressing = false; 
+
+function onParticleScreenClick() {
+	var $win = $(window);
+	$win.on('mousedown', function(){
+		isPressing = true; 
+	});
+
+	$win.on('mouseup', function(){
+			isPressing = false; 
+	})
+}
 
 

@@ -30,13 +30,57 @@ get_header();?>
 </div>
 
 <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
+<!-- <?php // <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/OrbitControls.min.js"></script>-->
 <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/DeviceOrientationControls.min.js"></script>
 <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/Maf.min.js"></script>
 <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/THREE.FBOHelper.js"></script>
 <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/isMobile.min.js"></script>
 
 
-<script data-cfasync="false" type="x-shader/x-vertex" id="clear-vs">
+
+    <script>
+      // var stats = new Stats();  // FPS STATS
+      // stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom  // FPS STATS
+      document.body.appendChild( stats.dom );
+
+      function animate() {
+
+      requestAnimationFrame( animate );
+         // stats.begin();  // FPS STATS
+
+        /*  controls.update();  ORBIT CONTROLS*/
+
+          simulationShader.uniforms.value = .0001 * performance.now();
+          simulationShader.uniforms.positions.value = targets[ targetPos ].texture;
+          targetPos = 1 - targetPos;
+          renderer.render( rtScene, rtCamera, targets[ targetPos ] );
+
+          renderer.autoClear = false;
+
+          orthoQuad.visible = true; orthoMesh.visible = false;
+          clearShader.uniforms.texture.value = textureFBO[ targetTexture ].texture;
+          targetTexture = 1 - targetTexture;
+          renderer.render( orthoScene, orthoCamera, textureFBO[ targetTexture ] );
+          textureShader.uniforms.positions.value = targets[ targetPos ].texture;
+          orthoQuad.visible = false; orthoMesh.visible = true;
+          renderer.render( orthoScene, orthoCamera, textureFBO[ targetTexture ] );
+          //sphere.material.map = textureFBO[ targetTexture ];
+          renderer.autoClear = true;
+
+          mesh.material.uniforms.positions.value = targets[ targetPos ].texture;
+
+          renderer.render( scene, camera );
+          helper.update();
+  
+          // stats.end(); // FPS STATS
+      }
+      animate();
+
+    </script>
+
+
+
+<script type="x-shader/x-vertex" id="clear-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -58,7 +102,7 @@ void main() {
 
 </script>
 
-<script data-cfasync="false" type="x-shader/x-fragment" id="clear-fs">
+<script type="x-shader/x-fragment" id="clear-fs">
 precision highp float;
 
 uniform sampler2D texture;
@@ -75,7 +119,7 @@ void main() {
 }
 
 </script>
-<script data-cfasync="false" type="x-shader/x-vertex" id="texture-vs">
+<script type="x-shader/x-vertex" id="texture-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -122,7 +166,7 @@ void main() {
 
 </script>
 
-<script data-cfasync="false" type="x-shader/x-fragment" id="texture-fs">
+<script type="x-shader/x-fragment" id="texture-fs">
 precision highp float;
 
 void main() {
@@ -137,7 +181,7 @@ void main() {
 
 </script>
 
-<script data-cfasync="false" type="x-shader/x-vertex" id="particle-vs">
+<script type="x-shader/x-vertex" id="particle-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -160,7 +204,7 @@ void main() {
 
 </script>
 
-<script data-cfasync="false" type="x-shader/x-fragment" id="particle-fs">
+<script type="x-shader/x-fragment" id="particle-fs">
 precision highp float;
 
 void main() {
@@ -170,7 +214,7 @@ void main() {
 
 </script>
 
-<script data-cfasync="false" type="x-shader/x-vertex" id="simulation-vs">
+<script type="x-shader/x-vertex" id="simulation-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -190,7 +234,7 @@ void main() {
 
 </script>
 
-<script data-cfasync="false" type="x-shader/x-fragment" id="simulation-fs">
+<script type="x-shader/x-fragment" id="simulation-fs">
 precision highp float;
 
 uniform sampler2D positions;
@@ -314,9 +358,47 @@ var textureFBO;
 
 var helper;
 
-var streakType = 0;
+// Streak Type
+
+var streakType = 0.1;
+
+// Streak Type Toggle Function
+
+/*
+document.getElementById( 'toggleStreakBtn' ).addEventListener( 'click', function( e ){
+
+  streakType = 1 - streakType;
+  textureShader.uniforms.streakType.value = streakType;
+
+});
+
+*/
+
+//  Toggle Camera Function
+
+/*
 
 var cameraPosition = 0;
+document.getElementById( 'toggleCamBtn' ).addEventListener( 'click', function( e ){
+
+  cameraPosition = 1 - cameraPosition;
+  if( cameraPosition == 0 ) {
+    if( isMobile.any ) {
+      camera.position.set( 0, 0, 0 );
+    } else {
+      camera.position.set( 0, 0, 90 ); // Camera Position
+    }
+  } else {
+    if( isMobile.any ) {
+      camera.position.set( 0, 0, 0 );
+    } else {
+      camera.position.set( 0, 0, 190 );
+    }
+  }
+
+});
+
+*/
 
 var webglcontainer = document.getElementById( 'webglcontainer' );
 
@@ -329,6 +411,7 @@ function createRenderTarget() {
     stencilBuffer: false,
     depthBuffer: true
   });
+
 }
 
 function initScene() {
@@ -366,7 +449,7 @@ function initScene() {
     minFilter: THREE.NearestFilter,
     magFilter: THREE.NearestFilter,
     format: THREE.RGBAFormat,
-    type: THREE.HalfFloatType,  // With "Half" is mobile ready
+    type: THREE.FloatType,
     stencilBuffer: false,
     depthBuffer: false,
     generateMipmaps: false
@@ -492,13 +575,13 @@ function initScene() {
 
   var light1 = new THREE.SpotLight( 0xffffff, .5, 100, .25, .2, .1 );
   light1.position.set( 0, 40, 0 );
-  light1.castShadow = true;
+  light1.castShadow = false;
   light1.shadow.mapSize.width = light1.shadow.mapSize.height = 1024;
   scene.add( light1 );
 
   var light2 = new THREE.SpotLight( 0xffffff, .5, 100, .5, .2, .1 );
   light2.position.set( -10, 20, 4 );
-  light2.castShadow = true;
+  light2.castShadow = false;
   light2.shadow.mapSize.width = light2.shadow.mapSize.height = 1024;
   scene.add( light2 );
 
@@ -520,12 +603,13 @@ function init() {
 
   scene = new THREE.Scene();
 
-  camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, .1, 10000 );
+  camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, .1, 10000 );
+  camera.position.set( 0, 0, 90 );
   camera.target = new THREE.Vector3( 0, 0, 0 );
   camera.lookAt( camera.target );
   scene.add( camera );
 
-  renderer = new THREE.WebGLRenderer( { antialias: true, preserveDrawingBuffer: true } );
+  renderer = new THREE.WebGLRenderer( { antialias: false, preserveDrawingBuffer: true } );
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setClearColor( 0, 1 );
   webglcontainer.appendChild( renderer.domElement );
@@ -536,6 +620,20 @@ function init() {
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
 
+/*
+
+ORBIT CONTROLS
+
+  if( isMobile.any ) {
+    camera.position.set( 0, 0, 0 );
+    controls = new THREE.DeviceOrientationControls( camera );
+  } else {
+    camera.position.set( 0, 0, 90 );
+    controls = new THREE.OrbitControls( camera, renderer.domElement );
+    controls.enableZoom = false;
+  }
+
+*/
 
   initScene();
   onWindowResized();
@@ -555,40 +653,15 @@ function onWindowResized( event ) {
   camera.aspect = w / h;
   camera.updateProjectionMatrix();
 
-  helper.setSize( w, h );
+//  helper.setSize( w, h );
 
 }
 
-function animate() {
-
-  requestAnimationFrame( animate );
-
-  simulationShader.uniforms.time.value = .0001 * performance.now();
-  simulationShader.uniforms.positions.value = targets[ targetPos ].texture;
-  targetPos = 1 - targetPos;
-  renderer.render( rtScene, rtCamera, targets[ targetPos ] );
-
-  renderer.autoClear = false;
-
-  orthoQuad.visible = true; orthoMesh.visible = false;
-  clearShader.uniforms.texture.value = textureFBO[ targetTexture ].texture;
-  targetTexture = 1 - targetTexture;
-  renderer.render( orthoScene, orthoCamera, textureFBO[ targetTexture ] );
-  textureShader.uniforms.positions.value = targets[ targetPos ].texture;
-  orthoQuad.visible = false; orthoMesh.visible = true;
-  renderer.render( orthoScene, orthoCamera, textureFBO[ targetTexture ] );
-  //sphere.material.map = textureFBO[ targetTexture ];
-  renderer.autoClear = true;
-
-  mesh.material.uniforms.positions.value = targets[ targetPos ].texture;
-
-  renderer.render( scene, camera );
-  helper.update();
-
-}
+// ANIMATE FUNCTION 
 
 window.addEventListener( 'load', init );
 
 </script>
+
 
 <?php get_footer(); ?>
