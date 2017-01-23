@@ -15,19 +15,18 @@ Template Name: Template Home
 global $current_page;
 $current_page ="home";
 
+$home_intro_headline = simple_fields_get_post_value(get_the_id(), "Home Intro Headline", true); 
+
 get_header();?>
 
 
 <div class="home-wrapper">
-
   <div class="home-content content-960">
       <h4 class="js-vp_reveal js-fade_in" style="color: white;">Welcome</h4>
-      <h1 class="js-vp_reveal js-slide_down" style="color: white; padding-top: 0;">I build exeptional websites and digital experiences that transform brands.</h1>
+      <h1 class="js-vp_reveal js-slide_down" style="color: white; padding-top: 0;"><?php echo $home_intro_headline; ?></h1>
       <p class="profile__copy js-vp_reveal js-slide_up"><a class="btn btn-m btn-violet" href="/work" title="Work">Learn More</a></p>
   </div>
-
   <div id="webglcontainer"></div>
-
 </div>
 
 <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
