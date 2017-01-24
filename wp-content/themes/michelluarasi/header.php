@@ -9,7 +9,7 @@
 global $body_class_extra, $detail_stylesheet, $current_page;
 
 $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu" : $current_page;
-
+ 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -26,6 +26,9 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
+
+    <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/open-graph.jpg" />
+
 
 		<!--  	APPLE		-->
 	  <meta name="apple-mobile-web-app-capable" content="yes">
