@@ -65,7 +65,11 @@ get_header();
 			<h1 class="detail-header__content__project-name js-vp_reveal js-slide_down"><?php echo $title; ?></h1>	
 			<p class="detail-header__content__subtitle js-vp_reveal js-fade_in"><?php echo $subtitle;?></p>
 		</div>
-		<div class="detail-header__arrow ml-icon-nav-down"></div>
+		<div class="detail-header__arrow js-vp_reveal js-fade_in">
+        <svg width="32px" height="32px"  viewBox="0 0 32 32">
+            <path d="M4.4 9L3 10.4 15.7 23l12.7-12.5L27 9 15.7 20.4" fill="#FFF"/>
+        </svg>
+    </div>
 	</div>
 	
 	<div class="detail-content">

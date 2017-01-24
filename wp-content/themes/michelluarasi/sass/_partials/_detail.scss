@@ -113,28 +113,26 @@
 
 .detail-header__arrow {
 	position: absolute;
-	background-color: rgba(0, 0, 0, 0.4);
-	bottom: 0px;
+	background-color: rgba(0, 0, 0, 0);
+	bottom: 12px;
 	left: 50%;
 	cursor: pointer;
-	margin-left: -40px;
-	width: 80px;
-	height: 32px;
+	margin-left: -28px;
+	width: 56px;
+	height: 56px;
 	display: block;
 	z-index: 10;
 	text-align: center;
+	padding-top: 13px;
 
 	&:before {
 		color: white;
-		font-size: 32px;
-		line-height: 32px;
 		vertical-align: middle;
 	}
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	border-radius: 48px;
 
 	&:hover {
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.4);
 	}
 }
 
@@ -480,6 +478,48 @@
 
 
 // END States
+
+
+.detail-content__body__section {
+	// position:relative;
+	width: 100%;
+	// overflow:hidden;
+	padding: 64px 0;
+
+	h3 {
+		@extend %header;
+		text-align: center;
+		font-size: 30px;
+		@include breakpoint(baby-bear) {
+			font-size: 21px;
+			margin-bottom: 10px;
+		}
+	}
+
+	p {
+		@extend .detail-content__body__row__column__text__copy;
+		@include breakpoint(baby-bear) {
+			padding: 0;
+		}
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+
+		&.responsive {
+			max-width: 100%;
+			height: auto;
+			width: auto;
+			@include breakpoint(baby-bear) {
+				padding: 0;
+			}
+		}
+	}
+	@include breakpoint(baby-bear){
+		// padding:10px;
+	}
+}
 
 
 /* BOX LIST */
