@@ -29,7 +29,7 @@ get_header();?>
   <div id="webglcontainer"></div>
 </div>
 
-<script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/three.min.js"></script>
+<script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
 <!-- <?php // <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/OrbitControls.min.js"></script>-->
 <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/DeviceOrientationControls.min.js"></script>
 <script data-cfasync="false" src="<?php bloginfo('template_url'); ?>/js/webgl/Maf.min.js"></script>
@@ -337,15 +337,11 @@ void main() {
     c.a = 0.;
   }
   gl_FragColor = c;
-
 }
 
 </script>
 
 <script>
-
-// https://twitter.com/archillect/status/801940973278396416
-// http://archillect.com/58740
 
 'use strict';
 
@@ -449,7 +445,7 @@ function initScene() {
     minFilter: THREE.NearestFilter,
     magFilter: THREE.NearestFilter,
     format: THREE.RGBAFormat,
-    type: THREE.FloatType,
+    type: THREE.HalfFloatType, // iOS ready
     stencilBuffer: false,
     depthBuffer: false,
     generateMipmaps: false
@@ -492,7 +488,6 @@ function initScene() {
       positions[ ptr + 2 ] = 0;
       ptr += 3;
     }
-
   }
 
   pointsGeometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
@@ -620,8 +615,8 @@ function init() {
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
 
-/*
 
+/*
 ORBIT CONTROLS
 
   if( isMobile.any ) {
@@ -632,8 +627,8 @@ ORBIT CONTROLS
     controls = new THREE.OrbitControls( camera, renderer.domElement );
     controls.enableZoom = false;
   }
-
 */
+
 
   initScene();
   onWindowResized();
