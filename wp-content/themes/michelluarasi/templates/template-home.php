@@ -38,7 +38,7 @@ get_header();?>
 
 
 
-    <script>
+    <script data-cfasync="false">
       // var stats = new Stats();  // FPS STATS
       // stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom  // FPS STATS
       document.body.appendChild( stats.dom );
@@ -80,7 +80,7 @@ get_header();?>
 
 
 
-<script type="x-shader/x-vertex" id="clear-vs">
+<script data-cfasync="false" type="x-shader/x-vertex" id="clear-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -102,7 +102,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-fragment" id="clear-fs">
+<script data-cfasync="false" type="x-shader/x-fragment" id="clear-fs">
 precision highp float;
 
 uniform sampler2D texture;
@@ -119,7 +119,7 @@ void main() {
 }
 
 </script>
-<script type="x-shader/x-vertex" id="texture-vs">
+<script data-cfasync="false" type="x-shader/x-vertex" id="texture-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -166,7 +166,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-fragment" id="texture-fs">
+<script data-cfasync="false" type="x-shader/x-fragment" id="texture-fs">
 precision highp float;
 
 void main() {
@@ -181,7 +181,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-vertex" id="particle-vs">
+<script data-cfasync="false" type="x-shader/x-vertex" id="particle-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -204,7 +204,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-fragment" id="particle-fs">
+<script data-cfasync="false" type="x-shader/x-fragment" id="particle-fs">
 precision highp float;
 
 void main() {
@@ -214,7 +214,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-vertex" id="simulation-vs">
+<script data-cfasync="false" type="x-shader/x-vertex" id="simulation-vs">
 precision highp float;
 
 attribute vec3 position;
@@ -234,7 +234,7 @@ void main() {
 
 </script>
 
-<script type="x-shader/x-fragment" id="simulation-fs">
+<script data-cfasync="false" type="x-shader/x-fragment" id="simulation-fs">
 precision highp float;
 
 uniform sampler2D positions;
@@ -341,7 +341,7 @@ void main() {
 
 </script>
 
-<script>
+<script data-cfasync="false">
 
 'use strict';
 
@@ -429,7 +429,6 @@ function initScene() {
     data[ i * 4 + 1 ] = r * Math.sin( theta) * Math.sin( phi );
     data[ i * 4 + 2 ] = r * Math.cos( theta );
     data[ i * 4 + 3 ] = Math.random() * 100; // frames life
-
   }
 
   var texture = new THREE.DataTexture( data, width, height, THREE.RGBAFormat, THREE.FloatType );

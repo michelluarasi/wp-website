@@ -1,3 +1,12 @@
+/***************
+*
+*  Detail
+*
+****************/
+
+
+
+
 .detail-img {
 	img {
 		width: 100%;
@@ -376,69 +385,6 @@
 	}
 }
 
-.detail-footer__connect {
-	@extend .cf;
-	width: 640px;
-	margin: 30px auto;
-	@include breakpoint(mama-bear) {
-		width: 620px;
-	}
-	@include breakpoint(teen-bear) {
-		width: 100%;
-		margin: 40px auto;
-	}
-
-	.footer__social {
-		float: right;
-		padding: 0;
-
-		@include breakpoint(teen-bear) {
-			float: none;
-		}
-	}
-
-	.footer__social__list-item {
-		background-color: #262626;
-
-		&:hover,
-		&:active,
-		&:visited {
-			background-color: #cc2127;
-
-			.footer__social__list-item__link {
-				opacity: 1;
-			}
-		}
-	}
-
-	.footer__social__list-item__link {
-		margin: 0;
-		width: 60px;
-		height: 60px;
-	}
-}
-
-.detail-footer__connect__link {
-	float: left;
-	@include breakpoint(teen-bear) {
-		width: 300px;
-		margin: 0 auto 10px;
-		float: none;
-	}
-}
-
-.detail-footer__connect__link__mail-icon {
-	position: absolute;
-	display: block;
-	font-size: 60px;
-	width: 60px;
-	height: 60px;
-	line-height: 60px;
-	right: 0;
-	top: 0;
-	background-color: #e1e3e6;
-	color: #898a8c;
-}
 
 .col-2-3 {
 	width: 66.66%;
@@ -495,7 +441,7 @@
 
 .journal-detail {
 	.footer {
-		display: none; // Hide FOOTER on WORK-DETAIL Pages
+		display: none; // Hide FOOTER on JOURNAL-DETAIL Pages
 	}
 }
 
@@ -532,85 +478,8 @@
 	}
 }
 
-.detail-header__content__project-name--journal {
-	@include breakpoint(mama-bear) {
-		padding: 0 35px;
-	}
-}
-
-.detail-footer__connect--journal {
-	.detail-footer__connect__link__short-tiny-url {
-		background-color: #ebedf0;
-		color: #a0a1a3;
-	}
-
-	.detail-footer__connect__link__short-tiny-url::after {
-		background-color: #e1e3e6;
-	}
-
-	.footer__social__list-item {
-		background-color: #ebedf0;
-
-		&:hover {
-			background-color: #00abf0;
-
-			.footer__social__list-item__link {
-				opacity: 1;
-			}
-		}
-	}
-
-	.footer__social__list-item__link:hover {
-		color: white;
-	}
-}
-
 
 // END States
-
-
-
-
-.detail-content__body__section {
-	// position:relative;
-	width: 100%;
-	// overflow:hidden;
-	padding: 64px 0;
-
-	h3 {
-		@extend %header;
-		text-align: center;
-		font-size: 30px;
-		@include breakpoint(baby-bear) {
-			font-size: 21px;
-			margin-bottom: 10px;
-		}
-	}
-
-	p {
-		@extend .detail-content__body__row__column__text__copy;
-		@include breakpoint(baby-bear) {
-			padding: 0;
-		}
-	}
-
-	img {
-		display: block;
-		margin: 0 auto;
-
-		&.responsive {
-			max-width: 100%;
-			height: auto;
-			width: auto;
-			@include breakpoint(baby-bear) {
-				padding: 0;
-			}
-		}
-	}
-	@include breakpoint(baby-bear){
-		// padding:10px;
-	}
-}
 
 
 /* BOX LIST */
@@ -645,21 +514,6 @@
 	@extend %copy;
 	color: #48494d;
 	font-size: 16px;
-}
-
-.signature {
-	color: #d5dae1;
-	text-align: center;
-	font-size: 240px;
-	line-height: 120px;
-	@include breakpoint(mama-bear) {
-		margin: 15px 0px 0px 0px;
-		font-size: 160px;
-	}
-
-	@include breakpoint(baby-bear) {
-		margin-top: 10px;
-	}
 }
 
 .detail-video {

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template Expertise
+Template Name: Template Blank
 */
 /**
  * The template for displaying all pages.
@@ -12,11 +12,22 @@ Template Name: Template Expertise
  *
  * @package michelluarasi
  */
-global $body_class_extra, $current_page;
-$current_page = "expertise";
-$body_class_extra = "expertise";
+
+//Content
+$post = get_post();
+$content = $post->post_content;
+
+global $body_class_extra, $page_content, $current_page;
+$current_page = "menu";
+$body_class_extra = "blank";
 
 get_header();?>
+
+  <div class="detail-content">
+    <div class="detail-content__body">
+        <?php echo $content; ?>
+    </div>
+  </div>
 
 <?php
   // include (get_template_directory()."/get_in_touch.php"); 

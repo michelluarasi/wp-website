@@ -37,6 +37,7 @@ $nextpost_image_large_url = wp_get_attachment_url($nextpost_image_large);
 
 global $body_class_extra, $next_page, $prev_page, $category_id, $detail_stylesheet, $post_content, $open_graph_image_url, $post_title;
 $post_title = get_the_title(get_the_id());
+
 $detail_stylesheet = simple_fields_get_post_value(get_the_id(), "Custom CSS", true);
 $body_class_extra .= " ".$detail_stylesheet;
 

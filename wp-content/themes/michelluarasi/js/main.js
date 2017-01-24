@@ -469,17 +469,15 @@ var Home = (function(){
 // END "Variables, Functions" HOME
 
 
-// START "Variables, Functions" Detail
+// START "Variables, Functions" DETAIL
 
 var Detail = (function(){
 	var s,
 	Module = {
 		settings: {
-			// centeredContent: $(".detail-content__body__section--centered"),
 			workContainer: $(".detail-content--work"),
 			headerContainer: $(".detail-header--work"),
 			projectYear: $(".detail-content__header__year"),
-			// centeredContentProportion: 0.5,
 			backgroundProportion: 2.7,
 			breakPoint: 960,
 			backgroundTopPos:0,
@@ -536,7 +534,7 @@ var Detail = (function(){
 	return Module;
 }());
 
-// END "Variables, Functions" Detail
+// END "Variables, Functions" DETAIL
 
 
 // START Viewport Reveal
@@ -610,6 +608,10 @@ $(window).load(function(){
 });
 
 // END Fade In Home, Image Header, Video Header
+
+
+// START Adonis Bou Chakra Stuff for WebGL
+
 var incrValue = 0.001; 
 var isPressing = false; 
 
@@ -624,4 +626,5 @@ function onParticleScreenClick() {
 	})
 }
 
+// END Adonis Bou Chakra Stuff for WebGL
 
