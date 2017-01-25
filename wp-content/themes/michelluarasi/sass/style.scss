@@ -10,16 +10,7 @@ License URI: license.txt
 Tags:
 */
 
-html,body{
-	width:100%;
-	height:100%;
-	background-color:#f5f7fa;
-	font-family: "Proxima Nova";
-	font-style:normal;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-}
-
+@import "_partials/normalize";
 @import "_partials/fonts";
 // @import "compass/css3";
 @import "_partials/animations";

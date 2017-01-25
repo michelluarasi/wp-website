@@ -66,9 +66,11 @@ $heart-color-3: #363B9C;
 .heart-container {
 	@include breakpoint(mama-bear) {
 		transform: scale(0.8, 0.8);
+		margin: -60px 0;
 	}
 	@include breakpoint(baby-bear) {
 		transform: scale(0.6, 0.6);
+		margin: -100px 0;
 	}
 }
 

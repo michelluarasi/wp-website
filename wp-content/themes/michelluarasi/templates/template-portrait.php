@@ -221,13 +221,9 @@ get_header();?>
 				</li>
 			</logo>
 		</ul>
-
 	</div>
 
-<!--	<p class="signature ml-otherml-icon-signature"></p> -->
-
 <?php
-	// include (get_template_directory()."/get_in_touch.php"); 
 	get_footer(); 
 ?>
 	

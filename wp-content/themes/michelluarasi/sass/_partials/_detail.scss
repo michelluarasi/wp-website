@@ -170,9 +170,9 @@
 }
 
 .detail-header__content__project-name {
-	@extend %header;
+	@extend h1;
 	margin: 0;
-	padding: 0 0 6px 0;
+	padding: 0 20px;
 	color: white;
 	font-size: 64px;
 	line-height: 72px;
