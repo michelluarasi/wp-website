@@ -16,7 +16,7 @@
         <a class="footer-main-link" href="mailto:michel@luarasi.com">michel@luarasi.com</a></br><a class="footer-main-link"" href="tel:+41787225079">+41 78 722 50 79</a>
 
         <p class="footer-social-wrapper">
-        
+
             <a class="hidden main-nav-container__footer__item" target="_blank" href="http://instagram.com/michelluarasi">Instagram
                 <svg width="8px" height="8px"  viewBox="0 0 8 8">
                   <g fill="#5259D4" fill-rule="evenodd">

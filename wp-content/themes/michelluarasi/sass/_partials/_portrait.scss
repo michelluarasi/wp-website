@@ -116,9 +116,8 @@
 }
 
 .profile__copy {
+	@extend p.lead;
 	text-align: center;
-	font-size: 24px;
-	line-height: 36px;
 	color: $color-grey-3;
 }
 
@@ -144,12 +143,10 @@
 }
 
 .expertise__copy {
+	@extend p.lead;
 	text-align: center;
-	font-size: 24px;
-	line-height: 36px;
 	color: $color-grey-2;
 }
-
 
 // END Expertise
 

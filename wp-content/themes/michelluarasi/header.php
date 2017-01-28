@@ -56,7 +56,7 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
           	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/custom/<?php echo $detail_stylesheet; ?>.css">
           <?php endif;?>
 
-          <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.1.min.js"></script>
+          <script async src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.1.min.js"></script>
    
   </head>
 

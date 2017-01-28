@@ -382,7 +382,6 @@ var PictureFill = (function(){
 		},
 
 		loadImage: function(){
-			console.log("background image is "+s.backgroundImages[s.currentBreakpoint]);
 			s.detailImgContainer.each(function(i){    			
     			var $img = $(this);
     			$img.get(0).style.backgroundImage = "url(" + s.backgroundImages[i][s.currentBreakpoint]+")";
