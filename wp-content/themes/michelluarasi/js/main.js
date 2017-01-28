@@ -373,11 +373,8 @@ var PictureFill = (function(){
 					else if( picImg ){
 						picImg.parentNode.removeChild( picImg );
 					}
-					s.matchedImageCounter++;
-
-					
+					s.matchedImageCounter++;	
 				}
-
 			}
 		},
 
