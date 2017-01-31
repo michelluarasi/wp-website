@@ -1,0 +1,49 @@
+/***************
+*
+*  Reverie
+*
+****************/
+
+
+// START Reverie Page
+
+.reverie-wrapper {
+	padding: 80px 0;
+	width: 100%;
+	height: auto;
+	min-height: 4800px;
+}
+
+.js-tumblr--list {
+	text-align: center;
+}
+
+.reverie-img{
+	max-width: 960px;
+	max-height: 640px;
+	margin: 20px;
+
+	@include breakpoint(papa-bear) {
+	max-width: 720px;
+	max-height: 480px;
+	}
+	@include breakpoint(mama-bear) {
+	max-width: 100%;
+	max-height: 480px;
+	}
+	@include breakpoint(baby-bear) {
+	max-width: 100%;
+	max-height: 360px;
+	}
+}
+
+.js-tumblr--loadMore {
+}
+
+.reverie {
+	.footer {
+		display: none; // Hide FOOTER on REVERIE-Pages
+	}
+}
+
+// END Reverie Page

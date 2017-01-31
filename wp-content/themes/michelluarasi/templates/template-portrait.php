@@ -32,7 +32,7 @@ $portrait_body = simple_fields_get_post_value(get_the_id(), "Portrait Body", tru
 
 get_header();?>
 
-<div class="profile-wrapper">
+<div class="profile-wrapper js-vp_reveal js-fade_in">
 	<div class="content-720 js-vp_reveal js-fade_in">
 
 			<div class="portrait-img-container js-vp_reveal js-scale_in">

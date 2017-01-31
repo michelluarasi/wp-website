@@ -52,6 +52,12 @@ var Nav = (function(){
 		},
 
 		menuClickHandler: function(event){
+
+   		// START Local Storage
+   		localStorage.setItem('learnMenu', 'learned');
+   		checkMenuPulseState();
+   		// END Local Storage
+
 			event.preventDefault();
 			if(s.htmlTag.hasClass(s.activeClass)){
 				Module.close();
@@ -606,6 +612,34 @@ $(window).load(function(){
 // END Fade In Home, Image Header, Video Header
 
 
+
+// START Fade out Elements (SKL)
+
+$('.js-fade_in.is-visible').each(function(index) {
+    var el = this;
+    setTimeout(function() {$(el).removeClass('is-visible').addClass('is-out');}, 50 * index);
+});
+
+// END Fade out Elements (SKL)
+
+
+// START Local Storage
+
+  // To clean your local storage
+  localStorage.removeItem('learnMenu');
+  
+  //check if menu-pulses are required
+  function checkMenuPulseState() {
+    if(localStorage.getItem('learnMenu') == 'learned') {
+      var $menuPulse = $('.menu-pulse');
+      $menuPulse.addClass('is-learned');
+    }
+  }
+  checkMenuPulseState();
+
+// END Local Storage
+
+
 // START Adonis Bou Chakra Stuff for WebGL
 
 var incrValue = 0.001; 
@@ -623,4 +657,57 @@ function onParticleScreenClick() {
 }
 
 // END Adonis Bou Chakra Stuff for WebGL
+
+
+// START Get Tumblr (merdar)
+
+
+function loadTumblr(url) {
+  var $list = $('.js-tumblr--list');
+
+  $.ajax({
+    type: 'GET',
+    url: url,
+    async: true,
+    jsonpCallback: 'jsonCallback',
+    contentType: 'application/json',
+    dataType: 'jsonp',
+    success: function(json) {
+      var tumblr = json.posts;
+      var $temp = $('<div>');
+      for (var i = 0; i < tumblr.length; i++) {
+        var $img = $('<img class="reverie-img js-vp_reveal js-slide_up" alt="">');
+        
+        $img.attr('src', tumblr[i]['photo-url-1280']);
+        $temp.append($img);
+      }
+      
+      $list.append($temp.html());
+    },
+    error: function(e) {
+      $('.js-tumblr--laadMore').remove();
+    }
+  });
+}
+ 
+loadTumblr('https://michelluarasi.tumblr.com/api/read/json');
+
+$('.js-tumblr--loadMore').on('click', function(e) {
+  e.preventDefault();
+  var $target = $(e.currentTarget);
+  
+  var href = $target.attr('href');
+  var start = $target.data('start');
+  var endpoint = href + "?start=" + start;
+  $target.data('start', start + $target.data('num'));
+  
+  loadTumblr(endpoint);
+});
+
+
+// END Get Tumblr (merdar)
+
+
+
+
 

@@ -384,6 +384,9 @@
 }
 
 
+
+// START Columns
+
 .col-2-3 {
 	width: 66.66%;
 }
@@ -422,7 +425,7 @@
 	width: 12.5%;
 }
 
-
+// END Columns
 
 // START States
 
@@ -450,8 +453,14 @@
 }
 
 .inprogress-detail {
-	.detail-nav {
+	.detail-nav{
 		display: none; // Hide DETAIL NAV on INPROGRESS Pages
+	}
+	.detail-next-content-link {
+		display: none; // Hide FOOTER on INPROGRESS Page
+	}
+	.footer {
+		display: none; // Hide FOOTER on INPROGRESS Page
 	}
 }
 

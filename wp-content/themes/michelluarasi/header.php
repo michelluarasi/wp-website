@@ -110,40 +110,30 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 								<nav class="main-nav" role="navigation">
 										<a class="main-nav__list-item__link <?php echo $current_page == "work" ? "main-nav__list-item__link--active" : "" ; ?>" href="/work">Work</a>
 										<a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">Portrait</a>
-										<a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal</a>
-                    <a class="main-nav__list-item__link <?php echo $current_page == "contact" ? "main-nav__list-item__link--active" : "" ; ?>" href="/contact">Contact</a>
+										<a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/reverie">R&ecirc;verie</a>
+                    <a class="main-nav__list-item__link <?php echo $current_page == "contact" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal</a>
 
 								</nav>
 
 								<div class="main-nav-container__footer">
 										<p>
-											<a class="hidden main-nav-container__footer__item" target="_blank" href="http://instagram.com/michelluarasi">Instagram
-                <svg width="8px" height="8px"  viewBox="0 0 8 8">
-                  <g fill="#5259D4" fill-rule="evenodd">
-                    <path d="M2 0h6v6"/>
-                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
-                  </g>
-                </svg>
+											<a class="hidden menu-meta-link" href="/contact">Contact
+                        <svg width="8px" height="8px" viewBox="0 0 8 8">
+                            <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
+                        </svg>
 											</a>
 
-											<a class="hidden main-nav-container__footer__item" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat
-                <svg width="8px" height="8px"  viewBox="0 0 8 8">
-                  <g fill="#5259D4" fill-rule="evenodd">
-                    <path d="M2 0h6v6"/>
-                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
-                  </g>
-                </svg>
+											<a class="hidden menu-meta-link" href="/credits">Credits
+                        <svg width="8px" height="8px" viewBox="0 0 8 8">
+                            <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
+                        </svg>
 											</a>
 
-											<a class="hidden main-nav-container__footer__item" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn
-                <svg width="8px" height="8px"  viewBox="0 0 8 8">
-                  <g fill="#5259D4" fill-rule="evenodd">
-                    <path d="M2 0h6v6"/>
-                    <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
-                  </g>
-                </svg>
-											</a>
-
+											<a class="hidden menu-meta-link" href="/legal">Legal
+                        <svg width="8px" height="8px" viewBox="0 0 8 8">
+                            <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
+                        </svg>
+											</a> 
 										</p>
 								</div>
 
