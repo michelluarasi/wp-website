@@ -39,8 +39,8 @@ var Nav = (function(){
 			});
 
 			$(document).on("scroll", function(event) {
-        Module.scrollHandler();
-      });
+		Module.scrollHandler();
+	  });
 
 			$(document).on("touchmove", function(event) {
 				Module.scrollHandler();
@@ -53,10 +53,10 @@ var Nav = (function(){
 
 		menuClickHandler: function(event){
 
-   		// START Local Storage
-   		localStorage.setItem('learnMenu', 'learned');
-   		checkMenuPulseState();
-   		// END Local Storage
+		// START Local Storage
+		localStorage.setItem('learnMenu', 'learned');
+		checkMenuPulseState();
+		// END Local Storage
 
 			event.preventDefault();
 			if(s.htmlTag.hasClass(s.activeClass)){
@@ -107,7 +107,7 @@ var Nav = (function(){
 		resizeHandler: function(){
 			 if($(window).width() > MOBILE_WIDTH ){
 			// 	s.htmlTag.removeClass(s.activeClass);
-			 	s.menuLink.addClass(s.navMenuClass);
+				s.menuLink.addClass(s.navMenuClass);
 			 }
 		}
 	};
@@ -194,16 +194,16 @@ var VideoFill = (function(){
 		init: function(options){
 			s = this.settings;
 			for(var prop in options) {
-        		if(options.hasOwnProperty(prop)){
-            		s[prop] = options[prop];
-        		}
-    		}
-    		this.bindUIActions();
-    		this.initVariables();
-    		setTimeout(function(){
-    			Module.loadVimeoVideos();
-    			Module.handleHTML5Videos();
-    		},500);
+				if(options.hasOwnProperty(prop)){
+					s[prop] = options[prop];
+				}
+			}
+			this.bindUIActions();
+			this.initVariables();
+			setTimeout(function(){
+				Module.loadVimeoVideos();
+				Module.handleHTML5Videos();
+			},500);
 		},	
 
 		initVariables: function(){
@@ -214,8 +214,8 @@ var VideoFill = (function(){
 
 		bindUIActions: function(){
 			$(document).on("scroll", function(event) {
-                Module.handleHTML5Videos();
-            });
+				Module.handleHTML5Videos();
+			});
 			$(window).on('resize',function(event) {
 				Module.handleHTML5Videos();
 			});            
@@ -233,12 +233,12 @@ var VideoFill = (function(){
 					Module.unloadHTML5Video($(this),$(s.html5Videos[index]));
 				}
 			});
-        },
+		},
 
-        loadHTML5Video: function(videoContainer,ele){
-        	if(!videoContainer.hasClass("video-loaded")){
-        		var videoURL = "";
-	        	if(Modernizr.video && Modernizr.video.h264) {
+		loadHTML5Video: function(videoContainer,ele){
+			if(!videoContainer.hasClass("video-loaded")){
+				var videoURL = "";
+				if(Modernizr.video && Modernizr.video.h264) {
 					videoURL = ele.attr("data-video")+".mp4";
 				} else if(Modernizr.video && Modernizr.video.webm) {
 					videoURL = ele.attr("data-video")+".webm";
@@ -257,36 +257,36 @@ var VideoFill = (function(){
 				if (videoContainer.find("video").attr("data-autoplay") == "true") {
 					videoContainer.find("video").get(0).play();
 				}
-        	}else if(videoContainer.find("video").get(0).paused){
-        		if (videoContainer.find("video").attr("data-autoplay") == "true") {
-        			videoContainer.find("video").get(0).play();
-        		}
-        	}
-        },
+			}else if(videoContainer.find("video").get(0).paused){
+				if (videoContainer.find("video").attr("data-autoplay") == "true") {
+					videoContainer.find("video").get(0).play();
+				}
+			}
+		},
 
-        setFallbackImg: function(videoContainer,ele){
-        	videoContainer.addClass("detail-img-fallback").html("<img src='"+ele.attr("data-fallback-img")+"' alt='' />");
-        },
+		setFallbackImg: function(videoContainer,ele){
+			videoContainer.addClass("detail-img-fallback").html("<img src='"+ele.attr("data-fallback-img")+"' alt='' />");
+		},
 
-        unloadHTML5Video: function(videoContainer,ele){
-        	if(videoContainer.hasClass("video-loaded") && !videoContainer.find("video").get(0).paused){
-        		videoContainer.find("video").get(0).pause();
-        	}
-        },
+		unloadHTML5Video: function(videoContainer,ele){
+			if(videoContainer.hasClass("video-loaded") && !videoContainer.find("video").get(0).paused){
+				videoContainer.find("video").get(0).pause();
+			}
+		},
 
-        loadVimeoVideos: function(){
-        	s.vimeoVideos.each(function(){
-        		s.videoContainer = $(this).parent();
-        		console.log(s.videoContainer.attr("class"));
-        		console.log($(this).attr("data-src"));
-        		$.getJSON("http://www.vimeo.com/api/oembed.json?url=http://vimeo.com/"+encodeURIComponent($(this).attr("data-video")) + "&api=1&callback=?", function(e) {
-                	s.videoContainer.html(e.html);
-            	});
-        	});        	
-        },
+		loadVimeoVideos: function(){
+			s.vimeoVideos.each(function(){
+				s.videoContainer = $(this).parent();
+				console.log(s.videoContainer.attr("class"));
+				console.log($(this).attr("data-src"));
+				$.getJSON("http://www.vimeo.com/api/oembed.json?url=http://vimeo.com/"+encodeURIComponent($(this).attr("data-video")) + "&api=1&callback=?", function(e) {
+					s.videoContainer.html(e.html);
+				});
+			});        	
+		},
 
-     };
-     return Module;
+	 };
+	 return Module;
 }());
 
 // END "Variables, Functions" VIDEOFILL
@@ -311,17 +311,17 @@ var PictureFill = (function(){
 		init: function(options){
 			s = this.settings;
 			for(var prop in options) {
-        		if(options.hasOwnProperty(prop)){
-            		s[prop] = options[prop];
-        		}
-    		}
+				if(options.hasOwnProperty(prop)){
+					s[prop] = options[prop];
+				}
+			}
 
 			s.detailImgContainer.each(function(){
 				s.backgroundImages.push(JSON.parse($(this).attr("data-images")));
 			});
-    		this.bindUIActions();
-    		this.getCurrentBreakPoint();
-    		this.pictureFillAsImage();
+			this.bindUIActions();
+			this.getCurrentBreakPoint();
+			this.pictureFillAsImage();
 		},
 
 		getCurrentBreakPoint: function(){
@@ -386,8 +386,8 @@ var PictureFill = (function(){
 
 		loadImage: function(){
 			s.detailImgContainer.each(function(i){    			
-    			var $img = $(this);
-    			$img.get(0).style.backgroundImage = "url(" + s.backgroundImages[i][s.currentBreakpoint]+")";
+				var $img = $(this);
+				$img.get(0).style.backgroundImage = "url(" + s.backgroundImages[i][s.currentBreakpoint]+")";
 			
 				setTimeout(function() {
 					$img.addClass('is-image-loaded');
@@ -433,9 +433,9 @@ var Home = (function(){
 				verticalCentered: true,
 				navigation: true,
 			  navigationTooltips: tooltipTitles,
-			 	continuousVertical: true,
+				continuousVertical: true,
 				autoScrolling:true,
-	      css3: true,
+		  css3: true,
 				scrollingSpeed: 800,
 				sectionSelector: '.homeslide',
 				afterRender: function(e){
@@ -567,60 +567,100 @@ var ViewportReveal = (function() {
 				}
 			};
 
-			var observer = new IntersectionObserver(callback, options);
+			observer = new IntersectionObserver(callback, options);
 	
 			var $elements = $('.js-vp_reveal');
 
+			Module.observe($elements);
+		},
+
+		observe : function($elements) {
 			for (var i = 0, len = $elements.length; i < len; i++) {
 				observer.observe($elements[i]);
 			}
 		}
 	};
-
 	return Module;
 }());
 
 // END show on scroll
 
-// START Fade In Home, Image Header, Video Header
 
-$(window).load(function(){
-	Helpers.init();
-	
-	FastClick.attach(document.body);
-	Nav.init();
+// START GetTumblr (merdar)
 
-	ViewportReveal.init();
+var GetTumblr = (function(){
+	var s,
+	Module = {
+		settings: {
+		},
+		init : function() {
+			Module.loadTumblr('https://michelluarasi.tumblr.com/api/read/json');
+		
+			$('.js-tumblr--loadMore').on('click', function(e) {
+			  e.preventDefault();
+			  var $target = $(e.currentTarget);
+			  
+			  var href = $target.attr('href');
+			  var start = $target.data('start');
+			  var endpoint = href + "?start=" + start;
+			  $target.data('start', start + $target.data('num'));
+			  
+			  Module.loadTumblr(endpoint);
+			});
+		},
 
-	if($(".home").length > 0){
-		Home.init();
+		loadTumblr : function(url) {
+		  var $list = $('.js-tumblr--list');
+
+		  $.ajax({
+			type: 'GET',
+			url: url,
+			async: true,
+			jsonpCallback: 'jsonCallback',
+			contentType: 'application/json',
+			dataType: 'jsonp',
+			success: function(json) {
+			  var tumblr = json.posts;
+			  var $temp = $('<div>');
+
+			  for (var i = 0; i < tumblr.length; i++) {
+				var $img = $('<img class="reverie-img js-vp_reveal js-slide_up" alt="">');
+				
+				$img.attr('src', tumblr[i]['photo-url-1280']);
+				$temp.append($img);
+			  }
+			  
+			  $list.append($temp.html());
+
+			  setTimeout(function() {
+			  	ViewportReveal.observe($list.find('.js-vp_reveal:not(.is-visible)'));
+			  }, 30);
+			},
+			error: function(e) {
+			  $('.js-tumblr--loadMore').remove();
+			}
+		  });
+		}
 	}
-	
-	if($(".video-element").length > 0 ){
-		VideoFill.init();
-	}
-	
-	if($(".home").length == 0){
-		Detail.init();
-	}
 
-	$('body').addClass('is-loaded');
+	return Module;
+}());
 
-	onParticleScreenClick();
-});
+// END Get Tumblr (merdar)
 
-// END Fade In Home, Image Header, Video Header
 
 
 
 // START Fade out Elements (SKL)
 
 $('.js-fade_in.is-visible').each(function(index) {
-    var el = this;
-    setTimeout(function() {$(el).removeClass('is-visible').addClass('is-out');}, 50 * index);
+	var el = this;
+	setTimeout(function() {$(el).removeClass('is-visible').addClass('is-out');}, 50 * index);
 });
 
 // END Fade out Elements (SKL)
+
+
 
 
 // START Local Storage
@@ -630,14 +670,16 @@ $('.js-fade_in.is-visible').each(function(index) {
   
   //check if menu-pulses are required
   function checkMenuPulseState() {
-    if(localStorage.getItem('learnMenu') == 'learned') {
-      var $menuPulse = $('.menu-pulse');
-      $menuPulse.addClass('is-learned');
-    }
+	if(localStorage.getItem('learnMenu') == 'learned') {
+	  var $menuPulse = $('.menu-pulse');
+	  $menuPulse.addClass('is-learned');
+	}
   }
   checkMenuPulseState();
 
 // END Local Storage
+
+
 
 
 // START Adonis Bou Chakra Stuff for WebGL
@@ -659,55 +701,39 @@ function onParticleScreenClick() {
 // END Adonis Bou Chakra Stuff for WebGL
 
 
-// START Get Tumblr (merdar)
 
+// START Fade In Home, Image Header, Video Header
 
-function loadTumblr(url) {
-  var $list = $('.js-tumblr--list');
+$(window).load(function(){
+	Helpers.init();
+	
+	FastClick.attach(document.body);
+	Nav.init();
 
-  $.ajax({
-    type: 'GET',
-    url: url,
-    async: true,
-    jsonpCallback: 'jsonCallback',
-    contentType: 'application/json',
-    dataType: 'jsonp',
-    success: function(json) {
-      var tumblr = json.posts;
-      var $temp = $('<div>');
-      for (var i = 0; i < tumblr.length; i++) {
-        var $img = $('<img class="reverie-img js-vp_reveal js-slide_up" alt="">');
-        
-        $img.attr('src', tumblr[i]['photo-url-1280']);
-        $temp.append($img);
-      }
-      
-      $list.append($temp.html());
-    },
-    error: function(e) {
-      $('.js-tumblr--laadMore').remove();
-    }
-  });
-}
- 
-loadTumblr('https://michelluarasi.tumblr.com/api/read/json');
+	ViewportReveal.init();
 
-$('.js-tumblr--loadMore').on('click', function(e) {
-  e.preventDefault();
-  var $target = $(e.currentTarget);
-  
-  var href = $target.attr('href');
-  var start = $target.data('start');
-  var endpoint = href + "?start=" + start;
-  $target.data('start', start + $target.data('num'));
-  
-  loadTumblr(endpoint);
+	if($(".js-tumblr--list").length) {
+		GetTumblr.init();
+	}
+
+	if($(".home").length > 0){
+		Home.init();
+	}
+	
+	if($(".video-element").length > 0 ){
+		VideoFill.init();
+	}
+	
+	if($(".home").length == 0){
+		Detail.init();
+	}
+
+	$('body').addClass('is-loaded');
+
+	onParticleScreenClick();
 });
 
-
-// END Get Tumblr (merdar)
-
-
+// END Fade In Home, Image Header, Video Header
 
 
 
