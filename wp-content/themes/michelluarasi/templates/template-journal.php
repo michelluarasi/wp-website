@@ -12,7 +12,7 @@ Template Name: Template Journal
  *
  * @package michelluarasi
  */
-global $body_class_extra,$current_page;
+global $body_class_extra, $current_page;
 $current_page = "journal";
 $body_class_extra = "journal";
 $args = "category_name=journal&orderby=date&order=DESC";

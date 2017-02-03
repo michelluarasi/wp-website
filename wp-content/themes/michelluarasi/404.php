@@ -17,9 +17,6 @@ get_header(); ?>
 	<a href="/" class="btn btn-m btn-violet"> Go Home</a>	
 </div>
 
-
-
-
 <?php
   get_footer(); 
 ?>

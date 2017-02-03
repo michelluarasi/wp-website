@@ -12,7 +12,7 @@ Template Name: Template Work
  *
  * @package michelluarasi
  */
-global $body_class_extra,$current_page;
+global $body_class_extra, $current_page;
 $current_page = "work";
 $body_class_extra = "work";
 $args = "category_name=work&orderby=date&order=DESC";

@@ -32,12 +32,10 @@
 		clear: left;
 	}
 
-
 	@include breakpoint(short-bear) {
-		width: 43.75%;
-		margin: 0 12% 4% 0;
+		width: 46.75%;
+		margin: 0 6% 4% 0;
 	}
-
 
 	@include breakpoint(baby-bear) {
 		width: 100%;

@@ -19,7 +19,6 @@ $home_intro_headline = simple_fields_get_post_value(get_the_id(), "Home Intro He
 
 get_header();?>
 
-
 <div class="home-wrapper">
   <div class="home-content content-960">
       <h4 class="js-vp_reveal js-fade_in" style="color: white;">Welcome</h4>

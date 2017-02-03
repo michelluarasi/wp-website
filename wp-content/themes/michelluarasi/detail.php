@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The Template for displaying all single posts.
  *
@@ -77,6 +78,7 @@ get_header();
 			<?php echo $post_content; ?>
 		</div>
 	</div>
+
   <a href="<?php echo $next_page;?>" class="detail-next-content-link js-vp_reveal js-fade_in">
     <div class="detail-next-content-parent" style="background-image: url('<?php echo $nextpost_image_large_url; ?>')">
         <div class="detail-next-content-child">
