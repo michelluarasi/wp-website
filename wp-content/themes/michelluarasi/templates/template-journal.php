@@ -34,7 +34,7 @@ get_header();?>
 
 		<li class="journal-list__item js-vp_reveal js-slide_up">
 			<a class="journal-list__item__link" href="<?php echo get_permalink()?>">
-				<img class="journal-list__item__img" src="<?php echo $thumbnail_image_url; ?>" />
+				<img class="journal-list__item__img" alt="<?php echo $title ?> Teaser Image" src="<?php echo $thumbnail_image_url; ?>" />
 				<h2 class="journal-list__item__body__header"><?php echo $title ?></h2>
 				<p class="journal-list__item__body__subtitle"><?php echo $subtitle;?></p>
 			</a>

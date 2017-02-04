@@ -7,7 +7,7 @@
 
 .footer {
 	text-align: center;
-	padding: 40px 20px 20px 20px;
+	padding-top: 40px;
 	background-color: white;
 }
 
@@ -32,9 +32,8 @@
 	color: $color-key;
 }
 
-.footer-social-wrapper {
+.footer-meta-nav {
+	@extend .meta-nav;
 	padding: 48px 0 0 0;
-}
-
-.footer-social-link {
+	position: relative;
 }

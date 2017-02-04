@@ -13,17 +13,17 @@
     <div class="footer__body">
 
         <h4>Get in touch</h4>
-        <a class="footer-main-link" href="mailto:&#109;&#105;&#99;&#104;&#101;&#108;&#64;&#108;&#117;&#97;&#114;&#97;&#115;&#105;&#46;&#99;&#111;&#109;">&#109;&#105;&#99;&#104;&#101;&#108;&#64;&#108;&#117;&#97;&#114;&#97;&#115;&#105;&#46;&#99;&#111;&#109;</a></br><a class="footer-main-link"" href="tel:+41787225079">+41 78 722 50 79</a>
+        <a class="footer-main-link" href="mailto:&#109;&#105;&#99;&#104;&#101;&#108;&#64;&#108;&#117;&#97;&#114;&#97;&#115;&#105;&#46;&#99;&#111;&#109;">&#109;&#105;&#99;&#104;&#101;&#108;&#64;&#108;&#117;&#97;&#114;&#97;&#115;&#105;&#46;&#99;&#111;&#109;</a></br><a class="footer-main-link" href="tel:+41787225079">+41 78 722 50 79</a>
 
-        <p class="footer-social-wrapper">
+        <nav class="footer-meta-nav">
         
-            <a class="hidden menu-meta-link" href="/contact">Contact
+            <a class="hidden meta-nav-link" href="/contact">Contact
                 <svg width="8px" height="8px" viewBox="0 0 8 8">
                     <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                 </svg>
             </a>
 
-            <a class="hidden menu-meta-link" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat
+            <a class="hidden meta-nav-link" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat
                 <svg width="8px" height="8px"  viewBox="0 0 8 8">
                   <g fill="#5259D4" fill-rule="evenodd">
                     <path d="M2 0h6v6"/>
@@ -32,7 +32,7 @@
                 </svg>
             </a>
 
-            <a class="hidden menu-meta-link" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn
+            <a class="hidden meta-nav-link" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn
                 <svg width="8px" height="8px"  viewBox="0 0 8 8">
                   <g fill="#5259D4" fill-rule="evenodd">
                     <path d="M2 0h6v6"/>
@@ -41,7 +41,7 @@
                 </svg>
             </a>
 
-    </p>
+        </nav>
 
 </footer>
 

@@ -34,9 +34,9 @@ get_header();?>
 
     <li class="work-list__item js-vp_reveal js-slide_up">
       <a class="work-list__item__link" href="<?php echo get_permalink()?>">
-        <img class="work-list__item__img" src="<?php echo $thumbnail_image_url; ?>" />
+        <img class="work-list__item__img" alt="<?php echo $title ?> Teaser Image" src="<?php echo $thumbnail_image_url; ?>" />
         <h2 class="work-list__item__info__header"><?php echo $title; ?></h2>
-        <p class="work-list__item__info__subtitle"><?php echo $subtitle; ?></p>
+        <p class="work-list__item__info__subtitle"><?php echo $subtitle; ?></p> 
       </a>
     </li>
   <?php           
