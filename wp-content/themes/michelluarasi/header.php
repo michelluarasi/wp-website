@@ -15,7 +15,6 @@ global $body_class_extra, $detail_stylesheet;
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,7 +25,6 @@ global $body_class_extra, $detail_stylesheet;
     <meta name="MobileOptimized" content="320" />
 
     <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/open-graph.jpg" />
-
 
     <!--  	APPLE		-->
     <meta name="apple-mobile-web-app-capable" content="yes">

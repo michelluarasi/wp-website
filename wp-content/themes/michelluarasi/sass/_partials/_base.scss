@@ -20,7 +20,9 @@ $color-bright: #F5F7FA;
 
 // Other
 
-$icon-ext-link: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.826 10.83L9 8.006h6v6l-2.467-2.467-4.826 4.826L7 15.657l4.826-4.826z' fill-rule='evenodd'/%3E%3C/svg%3E");
+$icon-ext-link-white: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.826 10.83L9 8.006h6v6l-2.467-2.467-4.826 4.826L7 15.657l4.826-4.826z' fill='white' /%3E%3C/svg%3E");
+$icon-ext-link-dark: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.826 10.83L9 8.006h6v6l-2.467-2.467-4.826 4.826L7 15.657l4.826-4.826z' fill='#303133' /%3E%3C/svg%3E");
+
 
 // END Variables
 
@@ -305,7 +307,7 @@ em, p {
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        padding: 0px 0 18px 0;
+        padding: 0 0 18px 0;
     }
 }
 
@@ -330,9 +332,9 @@ p.footnote {
     padding: 0px 0 12px 0;
     margin: 0;
     @include breakpoint(baby-bear){
-     font-size: 11px;
-     line-height: 13px;
-     padding: 0px 0 12px 0;
+        font-size: 11px;
+        line-height: 13px;
+        padding: 0px 0 12px 0;
     }
 }
 
@@ -346,8 +348,8 @@ blockquote {
     padding-left: 0;
     font-size: 21px;
     @include breakpoint(baby-bear){
-      margin: 18px 12px;
-      font-size: 18px
+        margin: 18px 12px;
+        font-size: 18px
     }
 }
 
@@ -359,20 +361,22 @@ ul, ol{
     -webkit-padding-start: 40px;
     -moz-padding-start: 40px;
 
-    color: #303133;
+    color: $color-dark;
     font-weight: 600;
-    font-size: 19px;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     list-style: disc;
     @include breakpoint(baby-bear){
-      -webkit-padding-start: 30px;
-      font-size: 16px;
+        -webkit-padding-start: 30px;
     }
 }
 
 ol {
-  list-style: decimal;
+    list-style: decimal;
+}
+
+ul p, ol p {
+     padding: 0 0 12px 0;
 }
 
 /*  Other ------------------------------ */
@@ -415,23 +419,23 @@ img{
     margin: 12px 0 12px 0;
 }
 
+
+.btn[target="_blank"],
+.btn[rel~="external"] {
+}
+
 .btn[target="_blank"]::after,
 .btn[rel~="external"]::after {
-  position: absolute;
+  position: relative;
   content: "";
   width: 0.9em;
   height: 0.9em;
   display: inline-block;
   vertical-align: middle;
-  background-image: $icon-ext-link;
+  background-image: $icon-ext-link-white;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   margin-left: 6px;
-}
-
-.btn[target="_blank"],
-.btn[rel~="external"] {
-  padding-right: 36px;
 }
 
 .btn-l {
@@ -449,7 +453,7 @@ img{
 
 .btn-s {
     height:     32px;
-    padding:    3px 32px;
+    padding:    5px 32px;
     font-size:  9px;
 }
 
@@ -508,8 +512,7 @@ img{
 
 .btn-grey[target="_blank"]::after,
 .btn-grey[rel~="external"]::after {
-  background-image: $icon-ext-link;
-  fill: #000000;
+  background-image: $icon-ext-link-dark;
 }
 
 /* White */
@@ -526,6 +529,11 @@ img{
 .btn-white:active{
     color: rgba(48, 49, 51, 1);
     background-color: white;
+}
+
+.btn-white[target="_blank"]::after,
+.btn-white[rel~="external"]::after {
+  background-image: $icon-ext-link-dark;
 }
 
 /* Transparent */
@@ -551,6 +559,10 @@ img{
     background-color: rgba(255, 255, 255, 0);
 }
 
+.btn-trans[target="_blank"]::after,
+.btn-trans[rel~="external"]::after {
+  background-image: $icon-ext-link-dark;
+}
 
 /* ------------------------------ /BUTTONS ------------------------------ */
 

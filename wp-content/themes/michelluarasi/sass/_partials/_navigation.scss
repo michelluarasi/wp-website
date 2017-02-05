@@ -5,379 +5,293 @@
 ****************/
 
 
-/* ------  Menu Button ------- */
+/************ START Menu Button ************/
 
 .menu-toggle {
-  position: relative;
-  float: left;
-  height: 48px;
-  width: 48px;
+     position: relative;
+     float: left;
+     height: 48px;
+     width: 48px;
 }
 
 .menu-link {
-  width: 64px;
-  height: 64px;
-  bottom: -8px;
-  right: -8px;
-  position: absolute;
-  z-index: 1010;
+     width: 64px;
+     height: 64px;
+     bottom: -8px;
+     right: -8px;
+     position: absolute;
+     z-index: 1010;
 }
- 
+
 .menu-icon {
-  position: absolute;
-  width: 20px;
-  height: 14px;
-  margin: auto;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 1px;
+     position: absolute;
+     width: 20px;
+     height: 14px;
+     margin: auto;
+     left: 0;
+     top: 0;
+     right: 0;
+     bottom: 1px;
 }
+
 
 /* ------  Menu Line ------- */
 
 .menu-line {
-  background-color: #333;
-  height: 2px;
-  width: 100%;
-  border-radius: 0px;
-  position: absolute;
-  left: 0;
-
-  transition: all 200ms ease;
+     background-color: #333;
+     height: 2px;
+     width: 100%;
+     border-radius: 0px;
+     position: absolute;
+     left: 0;
+     transition: all 200ms ease;
 }
 
 .menu-line-1 {
-  top: 4px;
-  margin: auto;
+     top: 4px;
+     margin: auto;
 }
+
 .menu-line-2 {
-  top: 10px;
+     top: 10px;
 }
 
 .menu-link:hover .menu-line-2 {
-  transform: translateY(2px);
+     transform: translateY(2px);
 }
 
 .menu-link:hover .menu-line-1 {
-  transform: translateY(-2px);
+     transform: translateY(-2px);
 }
 
 .menu-toggle.menu-open .menu-line-1 {
-  transform: translateY(4px) translateY(-50%) rotate(-225deg);
+     transform: translateY(4px) translateY(-50%) rotate(-225deg);
 }
+
 .menu-toggle.menu-open .menu-line-2 {
-  transform: translateY(-4px) translateY(50%) rotate(225deg);
+     transform: translateY(-4px) translateY(50%) rotate(225deg);
 }
+
 
 /* ------ Menu Circle ------- */
 
 .menu-circle {
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 50%;
-  z-index: 800;
-  opacity: 1;
-  transform: scale(1);
-  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-
-  -webkit-box-shadow: 0px 0px 32px 0px rgba(22,24,58,0.05);
-  -moz-box-shadow: 0px 0px 32px 0px rgba(22,24,58,0.05);
-  box-shadow: 0px 0px 32px 0px rgba(22,24,58,0.05);
-
+     background-color: white;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     border-radius: 50%;
+     z-index: 800;
+     opacity: 1;
+     transform: scale(1);
+     transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+     -webkit-box-shadow: 0px 0px 32px 0px rgba(22, 24, 58, 0.05);
+     -moz-box-shadow: 0px 0px 32px 0px rgba(22, 24, 58, 0.05);
+     box-shadow: 0px 0px 32px 0px rgba(22, 24, 58, 0.05);
 }
 
-
 .menu-toggle:hover .menu-circle {
-  transform: scale(1.2);
-  transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
-
-  -webkit-box-shadow: 0px 0px 32px 0px rgba(22,24,58,0.1);
-  -moz-box-shadow: 0px 0px 32px 0px rgba(22,24,58,0.1);
-  box-shadow: 0px 0px 32px 0px rgba(22,24,58,0.1);
-
+     transform: scale(1.2);
+     transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+     -webkit-box-shadow: 0px 0px 32px 0px rgba(22, 24, 58, 0.1);
+     -moz-box-shadow: 0px 0px 32px 0px rgba(22, 24, 58, 0.1);
+     box-shadow: 0px 0px 32px 0px rgba(22, 24, 58, 0.1);
 }
 
 .menu-toggle.menu-open .menu-circle {
-  transform: scale(25);
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1), opacity 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  opacity: 0;
+     transform: scale(25);
+     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1), opacity 800ms cubic-bezier(0.19, 1, 0.22, 1);
+     opacity: 0;
 }
 
 
-/* ------ Menu Overlay ------- */
+/************ END Menu Button ************/
+
+
+/************ START Menu Overlay ************/
+
 .menu-overlay {
-  background-color: #fff;
-  color: #333;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  text-align: center;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 800;
-  opacity: 0;
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+     background-color: #fff;
+     color: #333;
+     height: 100%;
+     width: 100%;
+     position: fixed;
+     text-align: center;
+     transition: opacity 0.2s ease-in-out;
+     z-index: 800;
+     opacity: 0;
+     visibility: hidden;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 }
+
 .menu-overlay.menu-open {
-  opacity: 1;
-  visibility: visible;
-  left: 0px;
-  top: 0;
+     opacity: 1;
+     visibility: visible;
+     left: 0px;
+     top: 0;
 }
 
-
-
-//---- START Menu Open ----//
-
-// Prevent Scrollbar
-
+//---- Menu Open ----//
 html.menu-open {
-  //  overflow: hidden;
+     //  overflow: hidden; // Prevent Scrollbar
 }
-
 
 // Show Logo
 
-/*html*/.menu-open {
-  .logo-container{
-    display: block !important;
-  }
-  .site-logo{
-    fill: black !important;
-    color: black !important;
-  }
-  .site-logo__text{     // Show Logo Text on Mobile wehen Menu Open
-    vertical-align: middle;
-    display: table-cell;
-    padding: 8px;
-    padding-bottom: 14px;
-  }
-}
+/*html*/
 
-//---- END Menu Open ----//
-
-
-// Navigation
-
-.work-detail header, .journal-detail header{
-  background-color:transparent;
-
-  .selected-menu-item{
-    display:none;
-  }
+.menu-open {
+     .logo-container {
+          display: block !important;
+     }
+     .site-logo {
+          fill: black !important;
+          color: black !important;
+     }
+     .site-logo__text {
+          // Show Logo Text on Mobile wehen Menu Open
+          vertical-align: middle;
+          display: table-cell;
+          padding: 8px;
+          padding-bottom: 14px;
+     }
 }
 
 
-//---- START Header ----//
-
-header{
-  @extend .cf;
-  display:none;
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:15px 20px;
-  z-index:900;
-
-  @include breakpoint(baby-bear){ 
-    .site-logo__text{
-      display:none;  // Hide Logo Text on Mobile
-    }
-  }
-
-  .wrapper{
-    @extend .cf;
-    width:100%;
-    max-width:960px;
-    margin:0 auto;
-    position: relative;
-  }
-
-  // Detail Navigation Links Next/Prev
-
-  .detail-content-nav__link--prev{
-    @include border-top-left-radius(4px);
-    @include border-bottom-left-radius(4px);
-  }
-
-  .detail-content-nav__link--next{
-    @include border-top-right-radius(4px);
-    @include border-bottom-right-radius(4px); 
-  } 
-
-  .detail-content-nav__link--prev, .detail-content-nav__link--next{
-    &:hover{
-      background-color:rgba(0,0,0,0.2);
-    }
-
-    &:active{
-      background-color:rgba(0,0,0,0.4); 
-    }
-  }
-}
-
-//---- END Header ----//
+/************ END Menu Overlay ************/
 
 
-.header{
-  opacity: 1;
-  // animation: 0.4s ease-out 0s 1 SlideRevealDown;
-}
-
-header.header--visible{
-  display:block;
+.work-detail header, .journal-detail header {
+     background-color: transparent;
+     .selected-menu-item {
+          display: none;
+     }
 }
 
 
-// Header Sticky
+/************ START Header ************/
 
-header.header--sticky{
-  top:0;
-  z-index:999;
-
-  .logo-container{
-    display:none;
-  }
-
-  .detail-content-nav__link--prev, .detail-content-nav__link--next, .menu-link{
-    // background-color:rgba(0,0,0,0.2);
-
-    &:hover{
-    // background-color:rgba(0,0,0,0.4);
-    }
-
-    &:active{
-    // background-color:rgba(0,0,0,0.6);  
-    }
-  }
-
-  .selected-menu-item{
-    display:none;
-  } 
+header {
+     @extend .cf;
+     display: none;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     padding: 15px 20px;
+     z-index: 900;
+     @include breakpoint(baby-bear) {
+          .site-logo__text {
+               display: none; // Hide Logo Text on Mobile
+          }
+     }
+     .wrapper {
+          @extend .cf;
+          width: 100%;
+          max-width: 960px;
+          margin: 0 auto;
+          position: relative;
+     }
+     // Detail Navigation Links Next/Prev
+     .detail-content-nav__link--prev {}
+     .detail-content-nav__link--next {}
+     .detail-content-nav__link--prev, .detail-content-nav__link--next {
+          &:hover {
+               background-color: rgba(0, 0, 0, 0.2);
+          }
+          &:active {
+               background-color: rgba(0, 0, 0, 0.4);
+          }
+     }
 }
 
-
-
-// START HEADER ACTIVE //
-
-.header--active header{
-  // background-color: red;
-  .logo-container{
-    display:block;
-  }
-
-  .site-logo__text{
-    display:table-cell;
-  }
-
-  .detail-content-nav__link--prev, .detail-content-nav__link--next{
-    display:none;
-  }
-
-  &.header--sticky{
-
-    &:hover{
-      color:black;
-      background-color: transparent;
-    }
-  }
-
-  .selected-menu-item{
-    display:none;
-  }
+.header {
+     opacity: 1;
 }
 
-
-// END HEADER ACTIVE //
-
-
-.header-bg{
-  @include transition-property(opacity);
-  @include transition-duration(0.2s);
-  @include transition-timing-function(ease-out);
-  opacity:0;
-  @include breakpoint(baby-bear){
-    position:absolute;
-    width:100%;
-    height: 100%;
-    background-color:white;
-    top:0;
-    left:0;
-    z-index:-1;
-  }
-  
-} 
-
-.home .header-bg{
-  opacity:transparent;
+header.header--visible {
+     display: block;
 }
 
-
-//  START Logo Styles
-
-.logo-container{
-  float:left;
-  height:40px;
-  position: relative;
-  z-index: 1200;
-  animation: 600ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 FadeReveal;
-
+header.header--sticky {
+     top: 0;
+     z-index: 999;
+     .logo-container {
+          display: none;
+     }
+     .detail-content-nav__link--prev, .detail-content-nav__link--next, .menu-link {
+          // background-color:rgba(0,0,0,0.2);
+          &:hover {
+               // background-color:rgba(0,0,0,0.4);
+          }
+          &:active {
+               // background-color:rgba(0,0,0,0.6);  
+          }
+     }
+     .selected-menu-item {
+          display: none;
+     }
 }
 
-.site-logo{
-  @extend %header;
-  display:table;
-  height:100%;
-  color:black;
-  fill:black;
-  text-decoration:none;
+/************ END Header ************/
+
+
+/************ START Logo Styles ************/
+
+.logo-container {
+     float: left;
+     height: 40px;
+     position: relative;
+     z-index: 1200;
 }
 
-.site-logo:hover{
-  opacity: 0.8;
+.site-logo {
+     @extend %header;
+     display: table;
+     height: 100%;
+     color: black;
+     fill: black;
+     text-decoration: none;
 }
 
-.site-logo__signet{
-  position: relative;
-  height: 48px;
- }
-
-.site-logo__text{
-  @extend h4;
-  vertical-align:middle;
-  display:table-cell;
-  padding: 8px;
-  padding-bottom: 14px;
- }
-
-.show-logo-in-menu{
-  display: block;
-  color:black;
-  fill:black;
+.site-logo:hover {
+     opacity: 0.8;
 }
 
-//  END Logo Styles
-
-
-
-//  START Logo Color For Special Pages
-
-.home .site-logo, .portrait .site-logo, .contact .site-logo, .work-detail .site-logo, .journal-detail .site-logo, .inprogress-detail .site-logo{
-  color:white;
-  fill:white;
+.site-logo__signet {
+     position: relative;
+     height: 48px;
 }
 
-//  END Logo Color For Special Pages
+.site-logo__text {
+     @extend h4;
+     vertical-align: middle;
+     display: table-cell;
+     padding: 8px;
+     padding-bottom: 14px;
+}
+
+.show-logo-in-menu {
+     display: block;
+     color: black;
+     fill: black;
+}
+
+// START Logo Color For Special Pages
+
+.home .site-logo, .portrait .site-logo, .contact .site-logo, .work-detail .site-logo, .journal-detail .site-logo, .inprogress-detail .site-logo {
+     color: white;
+     fill: white;
+}
+
+// END Logo Color For Special Pages
+
+/************ END Logo Styles ************/
 
 
-.center{
+.center {
      position: absolute;
      top: 50%;
      left: 50%;
@@ -389,7 +303,7 @@ header.header--sticky{
 }
 
 
-// START MENU FOOTER  //
+/************ START Menu Footer ************/
 
 .meta-nav {
      position: absolute;
@@ -401,233 +315,153 @@ header.header--sticky{
 
 .meta-nav-link {
      @extend p;
-
-    padding: 0 8px;
-    text-decoration: none;
-    transition: opacity 200ms ease-out;
+     padding: 0 8px;
+     text-decoration: none;
+     transition: opacity 200ms ease-out;
 }
 
 .meta-nav-link:hover {
-    text-decoration: none;
+     text-decoration: none;
 }
 
 
-// END MENU FOOTER  //
+/************ END Menu Footer ************/
 
-
-.main-nav{
+.main-nav {
      background-color: white;
 }
 
-.header--sticky .main-nav{
-     top:76px;
+.header--sticky .main-nav {
+     top: 76px;
 }
 
-
-.main-nav__list{
-  @extend .cf;
-  padding:30px 0;
-  line-height:normal;
+.main-nav__list {
+     @extend .cf;
+     padding: 30px 0;
+     line-height: normal;
 }
 
-.main-nav__list-item--home{
-  display:none;
-  @include breakpoint(baby-bear){
-    display:block;
-  }
+.main-nav__list-item__link {
+     text-align: center;
+     font-family: $head-font;
+     color: $color-dark;
+     text-decoration: none;
+     font-size: 48px;
+     line-height: 96px;
+     display: block;
+     width: 100%;
+     &:hover, &.main-nav__list-item__link--active {
+          color: $color-key;
+     }
+     @include breakpoint(baby-bear) {
+          display: block;
+          font-size: 32px;
+          line-height: 64px;
+     }
+     @include breakpoint(tiny-bear) {
+          display: block;
+          font-size: 32px;
+          line-height: 64px;
+     }
 }
 
-
-.main-nav__list-item__link{
-  text-align: center;
-  font-family:$head-font;
-  color:$color-dark;
-  text-decoration:none;
-  font-size:48px;
-  line-height: 96px;
-  display:block;
-  width:100%;
-
-//  transition: all 0.2s ease;
-
-  &:hover, &.main-nav__list-item__link--active{
-    color:$color-key;
-  }
-
-  @include breakpoint(baby-bear){
-    display:block;
-    font-size:32px;
-    line-height: 64px;
-  }
-
-  @include breakpoint(tiny-bear){
-    display:block;
-    font-size:32px;
-    line-height: 64px;
-  }
-
-}
 
 
 // Selected Menu Item
-
-.selected-menu-item{
-  @extend h4;
-  float:left;
-  padding: 0;
-  margin-top: 19px;
-  margin-right: 10px;
-  color:$color-dark;
-  text-decoration: none;
+.selected-menu-item {
+     @extend h4;
+     float: left;
+     padding: 0;
+     margin-top: 19px;
+     margin-right: 10px;
+     color: $color-dark;
+     text-decoration: none;
 }
 
-.portrait .selected-menu-item, .contact .selected-menu-item, .inprogress-detail .selected-menu-item, .home .selected-menu-item{
-  color:white;
+// Selected Menu Item States
+
+.portrait .selected-menu-item, .contact .selected-menu-item, .inprogress-detail .selected-menu-item, .home .selected-menu-item {
+     color: white;
 }
 
 // START Menu Color For Special Pages
-
-.home .menu-link, .work-detail .menu-link, .journal-detail .menu-link, .inprogress-detail .menu-link{
-//  color:red;
-//  background-color:green;
-}
+.home .menu-link, .work-detail .menu-link, .journal-detail .menu-link, .inprogress-detail .menu-link {}
 
 // END Menu Color For Special Pages
 
-.menu-container{
-  float:right;
-  @extend .cf;
+
+.menu-container {
+     float: right;
+     @extend .cf;
 }
 
-
-.detail-content-nav{
-  display:none;
-  float:left;
-  @extend .cf;
-  z-index:800;
-  margin-right:5px;
-  margin-top:5px;
+.detail-content-nav {
+     display: none;
+     float: left;
+     @extend .cf;
+     z-index: 800;
+     margin-right: 5px;
+     margin-top: 5px;
 }
 
-.detail-content-nav__link, .detail-content-nav__link:visited, .detail-content-nav__link:active{
-  display:block;
-  float:left;
-  font-size:32px;
-  line-height:26px; 
-  width:40px;
-  height:30px;
-  color:white;
-  text-decoration:none;
-  padding:2px;
-  margin-right: 2px;
-  text-align: center;
-  &:last-child{
-    margin-right:0;
-  }
-
-  &:hover{
-  }
+.detail-content-nav__link, .detail-content-nav__link:visited, .detail-content-nav__link:active {
+     display: block;
+     float: left;
+     font-size: 32px;
+     line-height: 26px;
+     width: 40px;
+     height: 30px;
+     color: white;
+     text-decoration: none;
+     padding: 2px;
+     margin-right: 2px;
+     text-align: center;
+     &:last-child {
+          margin-right: 0;
+     }
+     &:hover {}
 }
 
-.header--active{
-
-  body{
-    // overflow:hidden;
-  }
-
-  header{
-    // background-color:#fff;
-  }
-
-  .site-logo{
-    color:black; // !important;
-    fill:black; // !important;
-  }
-
-  .menu-link{
-    color:#d6d6d6;
-    &:hover{
-      color:black;
-    }
-  }
-
-  .main-nav-container{
-    display:block;
-    opacity:0;
-
-    
-  }
+.main-nav-animate {
+     animation: 0.25s ease-out 0s 1 SlideRevealDown;
 }
 
-.main-nav-animate{
-      animation: 0.25s ease-out 0s 1 SlideRevealDown;
-    }
-
-
-.header--active .detail-content-nav__link:hover{
-  border: 2px #000 solid;
-}
-
-.header--sticky{
-  color:black;
-  @include breakpoint(baby-bear){
-    color:white;
-  }
+.header--sticky {
+     color: black;
+     @include breakpoint(baby-bear) {
+          color: white;
+     }
 }
 
 .touch {
-  .main-nav__list-item__link:hover{
-    color:#989899;
-  }
-  .detail-content-nav__link:hover{
-    border:none;
-  }
-
-  .home .main-nav__list-item__link, .work-detail .main-nav__list-item__link,
-  .journal-detail .main-nav__list-item__link,
-  .inprogress-detail .main-nav__list-item__link{
-    &:hover{
-      opacity:0.5;
-    }
-  }
+     .main-nav__list-item__link:hover {
+          color: #989899;
+     }
+     .detail-content-nav__link:hover {
+          border: none;
+     }
+     .home .main-nav__list-item__link, .work-detail .main-nav__list-item__link, .journal-detail .main-nav__list-item__link, .inprogress-detail .main-nav__list-item__link {
+          &:hover {
+               opacity: 0.5;
+          }
+     }
 }
 
 // ...
-
-.work-detail .header, .journal-detail .header, .inprogress-detail .header{
-
-  .menu-link{
-
-    &:hover{
-    }
-
-    &:active{
-    }
-  }
-
-  &.header--sticky .menu-link{
-    &:hover{
-    //  background-color:red;
-    }
-
-    &:active{
-    }
-  }
+.work-detail .header, .journal-detail .header, .inprogress-detail .header {
+     .menu-link {
+          &:hover {}
+          &:active {}
+     }
+     &.header--sticky .menu-link {
+          &:hover {
+               //  background-color:red;
+          }
+          &:active {}
+     }
 }
 
-// ...
+// START Navigation States
+// END Navigation States
 
-.header--active{
-  .home .header, .work-detail .header, .journal-detail .header, .inprogress-detail .header{
-    .menu-link{
-      &:hover{
-        background-color:transparent;
-      }
-
-      &:active{
-        background-color:transparent; 
-      }
-    }
-  }
-}
 

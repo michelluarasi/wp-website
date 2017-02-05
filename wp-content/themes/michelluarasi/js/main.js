@@ -651,14 +651,14 @@ var GetTumblr = (function(){
 
 
 
-// START Fade out Elements (SKL)
+// START Fade out Elements (klasev)
 
 $('.js-fade_in.is-visible').each(function(index) {
 	var el = this;
 	setTimeout(function() {$(el).removeClass('is-visible').addClass('is-out');}, 50 * index);
 });
 
-// END Fade out Elements (SKL)
+// END Fade out Elements (klasev)
 
 
 
@@ -682,7 +682,7 @@ $('.js-fade_in.is-visible').each(function(index) {
 
 
 
-// START Adonis Bou Chakra Stuff for WebGL
+// START Stuff for WebGL (bouado)
 
 var incrValue = 0.001; 
 var isPressing = false; 
@@ -698,7 +698,7 @@ function onParticleScreenClick() {
 	})
 }
 
-// END Adonis Bou Chakra Stuff for WebGL
+// END Stuff for WebGL (bouado)
 
 
 
