@@ -674,10 +674,7 @@ select{
 .content-640{      //Rename all One-Column To Content Narrow
     margin: 0 auto;
     max-width: 640px;
-    padding: 0;
-    @include breakpoint(baby-bear){
     padding: 0 20px;
-    }
 }
 
 .content-720{      //Rename all One-Column To Content Narrow
@@ -773,28 +770,46 @@ hr.empty {
 /* ----------------------------------- /SEPARATOR ------------------------------ */
 
 
-/* ------------------------------ MAILCHIMP ------------------------------  */
+/* ------------------------------ Loading Spinner ------------------------------  */
 
-
-#mc_embed_signup #mce-success-response #mce-error-response  {
-    font-family: "Proxima Nova";
-    font-style: normal;
-    font-weight: 400;
+.loading-spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: relative;
+    margin: 48px;
+    width: 48px;
+    height: 48px;
+  
+  & .path {
+    stroke: #5259D4;
+    stroke-linecap: round;
+    animation: dash 1.2s ease-in-out infinite;
+  }
 }
 
-#mce-success-response{
-    color: #78C32D;
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-#mce-error-response  {
-    color: #DD6271;
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
 }
 
-#mc_embed_signup #mce-EMAIL {
-    font-size: 17px;
-    letter-spacing: 0px;
-}
-/* ------------------------------ /MAILCHIMP ------------------------------  */
+
+/* ------------------------------ /Loading Spinner ------------------------------  */
 
 
 

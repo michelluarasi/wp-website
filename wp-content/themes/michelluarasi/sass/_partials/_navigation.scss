@@ -315,6 +315,7 @@ header.header--sticky {
 
 .meta-nav-link {
      @extend p;
+     @extend .hidden;
      padding: 0 8px;
      text-decoration: none;
      transition: opacity 200ms ease-out;

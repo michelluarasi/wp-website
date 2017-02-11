@@ -17,19 +17,14 @@ global $body_class_extra, $current_page;
 $current_page = "portrait";
 $body_class_extra = "portrait";
 
-$portrait_big_img = simple_fields_get_post_value(get_the_id(), "Portrait Big Image", true);
-$portrait_big_img_url = wp_get_attachment_url($portrait_big_img);
+$portrait_img = simple_fields_get_post_value(get_the_id(), "Portrait Image", true);
+$portrait_img_url = wp_get_attachment_url($portrait_img);
 
-$portrait_medium_img = simple_fields_get_post_value(get_the_id(), "Portrait Medium Image", true);
-$portrait_medium_img_url = wp_get_attachment_url($portrait_medium_img);
-
-$portrait_small_img = simple_fields_get_post_value(get_the_id(), "Portrait Small Image", true);
-$portrait_small_img_url = wp_get_attachment_url($portrait_small_img);
-
-$portrait_headline = simple_fields_get_post_value(get_the_id(), "Portrait Headline", true); 
+$portrait_intro_heading = simple_fields_get_post_value(get_the_id(), "Portrait Intro Heading", true); 
 $portrait_intro_text = simple_fields_get_post_value(get_the_id(), "Portrait Intro Text", true);
 
-$portrait_body = simple_fields_get_post_value(get_the_id(), "Portrait Body", true);
+$portrait_expertise_heading = simple_fields_get_post_value(get_the_id(), "Portrait Expertise Heading", true); 
+$portrait_expertise_text = simple_fields_get_post_value(get_the_id(), "Portrait Expertise Text", true);
 
 get_header();?>
 
@@ -38,11 +33,11 @@ get_header();?>
 
 			<div class="portrait-img-container js-vp_reveal js-scale_in">
 					<div class="portrait-img">
-						<div class="portrait-img--inner" style='background-image:url("<?php echo $portrait_big_img_url; ?>")'></div>
+						<div class="portrait-img--inner" style='background-image:url("<?php echo $portrait_img_url; ?>")'></div>
 					</div>			
 				</div>
 
-			<h1 class="profile__title"><?php echo $portrait_headline; ?></h1>
+			<h1 class="profile__title"><?php echo $portrait_intro_heading; ?></h1>
 			<p class="profile__copy"><?php echo $portrait_intro_text; ?></p>
 			<p class="profile__copy"><a class="btn btn-m btn-violet" href="/work" title="Work">View My Work</a></p>
 		</div>
@@ -52,9 +47,8 @@ get_header();?>
 
 <div class="expertise-wrapper">
 	<div class="content-640 js-vp_reveal js-fade_in">
-		<h4 class="expertise__title">Expertise</h4>
-		<p class="expertise__copy">With more than a decade of experience I tackle a broad variety of disciplines in the process of creating digital products that make a real difference. With carefully selected tools and skills I express my visions ranging from product design to the creation of user experience up to development and delivery.</p>
-		<p class="expertise__copy">My distinctive strategic thinking helps me to pinpoint the holistic scope of a product and evolve it by adding new business ideas, innovations and values that meet user needs as well as business objectives.</p>
+		<h4 class="expertise__title"><?php echo $portrait_expertise_heading; ?></h4>
+		<p class="expertise__copy"><?php echo $portrait_expertise_text; ?></p>
 	</div>
 </div>
 

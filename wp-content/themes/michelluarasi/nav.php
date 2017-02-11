@@ -58,19 +58,19 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
         </nav> 
 
         <nav class="meta-nav">
-            <a class="hidden meta-nav-link" href="/contact">Contact
+            <a class="meta-nav-link" href="/contact">Contact
                 <svg width="8px" height="8px" viewBox="0 0 8 8">
                     <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                 </svg>
             </a>
 
-            <a class="hidden meta-nav-link" href="/credits">Credits
+            <a class="meta-nav-link" href="/credits">Credits
                 <svg width="8px" height="8px" viewBox="0 0 8 8">
                     <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                 </svg>
             </a>
 
-            <a class="hidden meta-nav-link" href="/legal">Legal
+            <a class="meta-nav-link" href="/legal">Legal
                 <svg width="8px" height="8px" viewBox="0 0 8 8">
                     <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                 </svg>
