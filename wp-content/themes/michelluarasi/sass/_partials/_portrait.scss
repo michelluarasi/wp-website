@@ -5,20 +5,18 @@
 ****************/
 
 
-
 .portrait-wrapper {
 	margin: 0 auto;
 	width: 100%;
 	padding-top: 120px;
 }
 
-
 // START Profile
 
 .profile-wrapper {
 	margin: 0 auto;
 	width: 100%;
-	padding: 140px 0 60px 0;
+	padding: 120px 0 60px 0;
 	background-color: #18181c;
 
 	@include breakpoint(baby-bear) {
@@ -74,9 +72,9 @@
 .portrait-img {
 	margin: 0 auto;
 	position: relative;
-	width: 320px;
-	height: 320px;
-	background-size: 320px;
+	width: 280px;
+	height: 280px;
+	background-size: 280px;
 	background-position: center center;
 	border-radius: 180px;
 	line-height: 30vw;
