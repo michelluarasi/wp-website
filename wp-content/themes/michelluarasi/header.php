@@ -15,7 +15,7 @@ global $body_class_extra, $detail_stylesheet;
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php wp_title(); ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content='Michel Luarasi' />
