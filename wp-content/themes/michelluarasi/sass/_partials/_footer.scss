@@ -7,8 +7,12 @@
 
 .footer {
 	text-align: center;
-	padding-top: 40px;
+	padding: 40px 0 20px 0;
 	background-color: white;
+
+	@include breakpoint(baby-bear) {
+		padding-top: 20px;
+	}
 }
 
 .footer__body {
@@ -18,14 +22,12 @@
 }
 
 .footer-main-link {
+	@extend h2;
+	display: block;
 	color: $color-dark;
-	font-family: $head-font;
-	font-weight: 500;
 	font-style: normal;
-	font-size: 32px;
-	line-height: 48px;
 	text-decoration: none;
-	padding: 0;
+	padding: 0 0 6px 0;
 }
 
 .footer-main-link:hover {
@@ -35,5 +37,10 @@
 .footer-meta-nav {
 	@extend .meta-nav;
 	padding: 48px 0 0 0;
-	position: relative;
+ 	position: inherit;
+
+	@include breakpoint(baby-bear) {
+		padding-top: 32px;
+	}
+
 }

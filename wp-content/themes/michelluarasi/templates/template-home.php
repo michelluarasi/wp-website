@@ -15,15 +15,19 @@ Template Name: Template Home
 global $current_page;
 $current_page ="home";
 
-$home_intro_headline = simple_fields_get_post_value(get_the_id(), "Home Intro Headline", true); 
+$home_title = simple_fields_get_post_value(get_the_id(), "Home Title", true); 
+$home_headline = simple_fields_get_post_value(get_the_id(), "Home Headline", true); 
+$home_link_cta = simple_fields_get_post_value(get_the_id(), "Home Link CTA", true); 
+$home_link_url = simple_fields_get_post_value(get_the_id(), "Home Link URL", true); 
+$home_content_width = simple_fields_get_post_value(get_the_id(), "Home Content Width", true); 
 
 get_header();?>
 
 <div class="home-wrapper">
-  <div class="home-content content-960">
-      <h4 class="js-vp_reveal js-fade_in" style="color: white;">Welcome</h4>
-      <h1 class="js-vp_reveal js-slide_down" style="color: white; padding-top: 0;"><?php echo $home_intro_headline; ?></h1>
-      <p class="profile__copy js-vp_reveal js-slide_up"><a class="btn btn-m btn-violet" href="/work" title="Work">Learn More</a></p>
+  <div class="home-content" style="max-width: <?php echo $home_content_width; ?>;">
+      <h4 class="js-vp_reveal js-fade_in" style="color: white;"><?php echo $home_title; ?></h4>
+      <h1 class="js-vp_reveal js-slide_down" style="color: white; padding-top: 0;"><?php echo $home_headline; ?></h1>
+      <p class="profile__copy js-vp_reveal js-slide_up"><a class="btn btn-m btn-violet" href="<?php echo $home_link_url; ?>" title="Home Call To Action"><?php echo $home_link_cta; ?></a></p>
   </div>
   <div id="webglcontainer"></div>
 </div>
