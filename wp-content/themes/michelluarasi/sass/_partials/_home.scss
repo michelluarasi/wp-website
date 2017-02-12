@@ -7,8 +7,8 @@
 
 .home-wrapper {
 	position: absolute;
-  overflow: hidden;
-  display: block;
+     overflow: hidden;
+     display: block;
 	left: 0;
 	top: 0;
 	right: 0;
@@ -18,28 +18,27 @@
 }
 
 .home-content {
-		position:absolute;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+	margin-left: auto;
+     margin-right: auto;
+     left: 0;
+     right: 0;
+     z-index: 10;
+     padding: 0 40px;
 
-		margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-
-    z-index: 10;
-
-    h1{
-      @include breakpoint(tiny-bear){
-      display:block;
-      font-size:32px;
-      line-height: 36px;
-      }
+     h1{
+          @include breakpoint(tiny-bear){
+               display: block;
+               font-size: 32px;
+               line-height: 36px;
+          }
     }
 }
 

@@ -254,7 +254,7 @@ h1 {
     padding: 36px 0 24px 0;
     @include breakpoint(baby-bear){
       font-size: 32px;
-      line-height: 30px;
+      line-height: 36px;
       padding: 36px 0 21px 0;
     }
 }
@@ -662,22 +662,13 @@ select{
 /* ------------------------------ LAYOUT ------------------------------ */
 
 
-.one-column {
-    margin: 0 auto;
-    max-width: 640px;
-    padding: 0;
-    @include breakpoint(baby-bear){
-        margin: 0 auto;
-    }
-}
-
-.content-640{      //Rename all One-Column To Content Narrow
+.content-640 {
     margin: 0 auto;
     max-width: 640px;
     padding: 0 20px;
 }
 
-.content-720{      //Rename all One-Column To Content Narrow
+.content-720 {
     margin: 0 auto;
     max-width: 720px;
     padding: 0;
