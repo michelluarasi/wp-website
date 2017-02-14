@@ -16,7 +16,7 @@ global $body_class_extra, $current_page;
 $current_page = "reverie";
 $body_class_extra = "reverie";
 
-get_header();?>
+get_header();?> 
 
 <div class="reverie-wrapper">
      <div class="js-tumblr--list"></div>

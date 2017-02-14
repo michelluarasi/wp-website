@@ -21,7 +21,7 @@ var Nav = (function(){
 			LogoContainer: $(".logo-container"),
 			LogoMenu: "show-logo-in-menu"
 		},
-
+ 
 		init: function(){
 			s = this.settings;
 			this.bindUIActions();
@@ -585,6 +585,99 @@ var ViewportReveal = (function() {
 
 // END show on scroll
 
+var Visibility = (function(){
+	function isVisible(element){
+		var t          = element,
+			vpWidth    = window.innerWidth,
+			vpHeight   = window.innerHeight,
+			direction  = 'vertical',
+			partial    = true;
+
+		var rec  = t.getBoundingClientRect(),
+		tViz     = rec.top    >= 0 && rec.top    <  vpHeight,
+		bViz     = rec.bottom >  0 && rec.bottom <= vpHeight,
+		lViz     = rec.left   >= 0 && rec.left   <  vpWidth,
+		rViz     = rec.right  >  0 && rec.right  <= vpWidth,
+		vVisible = partial ? tViz || bViz : tViz && bViz,
+		hVisible = partial ? lViz || rViz : lViz && rViz;
+
+		if (direction === 'both')
+			return vVisible && hVisible;
+		else if (direction === 'vertical')
+			return vVisible;
+		else if (direction === 'horizontal')
+			return hVisible;
+	}
+
+	function isScrollVisible(element, margin){
+		if (!margin) {
+			margin = 0;
+		}
+
+		var t          = element,
+		    vpHeight   = window.innerHeight,
+		    minY = - margin,
+		    maxY = vpHeight + margin;
+
+		var rec  = t.getBoundingClientRect(),
+		    partiallyVisible     = rec.bottom    > minY && rec.top    <  maxY,
+		    vVisible = partiallyVisible;
+
+		return vVisible;
+	}
+
+	return {
+		isVisible: isVisible,
+		isScrollVisible: isScrollVisible
+	};
+}());
+
+// START Load More on Scroll
+var LoadMore = (function() {
+	var s,
+	Module = {
+		settings: {
+			$el: $('.js-tumblr--loadMore'),
+			$win: $(window),
+			autoload: true
+		},
+		init: function() {
+			var self = this;
+
+			s = $.extend({}, this.settings);
+
+			// let's wait a little to give JS some time for layouting and things like that
+			this.autoloadTimeout = setTimeout(function() {
+			this._handleScroll = this.handleScroll.bind(this);
+		
+			document.addEventListener('scroll', this._handleScroll, true);
+				this._handleScroll();
+			}.bind(this), 2000);
+		},
+		
+		handleScroll: function(event){
+			if (!this.isLoading && Visibility.isScrollVisible(s.$el.get(0), s.$win.height())) {
+				this.load();
+			}
+		},
+
+		load: function(){
+			var self = this;
+
+			this.isLoading = true;
+			$('.js-tumblr--loadMore').trigger('click');
+
+
+			setTimeout(function() {
+				self.isLoading = false;
+			}, 1000);
+		}
+	}
+
+	return Module;
+}());
+
+// END Load More on Scroll
 
 // START GetTumblr (merdar)
 
@@ -616,7 +709,6 @@ var GetTumblr = (function(){
 			type: 'GET',
 			url: url,
 			async: true,
-			jsonpCallback: 'jsonCallback',
 			contentType: 'application/json',
 			dataType: 'jsonp',
 			success: function(json) {
@@ -633,7 +725,7 @@ var GetTumblr = (function(){
 			  $list.append($temp.html());
 
 			  setTimeout(function() {
-			  	ViewportReveal.observe($list.find('.js-vp_reveal:not(.is-visible)'));
+				ViewportReveal.observe($list.find('.js-vp_reveal:not(.is-visible)'));
 			  }, 30);
 			},
 			error: function(e) {
@@ -650,7 +742,6 @@ var GetTumblr = (function(){
 
 
 
-
 // START Fade out Elements (klasev)
 
 $('.js-fade_in.is-visible').each(function(index) {
@@ -659,7 +750,6 @@ $('.js-fade_in.is-visible').each(function(index) {
 });
 
 // END Fade out Elements (klasev)
-
 
 
 
@@ -678,7 +768,6 @@ $('.js-fade_in.is-visible').each(function(index) {
   checkMenuPulseState();
 
 // END Local Storage
-
 
 
 
@@ -703,7 +792,7 @@ function onParticleScreenClick() {
 
 
 // START Fade In Home, Image Header, Video Header
-
+// Init all Modules
 $(window).load(function(){
 	Helpers.init();
 	
@@ -714,17 +803,18 @@ $(window).load(function(){
 
 	if($(".js-tumblr--list").length) {
 		GetTumblr.init();
+		LoadMore.init();
 	}
 
-	if($(".home").length > 0){
+	if($(".home").length) {
 		Home.init();
 	}
 	
-	if($(".video-element").length > 0 ){
+	if($(".video-element").length) {
 		VideoFill.init();
 	}
 	
-	if($(".home").length == 0){
+	if($(".home").length == 0) {
 		Detail.init();
 	}
 
