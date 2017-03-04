@@ -227,26 +227,13 @@ i>a:active {
 
 /*  Titles ------------------------------ */
 
-h1, h2, h3 { 
+h1, h2, h3, h4 { 
     font-family: $head-font;
     font-weight: 500;
     font-style: normal;
     color: #303133;
     margin: 0;
 }
-
-/* Header H1
-h1 {
-    font-size: 64px;
-    line-height: 72px;
-    padding: 48px 0 24px 0;
-    @include breakpoint(baby-bear){
-      font-size: 30px;
-      line-height: 30px;
-      padding: 36px 0 21px 0;
-    }
-}
-*/
 
 h1 {
     font-size: 48px;

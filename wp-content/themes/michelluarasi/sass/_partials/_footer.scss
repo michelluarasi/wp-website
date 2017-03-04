@@ -7,11 +7,11 @@
 
 .footer {
 	text-align: center;
-	padding: 40px 0 20px 0;
+	padding: 60px 0 20px 0;
 	background-color: white;
 
 	@include breakpoint(baby-bear) {
-		padding-top: 20px;
+		padding-top: 30px;
 	}
 }
 

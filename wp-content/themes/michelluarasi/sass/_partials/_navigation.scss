@@ -251,8 +251,6 @@ header.header--sticky {
      @extend %header;
      display: table;
      height: 100%;
-     color: black;
-     fill: black;
      text-decoration: none;
 }
 
@@ -263,6 +261,7 @@ header.header--sticky {
 .site-logo__signet {
      position: relative;
      height: 48px;
+     fill: black;
 }
 
 .site-logo__text {
@@ -271,18 +270,32 @@ header.header--sticky {
      display: table-cell;
      padding: 8px;
      padding-bottom: 14px;
+     color: black;
 }
 
-.show-logo-in-menu {
-     display: block;
-     color: black;
-     fill: black;
+.show-logo-in-menu .site-logo__text, .show-logo-in-menu .site-logo__signet {
+     color: black !important;
+     fill: black !important;
+     transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 // START Logo Color For Special Pages
 
-.home .site-logo, .portrait .site-logo, .contact .site-logo, .work-detail .site-logo, .journal-detail .site-logo, .inprogress-detail .site-logo {
+.home .site-logo__text,                      // Logo Text-Color For HOME Template
+.portrait .site-logo__text,                  // Logo Text-Color For PORTRAIT Template
+.contact .site-logo__text,                   // Logo Text-Color For CONTACT Template
+.work-detail .site-logo__text,               // Logo Text-Color For WORK-DETAIL Template
+.journal-detail .site-logo__text,            // Logo Text-Color For JOURNAL-DETAIL Template
+.inprogress-detail .site-logo__text {        // Logo Text-Color For INPGROGESS-DETAIL Template
      color: white;
+}
+
+.home .site-logo__signet,                    // Logo Signet-Color For HOME Template
+.portrait .site-logo__signet,                // Logo Signet-Color For PORTRAIT Template
+.contact .site-logo__signet,                 // Logo Signet-Color For CONTACT Template
+.work-detail .site-logo__signet,             // Logo Signet-Color For WORK-DETAIL Template
+.journal-detail .site-logo__signet,          // Logo Signet-Color For JOURNAL-DETAIL Template
+.inprogress-detail .site-logo__signet {      // Logo Signet-Color For INPGROGESS-DETAIL Template
      fill: white;
 }
 

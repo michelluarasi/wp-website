@@ -23,26 +23,21 @@
                     </svg>
                 </a>
 
-                <a class="hidden meta-nav-link" target="_blank" href="https://www.snapchat.com/add/michelluarasi">Snapchat
-                    <svg width="8px" height="8px"  viewBox="0 0 8 8">
-                      <g fill="#5259D4" fill-rule="evenodd">
-                        <path d="M2 0h6v6"/>
-                        <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
-                      </g>
+                <a class="hidden meta-nav-link" href="/credits">Credits
+                    <svg width="8px" height="8px" viewBox="0 0 8 8">
+                        <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                     </svg>
                 </a>
 
-                <a class="hidden meta-nav-link" target="_blank" href="https://ch.linkedin.com/in/michelluarasi">LinkedIn
-                    <svg width="8px" height="8px"  viewBox="0 0 8 8">
-                      <g fill="#5259D4" fill-rule="evenodd">
-                        <path d="M2 0h6v6"/>
-                        <path d="M-.35 7.657L5.307 2l.707.707L.357 8.364z"/>
-                      </g>
+                <a class="hidden meta-nav-link" href="/legal">Legal
+                    <svg width="8px" height="8px" viewBox="0 0 8 8">
+                        <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                     </svg>
                 </a>
             </nav>
         </div>
     </footer>
+
 
     <script src="<?php bloginfo('template_url'); ?>/js/main.min.js"></script>
 

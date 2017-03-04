@@ -193,6 +193,14 @@
 	}
 }
 
+.blank .detail-content__body {	// Different Styles for BLANK Template
+	padding: 140px 0;			 
+
+	@include breakpoint(grandpapa-bear) {
+		padding: 100px 0;
+	}
+}
+
 .detail-header__content__desc,
 .detail-content__body__text {
 	width: 860px;
@@ -586,9 +594,6 @@
 	opacity: 0.8;
 }
 
-.detail-next-content-image:hover {
-	opacity: 0.8;
-}
 
 .detail-next-content-parent:before {    /* create a full-height inline block pseudo-element */
 	content: ' ';
@@ -614,6 +619,7 @@
 }
 
 .detail-next-content__title {
+	@extend h1;
 	margin: 0;
 	padding-top: 0;
 	color: white;

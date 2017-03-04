@@ -100,6 +100,7 @@ var Nav = (function(){
 			s.htmlTag.removeClass(s.activeClass);
 			s.navWrapper.removeClass(s.activeClass);
 			s.navToggle.removeClass(s.activeClass);
+			s.LogoContainer.removeClass(s.LogoMenu);
 			s.mainNav.removeClass(s.mainNavAnimateClass);
 			$(document).off("click"+s.ns);
 		},

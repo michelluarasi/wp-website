@@ -83,7 +83,8 @@ get_header();
     <div class="detail-next-content-parent" style="background-image: url('<?php echo $nextpost_image_large_url; ?>')">
         <div class="detail-next-content-child">
             <h4 class="detail-next-content__subtitle">View Next</h4>
-            <h2 class="detail-next-content__title"><?php echo $nextpost_title; ?></h2>    
+            <h2 class="detail-next-content__title"><?php echo $nextpost_title; ?></h2>
+            <div class="detail-next-content-overlay"></div>
         </div>
     </div>
   </a>
