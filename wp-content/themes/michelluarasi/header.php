@@ -14,6 +14,15 @@ global $body_class_extra, $detail_stylesheet;
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9229453767791230",
+        enable_page_level_ads: true
+      });
+    </script>
+
     <meta charset="utf-8">
     <title><?php wp_title(); ?></title>
 

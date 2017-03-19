@@ -196,8 +196,6 @@ a.hidden:active {
 }
 
 
-
-
 /* ----------------------------------- /NAVIGATE ------------------------------ */
 
 
@@ -373,6 +371,17 @@ strong {
     font-weight: bold;
     color: $color-dark;
 
+}
+
+code { 
+    font-family: monospace, monospace;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 3px;
+    @include breakpoint(baby-bear){
+        padding: 1px;
+    }
 }
 
 
