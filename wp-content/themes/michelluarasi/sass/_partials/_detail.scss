@@ -457,10 +457,10 @@
 		display: none; // Hide DETAIL NAV on INPROGRESS Pages
 	}
 	.detail-next-content-link {
-		display: none; // Hide FOOTER on INPROGRESS Page
+		display: none; // Hide NEXT CONTENT on INPROGRESS Page
 	}
 	.footer {
-		display: none; // Hide FOOTER on INPROGRESS Page
+	//	display: none; // Hide FOOTER on INPROGRESS Page
 	}
 }
 
@@ -601,7 +601,6 @@
 	z-index: 0;
 	background-color: $color-key;
 	opacity: 0.9;
-
 }
 
 
