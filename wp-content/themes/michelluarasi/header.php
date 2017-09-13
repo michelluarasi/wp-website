@@ -6,7 +6,10 @@
 *
 * @package michelluarasi
 */
-global $body_class_extra, $detail_stylesheet;
+global $body_class_extra, $detail_stylesheet, $open_graph_image_url;
+
+$open_graph_image = simple_fields_get_post_value(get_the_id(), "Open Graph Image", true);
+$open_graph_image_url = wp_get_attachment_url($open_graph_image);
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -33,7 +36,12 @@ global $body_class_extra, $detail_stylesheet;
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
 
-    <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/open-graph.jpg" />
+    <?php if( $open_graph_image_url === FALSE ): ?>
+        <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/open-graph.jpg" />    <!-- Show Standard OG Image -->
+        <?php else: ?>
+        <meta property="og:image" content="<?php echo $open_graph_image_url;?>"/>                       <!-- Show Detail OG Image -->
+    <?php endif; ?>
+
 
     <!--  	APPLE		-->
     <meta name="apple-mobile-web-app-capable" content="yes">
