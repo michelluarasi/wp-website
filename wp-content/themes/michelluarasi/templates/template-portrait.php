@@ -33,7 +33,7 @@ get_header();?>
 
 			<div class="portrait-img-container js-vp_reveal js-scale_in">
 					<div class="portrait-img">
-						<div class="portrait-img--inner" style='background-image:url("<?php portrait_image('image_test'); ?>")'></div>
+						<div class="portrait-img--inner" style='background-image:url("<?php the_field('portrait_image'); ?>")'></div>
 					</div>			
 				</div>
 
