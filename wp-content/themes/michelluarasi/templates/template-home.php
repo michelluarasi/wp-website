@@ -15,11 +15,12 @@ Template Name: Template Home
 global $current_page;
 $current_page ="home";
 
-$home_title = simple_fields_get_post_value(get_the_id(), "Home Title", true); 
-$home_headline = simple_fields_get_post_value(get_the_id(), "Home Headline", true); 
-$home_link_cta = simple_fields_get_post_value(get_the_id(), "Home Link CTA", true); 
-$home_link_url = simple_fields_get_post_value(get_the_id(), "Home Link URL", true); 
-$home_content_width = simple_fields_get_post_value(get_the_id(), "Home Content Width", true); 
+
+$home_title = get_field('home_title');
+$home_headline = get_field('home_headline');
+$home_link_cta = get_field('home_link_cta');
+$home_link_url = get_field('home_link_url');
+$home_content_width = get_field('home_content_width');
 
 get_header();?>
 
