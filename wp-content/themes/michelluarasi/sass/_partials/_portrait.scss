@@ -90,10 +90,6 @@
 		height: 240px;
 		background-size: 240px;
 	}
-
-	img {
-		width: 100%;
-	}
 }
 
 .portrait-img--inner {
@@ -114,17 +110,9 @@
 }
 
 .profile__copy {
-    font-size: 24px;
-    line-height: 40px;
-    text-align: center;
-	color: $color-grey-2;
-	padding: 0px 0 36px 0;
-    margin: 0;
-    @include breakpoint(baby-bear){
-      font-size: 21px;
-      line-height: 30px;
-      padding: 0px 0 24px 0;
-    }
+	@extend p.lead;
+	text-align: center;
+	color: $color-grey-3;
 }
 
 
@@ -148,22 +136,10 @@
 	text-align: center;
 }
 
-
-
-
 .expertise__copy {
-    font-size: 24px;
-    line-height: 40px;
-    text-align: center;
+	@extend p.lead;
+	text-align: center;
 	color: $color-grey-2;
-	padding: 0px 0 36px 0;
-    margin: 0;
-    @include breakpoint(baby-bear){
-      font-size: 21px;
-      line-height: 30px;
-      padding: 0px 0 24px 0;
-    }
-
 }
 
 // END Expertise

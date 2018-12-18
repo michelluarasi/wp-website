@@ -6,45 +6,27 @@
  * @package michelluarasi
  */
 
-//Titles
-$title = simple_fields_get_post_value(get_the_id(), "Title", true);
-$subtitle = simple_fields_get_post_value(get_the_id(), "Subtitle", true);
-$description = simple_fields_get_post_value(get_the_id(), "Description", true);
-
-
-// Images
-$header_img_large = simple_fields_get_post_value(get_the_id(), "Header Image Large", true);
-$header_img_large_url = wp_get_attachment_url($header_img_large);
-$header_img_small = simple_fields_get_post_value(get_the_id(), "Header Image Small", true);
-$header_img_small_url = wp_get_attachment_url($header_img_small);
-
-
 // Videos
-$header_video = simple_fields_get_post_value(get_the_id(), "Header Video", true);
+$header_video = get_field('detail_header_video');
 $hasVideo = empty($header_video) ? false : true;
 
-
-//Content
+// Content
 $post_content = get_the_content();
-
 
 list($prev_page,$next_page) = get_prev_next_posts($category_id);
 
 // next post parameters
-$nextpost_id = url_to_postid( $next_page );
-$nextpost_title = simple_fields_get_post_value($nextpost_id, "Title", true);
-$nextpost_image_large = simple_fields_get_post_value($nextpost_id, "Header Image Large", true);
-$nextpost_image_large_url = wp_get_attachment_url($nextpost_image_large);
+$nextpost_id = url_to_postid( $next_page);
+$nextpost_title = get_field('detail_title', $nextpost_id);
+$nextpost_image_large = get_field('detail_header_image_large', $nextpost_id);
 
-global $body_class_extra, $next_page, $prev_page, $category_id, $detail_stylesheet, $post_content, $open_graph_image_url, $post_title;
+global $body_class_extra, $next_page, $prev_page, $category_id, $detail_stylesheet, $post_content, $post_title;
 $post_title = get_the_title(get_the_id());
 
-$detail_stylesheet = simple_fields_get_post_value(get_the_id(), "Custom CSS", true);
+$detail_stylesheet = get_field('detail_class_name');
 $body_class_extra .= " ".$detail_stylesheet;
 
-
-$open_graph_image = simple_fields_get_post_value(get_the_id(), "Open Graph Image", true);
-$open_graph_image_url = wp_get_attachment_url($open_graph_image);
+$open_graph_image = get_field('open_graph_image');
 
 get_header();
 ?>
@@ -60,11 +42,11 @@ get_header();
 			</div>			
 		<?php endif; ?>
 		<div class="img-container <?php echo ($hasVideo ? 'img-fallback' : 'picturefill'); ?> ">
-			<div class="cover picturefill-img detail-img" data-images='{"large":"<?php echo $header_img_large_url; ?>", "small":"<?php echo $header_img_small_url; ?>"}'></div>
+			<div class="cover picturefill-img detail-img" data-images='{"large":"<?php the_field('detail_header_image_large'); ?>", "small":"<?php the_field('detail_header_image_small'); ?>"}'></div>
 		</div>
 		<div class="detail-header__content detail-header__content">
-			<h1 class="detail-header__content__project-name js-vp_reveal js-slide_down"><?php echo $title; ?></h1>	
-			<p class="detail-header__content__subtitle js-vp_reveal js-fade_in"><?php echo $subtitle;?></p>
+			<h1 class="detail-header__content__project-name js-vp_reveal js-slide_down"><?php the_field('detail_title');?></h1>	
+			<p class="detail-header__content__subtitle js-vp_reveal js-fade_in"><?php the_field('detail_subtitle');?></p>
 		</div>
 		<div class="detail-header__arrow js-vp_reveal js-slide_up">
         <svg width="32px" height="32px"  viewBox="0 0 32 32">
@@ -75,7 +57,7 @@ get_header();
 	
 	<div class="detail-content">
 		<div class="detail-content__body">
-			<?php echo $post_content; ?>
+			<?php echo $next_value; ?> <?php echo $post_content; ?>
 		</div>
 	</div>
 
@@ -88,7 +70,7 @@ get_header();
             <div class="detail-next-content-overlay"></div>
         </div>
     </div>
-    <div class="detail-next-content__background" style="background-image: url('<?php echo $nextpost_image_large_url; ?>')">
+    <div class="detail-next-content__background" style="background-image: url('<?php echo $nextpost_image_large; ?>')">
     </div>
   </a>
 
@@ -97,6 +79,4 @@ get_header();
 	?>
   
 </div>
-
-
 

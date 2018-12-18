@@ -17,15 +17,6 @@ global $body_class_extra, $current_page;
 $current_page = "portrait";
 $body_class_extra = "portrait";
 
-$portrait_img = simple_fields_get_post_value(get_the_id(), "Portrait Image", true);
-$portrait_img_url = wp_get_attachment_url($portrait_img);
-
-$portrait_intro_heading = simple_fields_get_post_value(get_the_id(), "Portrait Intro Heading", true); 
-$portrait_intro_text = simple_fields_get_post_value(get_the_id(), "Portrait Intro Text", true);
-
-$portrait_expertise_heading = simple_fields_get_post_value(get_the_id(), "Portrait Expertise Heading", true); 
-$portrait_expertise_text = simple_fields_get_post_value(get_the_id(), "Portrait Expertise Text", true);
-
 get_header();?>
 
 <div class="profile-wrapper js-vp_reveal js-fade_in">
@@ -37,8 +28,8 @@ get_header();?>
 					</div>			
 				</div>
 
-			<h1 class="profile__title"><?php echo $portrait_intro_heading; ?></h1>
-			<p class="profile__copy"><?php echo $portrait_intro_text; ?></p>
+			<h1 class="profile__title"><?php the_field('portrait_intro_heading'); ?></h1>
+			<p class="profile__copy"><?php the_field('portrait_intro_text'); ?></p>
 			<p class="profile__copy"><a class="btn btn-m btn-violet" href="/work" title="Work">View My Work</a></p>
 		</div>
 
@@ -47,8 +38,8 @@ get_header();?>
 
 <div class="expertise-wrapper">
 	<div class="content-640 js-vp_reveal js-fade_in">
-		<h4 class="expertise__title"><?php echo $portrait_expertise_heading; ?></h4>
-		<p class="expertise__copy"><?php echo $portrait_expertise_text; ?></p>
+		<h4 class="expertise__title"><?php the_field('portrait_expertise_heading'); ?></h4>
+		<p class="expertise__copy"><?php the_field('portrait_expertise_text'); ?></p>
 	</div>
 </div>
 

@@ -24,19 +24,13 @@ get_header();?>
 	<?php
 		while ( have_posts() ) : the_post();
 		setup_postdata( $post );
-
-		$title = simple_fields_get_post_value(get_the_id(), "Title", true);
-		$subtitle = simple_fields_get_post_value(get_the_id(), "Subtitle", true);
-
-		$thumbnail_image = simple_fields_get_post_value(get_the_id(), "Teaser Image", true);
-		$thumbnail_image_url = wp_get_attachment_url($thumbnail_image);
 	?>
 
 		<li class="journal-list__item js-vp_reveal js-slide_up">
 			<a class="journal-list__item__link" href="<?php echo get_permalink()?>">
-				<img class="journal-list__item__img" alt="<?php echo $title ?> Teaser Image" src="<?php echo $thumbnail_image_url; ?>" />
-				<h2 class="journal-list__item__body__header"><?php echo $title ?></h2>
-				<p class="journal-list__item__body__subtitle"><?php echo $subtitle;?></p>
+				<img class="journal-list__item__img" alt="<?php echo $title ?> Teaser Image" src="<?php the_field('detail_teaser_image'); ?>" />
+				<h2 class="journal-list__item__body__header"><?php the_field('detail_title');?></h2>
+				<p class="journal-list__item__body__subtitle"><?php the_field('detail_subtitle');?></p>
 			</a>
 		</li>
 	<?php 					
