@@ -732,7 +732,6 @@ $(window).load(function(){
 
     $('body').addClass('is-loaded');
 
-    onParticleScreenClick();
 });
 
 // END Fade In Home, Image Header, Video Header
