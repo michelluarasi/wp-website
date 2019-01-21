@@ -26,7 +26,7 @@ get_header();?>
 <div class="home-wrapper">
   <div class="home-content" style="max-width: <?php echo $home_content_width; ?>;">
       <h4 class="js-vp_reveal js-fade_in" style="color: white;"><?php echo $home_title; ?></h4>
-      <h1 class="js-vp_reveal js-slide_down" style="color: white; padding-top: 0;"><?php echo $home_headline; ?></h1>
+      <h1 class="js-vp_reveal js-slide_down" style="color: white; padding: 0;"><?php echo $home_headline; ?></h1>
       <p class="profile__copy js-vp_reveal js-slide_up"><a class="btn btn-m btn-violet" href="<?php echo $home_link_url; ?>" title="Home Call To Action"><?php echo $home_link_cta; ?></a></p>
   </div>
 </div>
