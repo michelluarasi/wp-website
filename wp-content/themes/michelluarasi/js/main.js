@@ -726,16 +726,8 @@ $(window).load(function(){
         LoadMore.init();
     }
 
-    if($(".home").length) {
-        Home.init();
-    }
-    
     if($(".video-element").length) {
         VideoFill.init();
-    }
-    
-    if($(".home").length == 0) {
-        Detail.init();
     }
 
     $('body').addClass('is-loaded');
