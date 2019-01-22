@@ -87,6 +87,3 @@ global $body_class_extra, $detail_stylesheet, $open_graph_image_url;
 
     <?php include 'nav.php'; ?>
 
-
-
-
