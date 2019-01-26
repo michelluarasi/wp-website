@@ -710,8 +710,27 @@ $('.js-fade_in.is-visible').each(function(index) {
 
 
 
-// START Fade In Home, Image Header, Video Header
+// START Stuff for WebGL (bouado)
 
+var incrValue = 0.001; 
+var isPressing = false; 
+
+function onParticleScreenClick() {
+    var $win = $(window);
+    $win.on('mousedown', function(){
+        isPressing = true; 
+    });
+
+    $win.on('mouseup', function(){
+            isPressing = false; 
+    })
+}
+
+// END Stuff for WebGL (bouado)
+
+
+
+// START Fade In Home, Image Header, Video Header
 // Init all Modules
 $(window).load(function(){
     Helpers.init();
