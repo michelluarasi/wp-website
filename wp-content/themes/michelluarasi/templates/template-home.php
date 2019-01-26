@@ -15,6 +15,7 @@ Template Name: Template Home
 global $current_page;
 $current_page ="home";
 
+
 $home_title = get_field('home_title');
 $home_headline = get_field('home_headline');
 $home_link_cta = get_field('home_link_cta');
