@@ -32,9 +32,6 @@ get_header();?>
   <div id="webglcontainer"></div>
 </div>
 
-
 <?php include 'webgl.php';?>
-<?php include 'nav.php';?>
-
 
 <?php get_footer(); ?>
