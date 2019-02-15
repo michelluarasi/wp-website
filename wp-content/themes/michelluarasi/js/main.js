@@ -25,9 +25,9 @@ var Nav = (function(){
 			s = this.settings;
 			this.bindUIActions();
 			this.scrollHandler();
-			s.header.addClass("header--visible");
+		/*	s.header.addClass("header--visible"); */
 		},
-
+	
 		bindUIActions: function(){
 			s.menuLink.click(function(event){
 				Module.menuClickHandler(event);
@@ -522,7 +522,7 @@ var ViewportReveal = (function() {
 	return Module;
 }());
 
-// END show on scroll
+// END Viewport Reveal
 
 var Visibility = (function(){
 	function isVisible(element){

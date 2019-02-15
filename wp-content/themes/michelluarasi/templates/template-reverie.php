@@ -20,7 +20,7 @@ get_header();?>
 
 <div class="reverie-wrapper">
      <div class="js-tumblr--list"></div>
-     <p class="profile__copy js-vp_reveal js-slide_up is-visible">
+     <p class="profile__copy js-vp_reveal js-slide_up">
           <a class="js-tumblr--loadMore" href="https://michelluarasi.tumblr.com/api/read/json" data-start="20" data-num="20">
                <svg class="loading-spinner" viewBox="0 0 48 48">
                     <circle class="path" cx="24" cy="24" r="20" fill="none" stroke-width="4"></circle>

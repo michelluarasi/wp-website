@@ -12,7 +12,7 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
 ?>
 
-<header class="header">
+<header class="header js-vp_reveal js-slide_down">
 
     <!-- START Navigation -->
     <div class="wrapper">
