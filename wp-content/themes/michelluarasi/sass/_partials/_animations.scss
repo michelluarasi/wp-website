@@ -18,8 +18,16 @@
 
 // START CSS Animations
 
-// FadeReveal
-@keyframes FadeReveal {
+
+.slide-down {
+  animation-name: SlideDown;
+  animation-duration: 800ms;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+// FadeIn
+@keyframes FadeIn {
   0% {
     opacity: 0;
   }
@@ -28,17 +36,35 @@
   }
 }
 
-// SlideRevealDown
-@keyframes SlideRevealDown {
-  0% {
-    transform: translateY(-32px);
-    opacity: 0;
-  }
+
+// SlideDown
+@keyframes SlideDown {
+  0% {  
+      transform: translateY(-32px);
+      opacity: 0;
+     }
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
+
+// SlideUp
+@keyframes SlideUp {
+  0% {  
+      transform: translateY(32px);
+      opacity: 0;
+     }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
 
 // END CSS Animations
 
