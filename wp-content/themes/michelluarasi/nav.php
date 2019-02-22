@@ -47,30 +47,30 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
 
     <div class="menu-overlay">
         <nav class="main-nav" role="navigation">
-            <a class="main-nav__list-item__link <?php echo $current_page == "work" ? "main-nav__list-item__link--active" : "" ; ?>" href="/work">Work
+            <a id="gtm-menu-work" class="main-nav__list-item__link <?php echo $current_page == "work" ? "main-nav__list-item__link--active" : "" ; ?>" href="/work">Work
             </a>
-            <a class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">Portrait
+            <a id="gtm-menu-portrait" class="main-nav__list-item__link <?php echo $current_page == "portrait" ? "main-nav__list-item__link--active" : "" ; ?>" href="/portrait">Portrait
             </a>
-            <a class="main-nav__list-item__link <?php echo $current_page == "reverie" ? "main-nav__list-item__link--active" : "" ; ?>" href="/reverie">R&ecirc;verie
+            <a id="gtm-menu-reverie" class="main-nav__list-item__link <?php echo $current_page == "reverie" ? "main-nav__list-item__link--active" : "" ; ?>" href="/reverie">R&ecirc;verie
             </a>
-            <a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/contact">Contact
+            <a id="gtm-menu-contact" class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/contact">Contact
             </a>
         </nav> 
 
         <nav class="meta-nav">
-            <a class="meta-nav-link" href="/journal">Journal
+            <a id="gtm-menu-journal" class="meta-nav-link" href="/journal">Journal
                 <svg width="8px" height="8px" viewBox="0 0 8 8">
                     <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                 </svg>
             </a>
 
-            <a class="meta-nav-link" href="/credits">Credits
+            <a id="gtm-menu-credits" class="meta-nav-link" href="/credits">Credits
                 <svg width="8px" height="8px" viewBox="0 0 8 8">
                     <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                 </svg>
             </a>
 
-            <a class="meta-nav-link" href="/legal">Legal
+            <a id="gtm-menu-legal" class="meta-nav-link" href="/legal">Legal
                 <svg width="8px" height="8px" viewBox="0 0 8 8">
                     <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                 </svg>
