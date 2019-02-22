@@ -53,12 +53,12 @@ $menu_item = ($current_page == "inprogress" || $current_page == "home") ? "menu"
             </a>
             <a class="main-nav__list-item__link <?php echo $current_page == "reverie" ? "main-nav__list-item__link--active" : "" ; ?>" href="/reverie">R&ecirc;verie
             </a>
-            <a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/journal">Journal
+            <a class="main-nav__list-item__link <?php echo $current_page == "journal" ? "main-nav__list-item__link--active" : "" ; ?>" href="/contact">Contact
             </a>
         </nav> 
 
         <nav class="meta-nav">
-            <a class="meta-nav-link" href="/contact">Contact
+            <a class="meta-nav-link" href="/journal">Journal
                 <svg width="8px" height="8px" viewBox="0 0 8 8">
                     <path fill="#5259D4" d="M2 0l4 3.5L2 7"/>
                 </svg>
