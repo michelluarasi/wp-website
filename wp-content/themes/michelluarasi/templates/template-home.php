@@ -32,7 +32,7 @@ get_header();?>
 	    <div class="contact-footer">
 			    <div class="contact-social js-vp_reveal js-fade_in">
 
-							<a id="gtm-home-mail" class="contact-social-link" target="_blank" href="mailto:&#109;&#105;&#99;&#104;&#101;&#108;&#64;&#108;&#117;&#97;&#114;&#97;&#115;&#105;&#46;&#99;&#111;&#109;"/>
+							<a id="gtm-home-mail" class="contact-social-link" href="mailto:&#109;&#105;&#99;&#104;&#101;&#108;&#64;&#108;&#117;&#97;&#114;&#97;&#115;&#105;&#46;&#99;&#111;&#109;"/>
 								<svg class="mail" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
 									<g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
 									    <rect x="10" y="15" width="28" height="18" rx="5"/>
@@ -40,7 +40,7 @@ get_header();?>
 									</g>
 							</a>
 
-							<a id="gtm-home-call"  class="contact-social-link" target="_blank" href="tel:+41787225079">
+							<a id="gtm-home-call"  class="contact-social-link" href="tel:+41787225079">
 								<svg class="phone" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
 									<g fill="none" fill-rule="evenodd">
 									    <rect stroke="#FFF" stroke-width="2" x="11" y="11" width="26" height="26" rx="13"/>
